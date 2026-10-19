@@ -7,3 +7,5 @@ exports/
 !citescout_prerun.db
 .streamlit/secrets.toml
 .venv/
+.pytest_cache/
+.vscode/
