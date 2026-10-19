@@ -40,18 +40,23 @@ def _tokens(text: str, stop: set[str] = _STOP) -> list[str]:
 
 
 def _terms(text: str, stop: set[str] = _STOP) -> set[str]:
-    """Unigrams plus bigrams of words that are adjacent in the original text (no gaps over stopwords)."""
+    """Unigrams plus bigrams of words that are adjacent in the original text (no gaps over stopwords).
+    Hyphenated words count both joined and split: "U-Net" -> "unet" (+ "net")."""
     out: set[str] = set()
     prev = None
-    for w in re.findall(r"[a-z0-9][a-z0-9\-]+", (text or "").lower()):
-        if w in stop or len(w) < 2:
-            prev = None
-            continue
-        s = _stem(w)
-        out.add(s)
-        if prev:
-            out.add(f"{prev} {s}")
-        prev = s
+    for m in re.findall(r"[a-z0-9]+(?:-[a-z0-9]+)*", (text or "").lower()):
+        parts = m.split("-")
+        if len(parts) > 1 and m not in stop:
+            out.add(_stem("".join(parts)))
+        for w in parts:
+            if w in stop or len(w) < 2:
+                prev = None
+                continue
+            s = _stem(w)
+            out.add(s)
+            if prev:
+                out.add(f"{prev} {s}")
+            prev = s
     return out
 
 
@@ -60,8 +65,14 @@ def _facet_terms(facet: str) -> list[str]:
 
 
 def _covers(p_terms: set[str], facet: str) -> bool:
-    ft = _facet_terms(facet)
-    return bool(ft) and all(t in p_terms for t in ft)
+    """All facet words present; also tries joining adjacent words so "U Net" matches "U-Net"/"UNet"."""
+    words = [w for w in re.findall(r"[a-z0-9]+", facet.lower()) if w not in _BASIC]
+    variants = [words] + [words[:i] + [words[i] + words[i + 1]] + words[i + 2:] for i in range(len(words) - 1)]
+    for v in variants:
+        toks = [_stem(w) for w in v]
+        if toks and all(t in p_terms for t in toks):
+            return True
+    return False
 
 
 def facets_for(question: str, keywords: list[str]) -> list[str]:

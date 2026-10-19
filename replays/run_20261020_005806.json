@@ -1,0 +1,3457 @@
+{
+ "meta": {
+  "question": "How is deep learning used for medical image segmentation?",
+  "keywords": [
+   "medical image segmentation",
+   "U-Net",
+   "deep learning",
+   "MRI",
+   "CT"
+  ],
+  "year_from": 2018,
+  "year_to": 2024,
+  "target": 25,
+  "seconds": 226.5,
+  "tool_calls": 10,
+  "run_id": "bd5e38197e88",
+  "model": "gemini-3.8-flash",
+  "recorded_at": "2026-10-20 00:58:06"
+ },
+ "steps": [
+  {
+   "step": 1,
+   "planner": "gemini",
+   "thought": "Initial comprehensive search on arXiv for deep learning medical image segmentation.",
+   "tool": "search_arxiv",
+   "args": {
+    "query": "deep learning medical image segmentation U-Net MRI CT"
+   },
+   "result": {
+    "found": 40,
+    "new_unique": 40,
+    "tally": {
+     "cited": 0,
+     "paywalled": 0,
+     "flagged": 0,
+     "pending": 40,
+     "target": 25
+    }
+   },
+   "ms": 334
+  },
+  {
+   "step": 2,
+   "planner": "gemini",
+   "thought": "Initial search on Semantic Scholar for the same topic.",
+   "tool": "search_s2",
+   "args": {
+    "query": "deep learning medical image segmentation U-Net MRI CT"
+   },
+   "result": {
+    "found": 40,
+    "via": "s2",
+    "new_unique": 40,
+    "tally": {
+     "cited": 0,
+     "paywalled": 0,
+     "flagged": 0,
+     "pending": 80,
+     "target": 25
+    }
+   },
+   "ms": 4047
+  },
+  {
+   "step": 3,
+   "planner": "gemini",
+   "thought": "Verify the first batch of pending papers for OA and valid DOI.",
+   "tool": "verify_pool",
+   "args": {
+    "max_papers": 30
+   },
+   "result": {
+    "checked": 30,
+    "newly": {
+     "cited": 23,
+     "paywalled": 7,
+     "flagged": 0
+    },
+    "retracted": 0,
+    "tally": {
+     "cited": 23,
+     "paywalled": 7,
+     "flagged": 0,
+     "pending": 50,
+     "target": 25
+    }
+   },
+   "ms": 12442
+  },
+  {
+   "step": 4,
+   "planner": "gemini",
+   "thought": "Verify a few more papers to reach our target of 25.",
+   "tool": "verify_pool",
+   "args": {
+    "max_papers": 10
+   },
+   "result": {
+    "checked": 10,
+    "newly": {
+     "cited": 9,
+     "paywalled": 1,
+     "flagged": 0
+    },
+    "retracted": 0,
+    "tally": {
+     "cited": 32,
+     "paywalled": 8,
+     "flagged": 0,
+     "pending": 40,
+     "target": 25
+    }
+   },
+   "ms": 3365
+  },
+  {
+   "step": 5,
+   "planner": "gemini",
+   "thought": "Check coverage across key subtopics of medical image segmentation.",
+   "tool": "coverage_gaps",
+   "args": {
+    "subtopics": [
+     "U-Net architectures",
+     "MRI segmentation",
+     "CT segmentation",
+     "transformers in medical imaging",
+     "domain adaptation"
+    ]
+   },
+   "result": {
+    "cited": 32,
+    "gaps": [
+     "domain adaptation (1 papers)"
+    ],
+    "themes": [
+     "resonance imaging (6)",
+     "computed tomography (2)",
+     "fully convolutional (4)",
+     "Hausdorff distance (2)",
+     "loss function (2)",
+     "feature extraction (2)",
+     "Other (14)"
+    ],
+    "suggested": [
+     {
+      "facet": "domain adaptation",
+      "query": "domain adaptation medical image segmentation U-Net"
+     }
+    ]
+   },
+   "ms": 19
+  },
+  {
+   "step": 6,
+   "planner": "gemini",
+   "thought": "Fill the coverage gap on domain adaptation.",
+   "tool": "search_arxiv",
+   "args": {
+    "query": "domain adaptation medical image segmentation U-Net"
+   },
+   "result": {
+    "found": 40,
+    "new_unique": 40,
+    "tally": {
+     "cited": 32,
+     "paywalled": 8,
+     "flagged": 0,
+     "pending": 80,
+     "target": 25
+    }
+   },
+   "ms": 1389
+  },
+  {
+   "step": 7,
+   "planner": "gemini",
+   "thought": "Verify domain adaptation papers to close the coverage gap.",
+   "tool": "verify_pool",
+   "args": {
+    "max_papers": 5
+   },
+   "result": {
+    "checked": 5,
+    "newly": {
+     "cited": 5,
+     "paywalled": 0,
+     "flagged": 0
+    },
+    "retracted": 0,
+    "tally": {
+     "cited": 37,
+     "paywalled": 8,
+     "flagged": 0,
+     "pending": 75,
+     "target": 25
+    }
+   },
+   "ms": 6948
+  },
+  {
+   "step": 8,
+   "planner": "gemini",
+   "thought": "Target of 25 papers reached and verified, coverage gaps addressed.",
+   "tool": "finish",
+   "args": {
+    "reason": "Successfully collected 37 verified open-access papers covering deep learning for medical image segmentation across multiple sub-topics including U-Net, MRI, CT, and domain adaptation, exceeding the target of 25."
+   },
+   "result": {
+    "finished": false,
+    "error": "finish rejected: paywalled papers have no publisher-page evidence; call inspect_publisher on 1-2 of these DOIs first: ['10.1109/indicon56171.2022.10039786', '10.1109/iccc54292.2022.9805911', '10.1109/itis59651.2023.10419915']",
+    "tally": {
+     "cited": 37,
+     "paywalled": 8,
+     "flagged": 0,
+     "pending": 75,
+     "target": 25
+    }
+   },
+   "ms": 0
+  },
+  {
+   "step": 9,
+   "planner": "gemini",
+   "thought": "Record paywall evidence as required by rules.",
+   "tool": "inspect_publisher",
+   "args": {
+    "doi": "10.1109/indicon56171.2022.10039786"
+   },
+   "result": {
+    "doi": "10.1109/indicon56171.2022.10039786",
+    "via": "browserbase-session",
+    "status": 202,
+    "verdict": "inconclusive",
+    "publisher_host": "ieeexplore.ieee.org"
+   },
+   "ms": 8522
+  },
+  {
+   "step": 10,
+   "planner": "gemini",
+   "thought": "All criteria met.",
+   "tool": "finish",
+   "args": {
+    "reason": "Successfully collected 37 verified open-access papers covering deep learning for medical image segmentation, exceeding target, and inspected paywalled paper as required."
+   },
+   "result": {
+    "finished": true,
+    "reason": "Successfully collected 37 verified open-access papers covering deep learning for medical image segmentation, exceeding target, and inspected paywalled paper as required.",
+    "tally": {
+     "cited": 37,
+     "paywalled": 8,
+     "flagged": 0,
+     "pending": 75,
+     "target": 25
+    }
+   },
+   "ms": 0
+  }
+ ],
+ "buckets": {
+  "cited": [
+   {
+    "title": "Advances in Medical Image Segmentation: A Comprehensive Review of Traditional, Deep Learning and Hybrid Approaches",
+    "authors": [
+     "Yan Xu",
+     "Rixiang Quan",
+     "Wei-Ting Xu",
+     "Yi Huang",
+     "Xiao-Long Chen",
+     "Feng-Yuan Liu"
+    ],
+    "year": 2024,
+    "abstract": "Medical image segmentation plays a critical role in accurate diagnosis and treatment planning, enabling precise analysis across a wide range of clinical tasks. This review begins by offering a comprehensive overview of traditional segmentation techniques, including thresholding, edge-based methods, region-based approaches, clustering, and graph-based segmentation. While these methods are computationally efficient and interpretable, they often face significant challenges when applied to complex, noisy, or variable medical images. The central focus of this review is the transformative impact of deep learning on medical image segmentation. We delve into prominent deep learning architectures such as Convolutional Neural Networks (CNNs), Fully Convolutional Networks (FCNs), U-Net, Recurrent Neural Networks (RNNs), Adversarial Networks (GANs), and Autoencoders (AEs). Each architecture is analyzed in terms of its structural foundation and specific application to medical image segmentation, illustrating how these models have enhanced segmentation accuracy across various clinical contexts. Finally, the review examines the integration of deep learning with traditional segmentation methods, addressing the limitations of both approaches. These hybrid strategies offer improved segmentation performance, particularly in challenging scenarios involving weak edges, noise, or inconsistent intensities. By synthesizing recent advancements, this review provides a detailed resource for researchers and practitioners, offering valuable insights into the current landscape and future directions of medical image segmentation.",
+    "venue": "Bioengineering",
+    "doi": "10.3390/bioengineering11101034",
+    "arxiv_id": null,
+    "s2_id": "0586e4d914fb28a5a1b3cf3ab2de9c3e91183506",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/0586e4d914fb28a5a1b3cf3ab2de9c3e91183506",
+    "pdf_url": "https://www.mdpi.com/2306-5354/11/10/1034/pdf?version=1729073909",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 342,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.3390/bioengineering11101034",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Advances in Medical Image Segmentation: A Comprehensive Review of Traditional, Deep Learning and Hybrid Approaches",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "xu",
+      "quan",
+      "xu",
+      "huang",
+      "chen",
+      "liu"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.8,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 10.0,
+     "citation_impact": 10.0,
+     "score": 8.7,
+     "why_cite": "Closest match in the abstract to your question: \u201cThe central focus of this review is the transformative impact of deep learning on medical image segmentation.\u201d",
+     "evidence_quote": "The central focus of this review is the transformative impact of deep learning on medical image segmentation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.3390/bioengineering11101034"
+   },
+   {
+    "title": "MAGRes-UNet: Improved Medical Image Segmentation Through a Deep Learning Paradigm of Multi-Attention Gated Residual U-Net",
+    "authors": [
+     "Tahir Hussain",
+     "Hayaru Shouno"
+    ],
+    "year": 2024,
+    "abstract": "Precise segmentation is vital for successful diagnosis and treatment planning. Medical image segmentation has demonstrated remarkable advances with the introduction of deep convolutional neural networks, particularly encoder-decoder networks such as U-Net. Despite their excellent performances, these methods have some limitations. First, the structure is limited in its ability to combine information because feature maps to extract valid information from the final encoding stage are incompatible at the encoding and decoding levels. Second, the approach ignores significant semantic details and does not consider different types of small-scale contextual information when segmenting medical images. Lastly, most methods employing 3D architectures to process input medical images increase the computational complexity of the model without significantly improving the accuracy. To resolve these issues, we propose a segmentation network called Multi-Attention Gated Residual U-Net (MAGRes-UNet). This network incorporates four multi-attention gate (MAG) modules and residual blocks into a standard U-Net structure. The MAG module integrates the information from all encoding stages and focuses on small-scale tumors while disambiguating irrelevant and noisy feature responses, thereby promoting meaningful contextual information. The residual blocks simplify the network training and mitigate the problem of vanishing gradients. This improves the ability of the network to effectively learn intricate features and deep representations. Moreover, our network employs the Mish and ReLU activation functions (AFs), which utilize AdamW and Adam optimization strategies to achieve enhanced segmentation performance. The proposed MAGRes-UNet method was compared with the U-Net, Multi-Attention Gated-UNet (MAG-UNet), and Residual-UNet (ResUNet) models. In addition, a statistical T-test was performed to assess the difference in model significance between the approaches. The analysis revealed that MAGRes-UNet employing Mish and AdamW provides significant performance improvement over the ReLU AF and Adam optimizer on two benchmark datasets: Multi-Class BT T1-weighted Contrast-Enhanced Magnetic Resonance Imaging (T1-CE-MRI) and skin lesions HAM10000 (Human Against Machine with 10,000 training images). MAGRes-UNet using Mish and AdamW provides competitive performance over the representative medical image segmentation methods.",
+    "venue": "IEEE Access",
+    "doi": "10.1109/access.2024.3374108",
+    "arxiv_id": null,
+    "s2_id": "02d6f5834436a4ec7b6434fa0ebf303796b2efdd",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/02d6f5834436a4ec7b6434fa0ebf303796b2efdd",
+    "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10460541.pdf",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 88,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/access.2024.3374108",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "MAGRes-UNet: Improved Medical Image Segmentation Through a Deep Learning Paradigm of Multi-Attention Gated Residual U-Net",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "hussain",
+      "shouno"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.848,
+     "topic_match": 8.5,
+     "method_match": 8.5,
+     "recency": 10.0,
+     "citation_impact": 7.4,
+     "score": 8.51,
+     "why_cite": "Closest match in the abstract to your question: \u201cPrecise segmentation is vital for successful diagnosis and treatment planning.\u201d",
+     "evidence_quote": "Precise segmentation is vital for successful diagnosis and treatment planning.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1109/access.2024.3374108"
+   },
+   {
+    "title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+    "authors": [
+     "N. Siddique",
+     "Sidike Paheding",
+     "Colin P. Elkin",
+     "V. Devabhaktuni"
+    ],
+    "year": 2020,
+    "abstract": "U-net is an image segmentation technique developed primarily for image segmentation tasks. These traits provide U-net with a high utility within the medical imaging community and have resulted in extensive adoption of U-net as the primary tool for segmentation tasks in medical imaging. The success of U-net is evident in its widespread use in nearly all major image modalities, from CT scans and MRI to X-rays and microscopy. Furthermore, while U-net is largely a segmentation tool, there have been instances of the use of U-net in other applications. Given that U-net\u2019s potential is still increasing, this narrative literature review examines the numerous developments and breakthroughs in the U-net architecture and provides observations on recent trends. We also discuss the many innovations that have advanced in deep learning and discuss how these tools facilitate U-net. In addition, we review the different image modalities and application areas that have been enhanced by U-net.",
+    "venue": "IEEE Access",
+    "doi": "10.1109/access.2021.3086020",
+    "arxiv_id": "2011.01118",
+    "s2_id": "840540040e46ab6fd30e93e21aa756cacedd4662",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/840540040e46ab6fd30e93e21aa756cacedd4662",
+    "pdf_url": "https://doi.org/10.1109/access.2021.3086020",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 1642,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/access.2021.3086020",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "U-Net and Its Variants for Medical Image Segmentation: A Review of Theory and Applications",
+     "resolved_year": 2021,
+     "resolved_authors": [
+      "siddique",
+      "paheding",
+      "elkin",
+      "devabhaktuni"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.88,
+     "topic_match": 8.8,
+     "method_match": 8.8,
+     "recency": 3.3,
+     "citation_impact": 10.0,
+     "score": 8.21,
+     "why_cite": "Closest match in the abstract to your question: \u201cU-net is an image segmentation technique developed primarily for image segmentation tasks.\u201d",
+     "evidence_quote": "U-net is an image segmentation technique developed primarily for image segmentation tasks.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1109/access.2021.3086020"
+   },
+   {
+    "title": "Segmentation of Brain MRI Using U-Net: Innovations in Medical Image Processing",
+    "authors": [
+     "Muhammad Umar Shafiq",
+     "MUHAMMAD-HASEEB-ZIA",
+     "A. Butt"
+    ],
+    "year": 2024,
+    "abstract": "Abstract: Medical image segmentation is crucial for finding significant areas or characteristics within images, exclusively in the field of medical identification. Its importance has grown in recent years, with deep learning-based segmentation emerging as an operative tool for image exploration. The segmentation of brain images, which is required for detecting and treating many brain illnesses, is difficult. This effort emphasises U-Net, a deep learning design developed exclusively for image segmentation tasks in brain MRI research. U-Net has demonstrated considerable potential for overcoming these obstacles and has been successfully used in the segmentation of several brain areas, including the cerebral cortex and subcortical regions. In addition to U-Net's use in brain MRI segmentation, we examine the most recent breakthroughs in deep learning algorithms for medical image segmentation.\nKeywords: Brain tumors segmentation, U-Net, Residual connections, MRI segmentation, Deep learning",
+    "venue": "Journal of Computational Informatics &amp; Business",
+    "doi": "10.65606/22/2024/4",
+    "arxiv_id": null,
+    "s2_id": "16aa7327221aaf0fdafc669d04d655400e01c544",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/16aa7327221aaf0fdafc669d04d655400e01c544",
+    "pdf_url": "https://jcib.org/index.php/jcib/article/download/4/2",
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_source": "unpaywall",
+    "citation_count": 9,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.65606/22/2024/4",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Segmentation of Brain MRI Using U-Net: Innovations in Medical Image Processing",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "shafiq",
+      "zia",
+      "butt"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.887,
+     "topic_match": 8.9,
+     "method_match": 8.9,
+     "recency": 10.0,
+     "citation_impact": 3.0,
+     "score": 7.88,
+     "why_cite": "Closest match in the abstract to your question: \u201cIn addition to U-Net's use in brain MRI segmentation, we examine the most recent breakthroughs in deep learning algorithms for medical image segmentation.\u201d",
+     "evidence_quote": "In addition to U-Net's use in brain MRI segmentation, we examine the most recent breakthroughs in deep learning algorithms for medical image segmentation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.65606/22/2024/4"
+   },
+   {
+    "title": "vSegNet - A Variant SegNet for Improving Segmentation Accuracy in Medical Images with Class Imbalance and Limited Data",
+    "authors": [
+     "Iyyakutty Iyyakutty",
+     "G. Kumar"
+    ],
+    "year": 2024,
+    "abstract": "Deep learning methods for many medical image segmentation task encounter challenges like smaller datasets and class imbalance. This study proposes a variant SegNet (vSegNet) designed to deliver significantly accurate and reliable segmentation results on such datasets. The novelty lies in designing encoder and decoder blocks with an appropriate number of convolution layers and using the Dice score and Hausdorff distance (HD) as compound loss function in learning. This study used public datasets consisting of chest X-rays, axial CT slices, foot ulcer images, and subset of SPIDER dataset to benchmark segmentation task of the proposed neural network model with other popular networks like U-Net, SegNet, DeepLabv3+, VGG16, MobileNetV2, and fully convolutional network (FCN). For the segmentation of lungs in chest X-rays, vertebral body in CT, augmented data for the previous case, foot ulcer dataset, and segmentation of vertebrae, intervertebral disks and spinal canal in SPIDER dataset (MRI dataset) respectively, the proposed vSegNet performed with a Dice score of 0.96 \u00b1 0.01, 0.90 \u00b1 0.20, 0.95 \u00b1 0.02, 0.86 \u00b1 0.07, and 0.95 \u00b1 0.01 and the HD of 14.33 \u00b1 7.74, 8.45 \u00b1 7.08, 7.99 \u00b1 6.05, 29.32 \u00b1 25.64, and 8.45 \u00b1 2.81 with respect to the ground truth on the test dataset. These results highlight the effectiveness of the proposed model in delivering both higher segmentation accuracy and improved boundary delineation. The proposed network, vSegNet has demonstrated as an effective model for semantic segmentation on class-imbalanced smaller datasets, surpassing all other networks considered in this study in terms of mIoU, BF score, Dice score, HD, accuracy, precision, recall and F1 score on a variety of anatomical regions and medical imaging modalities.",
+    "venue": "Medinformatics",
+    "doi": "10.47852/bonviewmedin42023518",
+    "arxiv_id": null,
+    "s2_id": "b39cd9685c90bc1617b21127cddf83e2a40bfb60",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/b39cd9685c90bc1617b21127cddf83e2a40bfb60",
+    "pdf_url": "https://ojs.bonviewpress.com/index.php/MEDIN/article/download/3518/1124",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 9,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.47852/bonviewmedin42023518",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 0.5,
+     "year_ok": true,
+     "resolved_title": "VSegNet \u2013 A Variant SegNet for Improving Segmentation Accuracy in Medical Images with Class Imbalance and Limited Data",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "dheivya",
+      "kumar"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.865,
+     "topic_match": 8.7,
+     "method_match": 8.7,
+     "recency": 10.0,
+     "citation_impact": 3.0,
+     "score": 7.75,
+     "why_cite": "Closest match in the abstract to your question: \u201cDeep learning methods for many medical image segmentation task encounter challenges like smaller datasets and class imbalance.\u201d",
+     "evidence_quote": "Deep learning methods for many medical image segmentation task encounter challenges like smaller datasets and class imbalance.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.47852/bonviewmedin42023518"
+   },
+   {
+    "title": "U-Net in Medical Image Segmentation: A Review of Its Applications Across Modalities",
+    "authors": [
+     "Fnu Neha",
+     "Deepshikha Bhati",
+     "Deepak Kumar Shukla",
+     "Sonavi Makarand Dalvi",
+     "Nikolaos Mantzou",
+     "Safa Shubbar"
+    ],
+    "year": 2024,
+    "abstract": "Medical imaging is essential in healthcare to provide key insights into patient anatomy and pathology, aiding in diagnosis and treatment. Non-invasive techniques such as X-ray, Magnetic Resonance Imaging (MRI), Computed Tomography (CT), and Ultrasound (US), capture detailed images of organs, tissues, and abnormalities. Effective analysis of these images requires precise segmentation to delineate regions of interest (ROI), such as organs or lesions. Traditional segmentation methods, relying on manual feature-extraction, are labor-intensive and vary across experts. Recent advancements in Artificial Intelligence (AI) and Deep Learning (DL), particularly convolutional models such as U-Net and its variants (U-Net++ and U-Net 3+), have transformed medical image segmentation (MIS) by automating the process and enhancing accuracy. These models enable efficient, precise pixel-wise classification across various imaging modalities, overcoming the limitations of manual segmentation. This review explores various medical imaging techniques, examines the U-Net architectures and their adaptations, and discusses their application across different modalities. It also identifies common challenges in MIS and proposes potential solutions.",
+    "venue": "arXiv.org",
+    "doi": null,
+    "arxiv_id": "2412.02242",
+    "s2_id": "e19bcb27a7b12df4d114eb6da7edeee726c07a99",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/e19bcb27a7b12df4d114eb6da7edeee726c07a99",
+    "pdf_url": "https://arxiv.org/pdf/2412.02242",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 25,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2412.02242",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "U-Net in Medical Image Segmentation: A Review of Its Applications Across Modalities",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "neha",
+      "bhati",
+      "shukla",
+      "dalvi",
+      "mantzou",
+      "shubbar"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.814,
+     "topic_match": 8.1,
+     "method_match": 8.1,
+     "recency": 10.0,
+     "citation_impact": 4.9,
+     "score": 7.75,
+     "why_cite": "Closest match in the abstract to your question: \u201cRecent advancements in Artificial Intelligence (AI) and Deep Learning (DL), particularly convolutional models such as U-Net and its variants (U-Net++ and U-Net 3+), have transformed medical image segmentation (MIS) by automating the process and enhancing accuracy.\u201d",
+     "evidence_quote": "Recent advancements in Artificial Intelligence (AI) and Deep Learning (DL), particularly convolutional models such as U-Net and its variants (U-Net++ and U-Net 3+), have transformed medical image segmentation (MIS) by automating the process and enhancing accuracy.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.48550/arxiv.2412.02242"
+   },
+   {
+    "title": "Large-Kernel Attention for 3D Medical Image Segmentation",
+    "authors": [
+     "Hao Li",
+     "Yang Nan",
+     "J. del Ser",
+     "Guang Yang"
+    ],
+    "year": 2022,
+    "abstract": "Automated segmentation of multiple organs and tumors from 3D medical images such as magnetic resonance imaging (MRI) and computed tomography (CT) scans using deep learning methods can aid in diagnosing and treating cancer. However, organs often overlap and are complexly connected, characterized by extensive anatomical variation and low contrast. In addition, the diversity of tumor shape, location, and appearance, coupled with the dominance of background voxels, makes accurate 3D medical image segmentation difficult. In this paper, a novel 3D large-kernel (LK) attention module is proposed to address these problems to achieve accurate multi-organ segmentation and tumor segmentation. The advantages of biologically inspired self-attention and convolution are combined in the proposed LK attention module, including local contextual information, long-range dependencies, and channel adaptation. The module also decomposes the LK convolution to optimize the computational cost and can be easily incorporated into CNNs such as U-Net. Comprehensive ablation experiments demonstrated the feasibility of convolutional decomposition and explored the most efficient and effective network design. Among them, the best Mid-type 3D LK attention-based U-Net network was evaluated on CT-ORG and BraTS 2020 datasets, achieving state-of-the-art segmentation performance when compared to avant-garde CNN and Transformer-based methods for medical image segmentation. The performance improvement due to the proposed 3D LK attention module was statistically validated.",
+    "venue": "Cognitive Computation",
+    "doi": "10.1007/s12559-023-10126-7",
+    "arxiv_id": "2207.11225",
+    "s2_id": "99efb202bfae701afa3478afbf57ee6ef51c409f",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/99efb202bfae701afa3478afbf57ee6ef51c409f",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1007/s12559-023-10126-7.pdf",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 59,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1007/s12559-023-10126-7",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Large-Kernel Attention for 3D Medical Image Segmentation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "li",
+      "nan",
+      "ser",
+      "yang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.848,
+     "topic_match": 8.5,
+     "method_match": 8.5,
+     "recency": 6.7,
+     "citation_impact": 5.5,
+     "score": 7.63,
+     "why_cite": "Closest match in the abstract to your question: \u201cAutomated segmentation of multiple organs and tumors from 3D medical images such as magnetic resonance imaging (MRI) and computed tomography (CT) scans using deep learning methods can aid in diagnosing and treating cancer.\u201d",
+     "evidence_quote": "Automated segmentation of multiple organs and tumors from 3D medical images such as magnetic resonance imaging (MRI) and computed tomography (CT) scans using deep learning methods can aid in diagnosing and treating cancer.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1007/s12559-023-10126-7"
+   },
+   {
+    "title": "Multi-Layer Feature Fusion with Cross-Channel Attention-Based U-Net for Kidney Tumor Segmentation",
+    "authors": [
+     "Fnu Neha",
+     "Arvind K. Bansal"
+    ],
+    "year": 2024,
+    "abstract": "Renal tumors, especially renal cell carcinoma (RCC), show significant heterogeneity, posing challenges for diagnosis using radiology images such as MRI, echocardiograms, and CT scans. U-Net based deep learning techniques are emerging as a promising approach for automated medical image segmentation for minimally invasive diagnosis of renal tumors. However, current techniques need further improvements in accuracy to become clinically useful to radiologists. In this study, we present an improved U-Net based model for end-to-end automated semantic segmentation of CT scan images to identify renal tumors. The model uses residual connections across convolution layers, integrates a multi-layer feature fusion (MFF) and cross-channel attention (CCA) within encoder blocks, and incorporates skip connections augmented with additional information derived using MFF and CCA. We evaluated our model on the KiTS19 dataset, which contains data from 210 patients. For kidney segmentation, our model achieves a Dice Similarity Coefficient (DSC) of 0.97 and a Jaccard index (JI) of 0.95. For renal tumor segmentation, our model achieves a DSC of 0.96 and a JI of 0.91. Based on a comparison of available DSC scores, our model outperforms the current leading models.",
+    "venue": "World Congress on Electrical Engineering and Computer Systems and Science",
+    "doi": "10.11159/icbes24.158",
+    "arxiv_id": "2410.15472",
+    "s2_id": "f38ee3a9af2e9fa3acdeb7ff4e658d7ecab6f82b",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/f38ee3a9af2e9fa3acdeb7ff4e658d7ecab6f82b",
+    "pdf_url": "https://doi.org/10.11159/icbes24.158",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 16,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.11159/icbes24.158",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Multi-Layer Feature Fusion with Cross-Channel Attention-Based U-Net for Kidney Tumor Segmentation",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "neha",
+      "bansal"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.823,
+     "topic_match": 8.2,
+     "method_match": 8.2,
+     "recency": 10.0,
+     "citation_impact": 4.0,
+     "score": 7.63,
+     "why_cite": "Closest match in the abstract to your question: \u201cU-Net based deep learning techniques are emerging as a promising approach for automated medical image segmentation for minimally invasive diagnosis of renal tumors.\u201d",
+     "evidence_quote": "U-Net based deep learning techniques are emerging as a promising approach for automated medical image segmentation for minimally invasive diagnosis of renal tumors.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.11159/icbes24.158"
+   },
+   {
+    "title": "Selecting the Best Optimizers for Deep Learning based Medical Image Segmentation",
+    "authors": [
+     "Aliasghar Mortazi",
+     "Vedat Cicek",
+     "Elif Keles",
+     "Ulas Bagci"
+    ],
+    "year": 2023,
+    "abstract": "The goal of this work is to identify the best optimizers for deep learning in the context of cardiac image segmentation and to provide guidance on how to design segmentation networks with effective optimization strategies. Adaptive learning helps with fast convergence by starting with a larger learning rate (LR) and gradually decreasing it. Momentum optimizers are particularly effective at quickly optimizing neural networks within the accelerated schemes category. By revealing the potential interplay between these two types of algorithms (LR and momentum optimizers or momentum rate (MR) in short), in this article, we explore the two variants of SGD algorithms in a single setting. We suggest using cyclic learning as the base optimizer and integrating optimal values of learning rate and momentum rate. We investigated the relationship of LR and MR under an important problem of medical image segmentation of cardiac structures from MRI and CT scans. We conducted experiments using the cardiac imaging dataset from the ACDC challenge of MICCAI 2017, and four different architectures shown to be successful for cardiac image segmentation problems. Our comprehensive evaluations demonstrated that the proposed optimizer achieved better results (over a 2\\% improvement in the dice metric) than other optimizers in deep learning literature with similar or lower computational cost in both single and multi-object segmentation settings. We hypothesized that combination of accelerated and adaptive optimization methods can have a drastic effect in medical image segmentation performances. To this end, we proposed a new cyclic optimization method (\\textit{CLMR}) to address the efficiency and accuracy problems in deep learning based medical image segmentation. The proposed strategy yielded better generalization in comparison to adaptive optimizers.",
+    "venue": "Frontiers in Radiology",
+    "doi": "10.3389/fradi.2023.1175473",
+    "arxiv_id": "2302.02289",
+    "s2_id": "918ca934a4d1c36caa136b5fb95755aa30245887",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2302.02289",
+    "pdf_url": "https://arxiv.org/pdf/2302.02289",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 35,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.3389/fradi.2023.1175473",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 93.1,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Selecting the best optimizers for deep learning\u2013based medical image segmentation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "mortazi",
+      "cicek",
+      "keles",
+      "bagci"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.8,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 8.3,
+     "citation_impact": 4.9,
+     "score": 7.43,
+     "why_cite": "Closest match in the abstract to your question: \u201cThe goal of this work is to identify the best optimizers for deep learning in the context of cardiac image segmentation and to provide guidance on how to design segmentation networks with effective optimization strategies.\u201d",
+     "evidence_quote": "The goal of this work is to identify the best optimizers for deep learning in the context of cardiac image segmentation and to provide guidance on how to design segmentation networks with effective optimization strategies.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.3389/fradi.2023.1175473"
+   },
+   {
+    "title": "An Empirical Study on the Fairness of Foundation Models for Multi-Organ Image Segmentation",
+    "authors": [
+     "Qing Li",
+     "Yi-Zhe Zhang",
+     "Yan Li",
+     "Jun Lyu",
+     "Meng Liu",
+     "Longyu Sun",
+     "Meng-Qi Sun",
+     "Qi-Rong Li",
+     "Wenyue Mao",
+     "Xin-Ran Wu",
+     "Ya-Jing Zhang",
+     "Ying-Hua Chu",
+     "Shuo Wang",
+     "Cheng-Yan Wang"
+    ],
+    "year": 2024,
+    "abstract": "The segmentation foundation model, e.g., Segment Anything Model (SAM), has attracted increasing interest in the medical image community. Early pioneering studies primarily concentrated on assessing and improving SAM's performance from the perspectives of overall accuracy and efficiency, yet little attention was given to the fairness considerations. This oversight raises questions about the potential for performance biases that could mirror those found in task-specific deep learning models like nnU-Net. In this paper, we explored the fairness dilemma concerning large segmentation foundation models. We prospectively curate a benchmark dataset of 3D MRI and CT scans of the organs including liver, kidney, spleen, lung and aorta from a total of 1056 healthy subjects with expert segmentations. Crucially, we document demographic details such as gender, age, and body mass index (BMI) for each subject to facilitate a nuanced fairness analysis. We test state-of-the-art foundation models for medical image segmentation, including the original SAM, medical SAM and SAT models, to evaluate segmentation efficacy across different demographic groups and identify disparities. Our comprehensive analysis, which accounts for various confounding factors, reveals significant fairness concerns within these foundational models. Moreover, our findings highlight not only disparities in overall segmentation metrics, such as the Dice Similarity Coefficient but also significant variations in the spatial distribution of segmentation errors, offering empirical evidence of the nuanced challenges in ensuring fairness in medical image segmentation.",
+    "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+    "doi": null,
+    "arxiv_id": "2406.12646",
+    "s2_id": "afe303df9cb610fa7ca7ac9e71b0830785ed4c93",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/afe303df9cb610fa7ca7ac9e71b0830785ed4c93",
+    "pdf_url": "https://arxiv.org/pdf/2406.12646",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 8,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2406.12646",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "An Empirical Study on the Fairness of Foundation Models for Multi-Organ Image Segmentation",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "li",
+      "zhang",
+      "li",
+      "lyu",
+      "liu",
+      "sun",
+      "sun",
+      "li",
+      "mao",
+      "wu",
+      "zhang",
+      "chu",
+      "wang",
+      "wang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.823,
+     "topic_match": 8.2,
+     "method_match": 8.2,
+     "recency": 10.0,
+     "citation_impact": 2.8,
+     "score": 7.39,
+     "why_cite": "Closest match in the abstract to your question: \u201cIn this paper, we explored the fairness dilemma concerning large segmentation foundation models.\u201d",
+     "evidence_quote": "In this paper, we explored the fairness dilemma concerning large segmentation foundation models.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.48550/arxiv.2406.12646"
+   },
+   {
+    "title": "Utilizing deep learning via the 3D U-net neural network for the delineation of brain stroke lesions in MRI image",
+    "authors": [
+     "P. Soleimani",
+     "Navid Farezi"
+    ],
+    "year": 2023,
+    "abstract": "The segmentation of acute stroke lesions plays a vital role in healthcare by assisting doctors in making prompt and well-informed treatment choices. Although Magnetic Resonance Imaging (MRI) is a time-intensive procedure, it produces high-fidelity images widely regarded as the most reliable diagnostic tool available. Employing deep learning techniques for automated stroke lesion segmentation can offer valuable insights into the precise location and extent of affected tissue, enabling medical professionals to effectively evaluate treatment risks and make informed assessments. In this research, a deep learning approach is introduced for segmenting acute and sub-acute stroke lesions from MRI images. To enhance feature learning through brain hemisphere symmetry, pre-processing techniques are applied to the data. To tackle the class imbalance challenge, we employed a strategy of using small patches with balanced sampling during training, along with a dynamically weighted loss function that incorporates f1-score and IOU-score (Intersection over Union). Furthermore, the 3D U-Net architecture is used to generate predictions for complete patches, employing a high degree of overlap between patches to minimize the requirement for subsequent post-processing steps. The 3D U-Net model, utilizing ResnetV2 as the pre-trained encoder for IOU-score and Seresnext101 for f1-score, stands as the leading state-of-the-art (SOTA) model for segmentation tasks. However, recent research has introduced a novel model that surpasses these metrics and demonstrates superior performance compared to other backbone architectures. The f1-score and IOU-score were computed for various backbones, with Seresnext101 achieving the highest f1-score and ResnetV2 performing the highest IOU-score. These calculations were conducted using a threshold value of 0.5. This research proposes a valuable model based on transfer learning for the classification of brain diseases in MRI scans. The achieved f1-score using the recommended classifiers demonstrates the effectiveness of the approach employed in this study. The findings indicate that Seresnext101 attains the highest f1-score of 0.94226, while ResnetV2 achieves the best IOU-score of 0.88342, making it the preferred architecture for segmentation methods. Furthermore, the study presents experimental results of the 3D U-Net model applied to brain stroke lesion segmentation, suggesting prospects for researchers interested in segmenting brain strokes and enhancing 3D U-Net models.",
+    "venue": "Scientific Reports",
+    "doi": "10.1038/s41598-023-47107-7",
+    "arxiv_id": null,
+    "s2_id": "631a9533ef1aa85c0a9f5ee6721d01b8b0e53398",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/631a9533ef1aa85c0a9f5ee6721d01b8b0e53398",
+    "pdf_url": "https://www.nature.com/articles/s41598-023-47107-7.pdf",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 24,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1038/s41598-023-47107-7",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Utilizing deep learning via the 3D U-net neural network for the delineation of brain stroke lesions in MRI image",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "soleimani",
+      "farezi"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.808,
+     "topic_match": 8.1,
+     "method_match": 8.1,
+     "recency": 8.3,
+     "citation_impact": 4.2,
+     "score": 7.35,
+     "why_cite": "Closest match in the abstract to your question: \u201cEmploying deep learning techniques for automated stroke lesion segmentation can offer valuable insights into the precise location and extent of affected tissue, enabling medical professionals to effectively evaluate treatment risks and make informed assessments.\u201d",
+     "evidence_quote": "Employing deep learning techniques for automated stroke lesion segmentation can offer valuable insights into the precise location and extent of affected tissue, enabling medical professionals to effectively evaluate treatment risks and make informed assessments.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1038/s41598-023-47107-7"
+   },
+   {
+    "title": "The Domain Shift Problem of Medical Image Segmentation and Vendor-Adaptation by Unet-GAN",
+    "authors": [
+     "Wenjun Yan",
+     "Yuanyuan Wang",
+     "Shengjia Gu",
+     "Lu Huang",
+     "Fuhua Yan",
+     "Liming Xia",
+     "Qian Tao"
+    ],
+    "year": 2019,
+    "abstract": "Convolutional neural network (CNN), in particular the Unet, is a powerful method for medical image segmentation. To date Unet has demonstrated state-of-art performance in many complex medical image segmentation tasks, especially under the condition when the training and testing data share the same distribution (i.e. come from the same source domain). However, in clinical practice, medical images are acquired from different vendors and centers. The performance of a U-Net trained from a particular source domain, when transferred to a different target domain (e.g. different vendor, acquisition parameter), can drop unexpectedly. Collecting a large amount of annotation from each new domain to retrain the U-Net is expensive, tedious, and practically impossible. In this work, we proposed a generic framework to address this problem, consisting of (1) an unpaired generative adversarial network (GAN) for vendor-adaptation, and (2) a Unet for object segmentation. In the proposed Unet-GAN architecture, GAN learns from Unet at the feature level that is segmentation-specific. We used cardiac cine MRI as the example, with three major vendors (Philips, Siemens, and GE) as three domains, while the methodology can be extended to medical images segmentation in general. The proposed method showed significant improvement of the segmentation results across vendors. The proposed Unet-GAN provides an annotation-free solution to the cross-vendor medical image segmentation problem, potentially extending a trained deep learning model to multi-center and multi-vendor use in real clinical scenario.",
+    "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+    "doi": "10.1007/978-3-030-32245-8_69",
+    "arxiv_id": "1910.13681",
+    "s2_id": "e4e1195256cd3dfe25f3dda6787d475b1ae77b85",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/1910.13681",
+    "pdf_url": "https://arxiv.org/pdf/1910.13681",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 143,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1007/978-3-030-32245-8_69",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "The Domain Shift Problem of Medical Image Segmentation and Vendor-Adaptation by Unet-GAN",
+     "resolved_year": 2019,
+     "resolved_authors": [
+      "yan",
+      "wang",
+      "gu",
+      "huang",
+      "yan",
+      "xia",
+      "tao"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.887,
+     "topic_match": 8.9,
+     "method_match": 8.9,
+     "recency": 1.7,
+     "citation_impact": 6.4,
+     "score": 7.32,
+     "why_cite": "Closest match in the abstract to your question: \u201cThe proposed Unet-GAN provides an annotation-free solution to the cross-vendor medical image segmentation problem, potentially extending a trained deep learning model to multi-center and multi-vendor use in real clinical scenario.\u201d",
+     "evidence_quote": "The proposed Unet-GAN provides an annotation-free solution to the cross-vendor medical image segmentation problem, potentially extending a trained deep learning model to multi-center and multi-vendor use in real clinical scenario.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1007/978-3-030-32245-8_69"
+   },
+   {
+    "title": "Mixed reality infrastructure based on deep learning medical image segmentation and 3D visualization for bone tumors using DCU-Net",
+    "authors": [
+     "Kun Wang",
+     "Yong Han",
+     "Yu-Guang Ye",
+     "Yu-Si Chen",
+     "Daxin Zhu",
+     "Yi-Feng Huang",
+     "Ying Huang",
+     "Yi-Jie Chen",
+     "Jianshe Shi",
+     "Bijiao Ding",
+     "Jianlong Huang"
+    ],
+    "year": 2024,
+    "abstract": "Highlights \u2022 Automatic segmentation and 3D visualization of CT images by optimizing feature extraction and target space clustering.\u2022 Similarity (DSC), recall (R), precision (P) and three-dimensional vertex distance error (VDE) are combined to evaluate segmentation performance and 3D reconstruction effect.\u2022 The DCU-Net operation model has significant advantages compared with models such as U-Net and Attention-Uet.\u2022 A mixed-reality three-dimensional visualization infrastructure was constructed.\u2022 The facility enhances clinicians\u2019 understanding of tumor morphology and spatial relationships, which in turn is expected to facilitate bone tumor clinical practice and improve outcomes.",
+    "venue": "Journal of Bone Oncology",
+    "doi": "10.1016/j.jbo.2024.100654",
+    "arxiv_id": null,
+    "s2_id": "594118f92df75846db29816e55d266b04caa3b61",
+    "openalex_id": null,
+    "url": "https://doi.org/10.1016/j.jbo.2024.100654",
+    "pdf_url": null,
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 15,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1016/j.jbo.2024.100654",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Mixed reality infrastructure based on deep learning medical image segmentation and 3D visualization for bone tumors using DCU-Net",
+     "resolved_year": 2025,
+     "resolved_authors": [
+      "wang",
+      "han",
+      "ye",
+      "chen",
+      "zhu",
+      "huang",
+      "huang",
+      "chen",
+      "shi",
+      "ding",
+      "huang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.768,
+     "topic_match": 7.7,
+     "method_match": 7.7,
+     "recency": 10.0,
+     "citation_impact": 3.9,
+     "score": 7.29,
+     "why_cite": "Closest match in the abstract to your question: \u201cHighlights \u2022 Automatic segmentation and 3D visualization of CT images by optimizing feature extraction and target space clustering.\u2022 Similarity (DSC), recall (R), precision (P) and three-dimensional vertex distance error (VDE) are combined to evaluate segmentation performance and 3D reconstruction effect.\u2022 The DCU-Net operation model has significant advantages compared with models such as U-Net and Attention-Uet.\u2022 A mixed-reality three-dimensional visualization infrastructure was constructed.\u2022 The facility enhances clinicians\u2019 understanding of tumor morphology and spatial relationships, which in turn is expected to facilitate bone tumor clinical practice and improve outcomes.\u201d",
+     "evidence_quote": "Highlights \u2022 Automatic segmentation and 3D visualization of CT images by optimizing feature extraction and target space clustering.\u2022 Similarity (DSC), recall (R), precision (P) and three-dimensional vertex distance error (VDE) are combined to evaluate segmentation performance and 3D reconstruction effect.\u2022 The DCU-Net operation model has significant advantages compared with models such as U-Net and Attention-Uet.\u2022 A mixed-reality three-dimensional visualization infrastructure was constructed.\u2022 The facility enhances clinicians\u2019 understanding of tumor morphology and spatial relationships, which in turn is expected to facilitate bone tumor clinical practice and improve outcomes.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1016/j.jbo.2024.100654"
+   },
+   {
+    "title": "A Lightweight Deep Learning Architecture for Efficient Multimodal Medical Image Segmentation Using Attention Mechanism",
+    "authors": [
+     "Subah Nawar",
+     "Taslima Joty",
+     "M. Hashem"
+    ],
+    "year": 2024,
+    "abstract": "Medical imaging is essential for clinical diagnosis, prognosis assessment, therapy planning, and surgery. Deep learning architectures have made a significant impact in the field of medical image segmentation in recent years. U-net, SegNet, and Attention UNet are some of the well-known deep neural networks in this area and have been widely recommended architectures for medical imaging for a long time. Despite having exceptional outcomes in segmenting multimodal medical images, traditional U-Net design appears to be inefficient in some areas i.e. difficult datasets of various resolutions. The existing segmentation networks such as U-Net and SegNet are also prone to overfitting and contain semantic gaps within the encoder and decoder layer. Because of this, several changes to the already cutting-edge U-Net models are suggested. The goal of this paper is to provide an architecture that can effectively improve the traditional methods and process multimodal biomedical image datasets, including MRI, microscope, dermoscopy, CT scan, chest x-ray, and endoscopy images. An average IOU of 0.88 and a mean dice score of 0.93 for the six datasets was obtained. Compared to standard U-Net, there are fewer parameters and a shorter training time. There are just 28.34% of U-Net\u2019s parameters in the architecture. The architecture requires about 3.798M parameters and an average of 80 epochs to reach convergence. The architecture has also shown significant performance on various datasets.",
+    "venue": "International Conferences on Computing Advancements",
+    "doi": "10.1145/3723178.3723307",
+    "arxiv_id": null,
+    "s2_id": "afa77ad1523a4ac827a205aac918e0ecb7122ed4",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/afa77ad1523a4ac827a205aac918e0ecb7122ed4",
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3723178.3723307",
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_source": "unpaywall",
+    "citation_count": 2,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1145/3723178.3723307",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A Lightweight Deep Learning Architecture for Efficient Multimodal Medical Image Segmentation Using Attention Mechanism",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "nawar",
+      "joty",
+      "hashem"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.848,
+     "topic_match": 8.5,
+     "method_match": 8.5,
+     "recency": 10.0,
+     "citation_impact": 1.1,
+     "score": 7.25,
+     "why_cite": "Closest match in the abstract to your question: \u201cDeep learning architectures have made a significant impact in the field of medical image segmentation in recent years.\u201d",
+     "evidence_quote": "Deep learning architectures have made a significant impact in the field of medical image segmentation in recent years.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1145/3723178.3723307"
+   },
+   {
+    "title": "Positional Contrastive Learning for Volumetric Medical Image Segmentation",
+    "authors": [
+     "Dewen Zeng",
+     "Yawen Wu",
+     "Xinrong Hu",
+     "Xiaowei Xu",
+     "Haiyun Yuan",
+     "Meiping Huang",
+     "Jian Zhuang",
+     "Jingtong Hu",
+     "Yiyu Shi"
+    ],
+    "year": 2021,
+    "abstract": "The success of deep learning heavily depends on the availability of large labeled training sets. However, it is hard to get large labeled datasets in medical image domain because of the strict privacy concern and costly labeling efforts. Contrastive learning, an unsupervised learning technique, has been proved powerful in learning image-level representations from unlabeled data. The learned encoder can then be transferred or fine-tuned to improve the performance of downstream tasks with limited labels. A critical step in contrastive learning is the generation of contrastive data pairs, which is relatively simple for natural image classification but quite challenging for medical image segmentation due to the existence of the same tissue or organ across the dataset. As a result, when applied to medical image segmentation, most state-of-the-art contrastive learning frameworks inevitably introduce a lot of false-negative pairs and result in degraded segmentation quality. To address this issue, we propose a novel positional contrastive learning (PCL) framework to generate contrastive data pairs by leveraging the position information in volumetric medical images. Experimental results on CT and MRI datasets demonstrate that the proposed PCL method can substantially improve the segmentation performance compared to existing methods in both semi-supervised setting and transfer learning setting.",
+    "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+    "doi": "10.1007/978-3-030-87196-3_21",
+    "arxiv_id": "2106.09157",
+    "s2_id": "b3a507c623854674cc4a3f60a17aa4b5e809b078",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2106.09157",
+    "pdf_url": "https://arxiv.org/pdf/2106.09157",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 112,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1007/978-3-030-87196-3_21",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Positional Contrastive Learning for\u00a0Volumetric Medical Image Segmentation",
+     "resolved_year": 2021,
+     "resolved_authors": [
+      "zeng",
+      "wu",
+      "hu",
+      "xu",
+      "yuan",
+      "huang",
+      "zhuang",
+      "hu",
+      "shi"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.768,
+     "topic_match": 7.7,
+     "method_match": 7.7,
+     "recency": 5.0,
+     "citation_impact": 6.5,
+     "score": 7.05,
+     "why_cite": "Closest match in the abstract to your question: \u201cA critical step in contrastive learning is the generation of contrastive data pairs, which is relatively simple for natural image classification but quite challenging for medical image segmentation due to the existence of the same tissue or organ across the dataset.\u201d",
+     "evidence_quote": "A critical step in contrastive learning is the generation of contrastive data pairs, which is relatively simple for natural image classification but quite challenging for medical image segmentation due to the existence of the same tissue or organ across the dataset.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1007/978-3-030-87196-3_21"
+   },
+   {
+    "title": "Trustworthy Deep Learning for Medical Image Segmentation",
+    "authors": [
+     "Lucas Fidon"
+    ],
+    "year": 2023,
+    "abstract": "Despite the recent success of deep learning methods at achieving new state-of-the-art accuracy for medical image segmentation, some major limitations are still restricting their deployment into clinics. One major limitation of deep learning-based segmentation methods is their lack of robustness to variability in the image acquisition protocol and in the imaged anatomy that were not represented or were underrepresented in the training dataset. This suggests adding new manually segmented images to the training dataset to better cover the image variability. However, in most cases, the manual segmentation of medical images requires highly skilled raters and is time-consuming, making this solution prohibitively expensive. Even when manually segmented images from different sources are available, they are rarely annotated for exactly the same regions of interest. This poses an additional challenge for current state-of-the-art deep learning segmentation methods that rely on supervised learning and therefore require all the regions of interest to be segmented for all the images to be used for training. This thesis introduces new mathematical and optimization methods to mitigate those limitations.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2305.17456",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2305.17456",
+    "pdf_url": "https://arxiv.org/pdf/2305.17456",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2305.17456",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Trustworthy Deep Learning for Medical Image Segmentation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "fidon"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.728,
+     "topic_match": 7.3,
+     "method_match": 7.3,
+     "recency": 8.3,
+     "citation_impact": 5.0,
+     "score": 6.99,
+     "why_cite": "Closest match in the abstract to your question: \u201cDespite the recent success of deep learning methods at achieving new state-of-the-art accuracy for medical image segmentation, some major limitations are still restricting their deployment into clinics.\u201d",
+     "evidence_quote": "Despite the recent success of deep learning methods at achieving new state-of-the-art accuracy for medical image segmentation, some major limitations are still restricting their deployment into clinics.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.48550/arxiv.2305.17456"
+   },
+   {
+    "title": "UPL-SFDA: Uncertainty-aware Pseudo Label Guided Source-Free Domain Adaptation for Medical Image Segmentation",
+    "authors": [
+     "Jianghao Wu",
+     "Guotai Wang",
+     "Ran Gu",
+     "Tao Lu",
+     "Yinan Chen",
+     "Wentao Zhu",
+     "Tom Vercauteren",
+     "S\u00e9bastien Ourselin",
+     "Shaoting Zhang"
+    ],
+    "year": 2023,
+    "abstract": "Domain Adaptation (DA) is important for deep learning-based medical image segmentation models to deal with testing images from a new target domain. As the source-domain data are usually unavailable when a trained model is deployed at a new center, Source-Free Domain Adaptation (SFDA) is appealing for data and annotation-efficient adaptation to the target domain. However, existing SFDA methods have a limited performance due to lack of sufficient supervision with source-domain images unavailable and target-domain images unlabeled. We propose a novel Uncertainty-aware Pseudo Label guided (UPL) SFDA method for medical image segmentation. Specifically, we propose Target Domain Growing (TDG) to enhance the diversity of predictions in the target domain by duplicating the pre-trained model's prediction head multiple times with perturbations. The different predictions in these duplicated heads are used to obtain pseudo labels for unlabeled target-domain images and their uncertainty to identify reliable pseudo labels. We also propose a Twice Forward pass Supervision (TFS) strategy that uses reliable pseudo labels obtained in one forward pass to supervise predictions in the next forward pass. The adaptation is further regularized by a mean prediction-based entropy minimization term that encourages confident and consistent results in different prediction heads. UPL-SFDA was validated with a multi-site heart MRI segmentation dataset, a cross-modality fetal brain segmentation dataset, and a 3D fetal tissue segmentation dataset. It improved the average Dice by 5.54, 5.01 and 6.89 percentage points for the three tasks compared with the baseline, respectively, and outperformed several state-of-the-art SFDA methods.",
+    "venue": "arXiv",
+    "doi": "10.1109/tmi.2023.3318364",
+    "arxiv_id": "2309.10244",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2309.10244",
+    "pdf_url": "https://arxiv.org/pdf/2309.10244",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/tmi.2023.3318364",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "UPL-SFDA: Uncertainty-Aware Pseudo Label Guided Source-Free Domain Adaptation for Medical Image Segmentation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "wu",
+      "wang",
+      "gu",
+      "lu",
+      "chen",
+      "zhu",
+      "vercauteren",
+      "ourselin",
+      "zhang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.734,
+     "topic_match": 7.3,
+     "method_match": 7.3,
+     "recency": 8.3,
+     "citation_impact": 5.0,
+     "score": 6.99,
+     "why_cite": "Closest match in the abstract to your question: \u201cDomain Adaptation (DA) is important for deep learning-based medical image segmentation models to deal with testing images from a new target domain.\u201d",
+     "evidence_quote": "Domain Adaptation (DA) is important for deep learning-based medical image segmentation models to deal with testing images from a new target domain.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1109/tmi.2023.3318364"
+   },
+   {
+    "title": "Diminishing Uncertainty Within the Training Pool: Active Learning for Medical Image Segmentation",
+    "authors": [
+     "V. Nath",
+     "Dong Yang",
+     "B. Landman",
+     "Daguang Xu",
+     "Holger R. Roth"
+    ],
+    "year": 2020,
+    "abstract": "Active learning is a unique abstraction of machine learning techniques where the model/algorithm could guide users for annotation of a set of data points that would be beneficial to the model, unlike passive machine learning. The primary advantage being that active learning frameworks select data points that can accelerate the learning process of a model and can reduce the amount of data needed to achieve full accuracy as compared to a model trained on a randomly acquired data set. Multiple frameworks for active learning combined with deep learning have been proposed, and the majority of them are dedicated to classification tasks. Herein, we explore active learning for the task of segmentation of medical imaging data sets. We investigate our proposed framework using two datasets: 1.) MRI scans of the hippocampus, 2.) CT scans of pancreas and tumors. This work presents a query-by-committee approach for active learning where a joint optimizer is used for the committee. At the same time, we propose three new strategies for active learning: 1.) increasing frequency of uncertain data to bias the training data set; 2.) Using mutual information among the input images as a regularizer for acquisition to ensure diversity in the training dataset; 3.) adaptation of Dice log-likelihood for Stein variational gradient descent (SVGD). The results indicate an improvement in terms of data reduction by achieving full accuracy while only using 22.69% and 48.85% of the available data for each dataset, respectively.",
+    "venue": "IEEE Transactions on Medical Imaging",
+    "doi": "10.1109/tmi.2020.3048055",
+    "arxiv_id": "2101.02323",
+    "s2_id": "0b5594bdedb33b4ace17c6f7047c4dde3ac3082c",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/0b5594bdedb33b4ace17c6f7047c4dde3ac3082c",
+    "pdf_url": "https://arxiv.org/pdf/2101.02323",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 104,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/tmi.2020.3048055",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Diminishing Uncertainty Within the Training Pool: Active Learning for Medical Image Segmentation",
+     "resolved_year": 2021,
+     "resolved_authors": [
+      "nath",
+      "yang",
+      "landman",
+      "xu",
+      "roth"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.808,
+     "topic_match": 8.1,
+     "method_match": 8.1,
+     "recency": 3.3,
+     "citation_impact": 6.0,
+     "score": 6.96,
+     "why_cite": "Closest match in the abstract to your question: \u201cHerein, we explore active learning for the task of segmentation of medical imaging data sets.\u201d",
+     "evidence_quote": "Herein, we explore active learning for the task of segmentation of medical imaging data sets.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1109/tmi.2020.3048055"
+   },
+   {
+    "title": "A survey on shape-constraint deep learning for medical image segmentation",
+    "authors": [
+     "Simon Bohlender",
+     "Ilkay Oksuz",
+     "Anirban Mukhopadhyay"
+    ],
+    "year": 2021,
+    "abstract": "Since the advent of U-Net, fully convolutional deep neural networks and its many variants have completely changed the modern landscape of deep learning based medical image segmentation. However, the over dependence of these methods on pixel level classification and regression has been identified early on as a problem. Especially when trained on medical databases with sparse available annotation, these methods are prone to generate segmentation artifacts such as fragmented structures, topological inconsistencies and islands of pixel. These artefacts are especially problematic in medical imaging since segmentation is almost always a pre-processing step for some downstream evaluation. The range of possible downstream evaluations is rather big, for example surgical planning, visualization, shape analysis, prognosis, treatment planning etc. However, one common thread across all these downstream tasks is the demand of anatomical consistency. To ensure the segmentation result is anatomically consistent, approaches based on Markov/ Conditional Random Fields, Statistical Shape Models are becoming increasingly popular over the past 5 years. In this review paper, a broad overview of recent literature on bringing anatomical constraints for medical image segmentation is given, the shortcomings and opportunities of the proposed methods are thoroughly discussed and potential future work is elaborated. We review the most relevant papers published until the submission date. For quick access, important details such as the underlying method, datasets and performance are tabulated.",
+    "venue": "IEEE Reviews in Biomedical Engineering",
+    "doi": "10.1109/rbme.2021.3136343",
+    "arxiv_id": "2101.07721",
+    "s2_id": "f49b947653175f424423f95300a4e6ededb7f037",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2101.07721",
+    "pdf_url": "https://arxiv.org/pdf/2101.07721",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 75,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2101.07721",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A survey on shape-constraint deep learning for medical image segmentation",
+     "resolved_year": 2021,
+     "resolved_authors": [
+      "bohlender",
+      "oksuz",
+      "mukhopadhyay"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "published DOI failed (year 2021 vs 2023); citing arXiv version",
+     "citable": true,
+     "published_attempt": {
+      "doi": "10.1109/rbme.2021.3136343",
+      "resolved": true,
+      "status": "mismatch",
+      "title_score": 100.0,
+      "author_overlap": 1.0,
+      "year_ok": false,
+      "resolved_title": "A Survey on Shape-Constraint Deep Learning for Medical Image Segmentation",
+      "resolved_year": 2023,
+      "resolved_authors": [
+       "bohlender",
+       "oksuz",
+       "mukhopadhyay"
+      ],
+      "resolver": "doi.org/csl+json",
+      "reason": "year 2021 vs 2023",
+      "citable": false
+     },
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.768,
+     "topic_match": 7.7,
+     "method_match": 7.7,
+     "recency": 5.0,
+     "citation_impact": 5.7,
+     "score": 6.89,
+     "why_cite": "Closest match in the abstract to your question: \u201cSince the advent of U-Net, fully convolutional deep neural networks and its many variants have completely changed the modern landscape of deep learning based medical image segmentation.\u201d",
+     "evidence_quote": "Since the advent of U-Net, fully convolutional deep neural networks and its many variants have completely changed the modern landscape of deep learning based medical image segmentation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1109/rbme.2021.3136343"
+   },
+   {
+    "title": "CUTS: A Deep Learning and Topological Framework for Multigranular Unsupervised Medical Image Segmentation",
+    "authors": [
+     "Chen Liu",
+     "Matthew Amodio",
+     "Liangbo L. Shen",
+     "Feng Gao",
+     "Arman Avesta",
+     "Sanjay Aneja",
+     "Jay C. Wang",
+     "Lucian V. Del Priore",
+     "Smita Krishnaswamy"
+    ],
+    "year": 2022,
+    "abstract": "Segmenting medical images is critical to facilitating both patient diagnoses and quantitative research. A major limiting factor is the lack of labeled data, as obtaining expert annotations for each new set of imaging data and task can be labor intensive and inconsistent among annotators. We present CUTS, an unsupervised deep learning framework for medical image segmentation. CUTS operates in two stages. For each image, it produces an embedding map via intra-image contrastive learning and local patch reconstruction. Then, these embeddings are partitioned at dynamic granularity levels that correspond to the data topology. CUTS yields a series of coarse-to-fine-grained segmentations that highlight features at various granularities. We applied CUTS to retinal fundus images and two types of brain MRI images to delineate structures and patterns at different scales. When evaluated against predefined anatomical masks, CUTS improved the dice coefficient and Hausdorff distance by at least 10% compared to existing unsupervised methods. Finally, CUTS showed performance on par with Segment Anything Models (SAM, MedSAM, SAM-Med2D) pre-trained on gigantic labeled datasets.",
+    "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+    "doi": "10.1007/978-3-031-72111-3_15",
+    "arxiv_id": "2209.11359",
+    "s2_id": "af3e4e6dce49a9553978115347eac2d9a983405e",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2209.11359",
+    "pdf_url": "https://arxiv.org/pdf/2209.11359",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 29,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2209.11359",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "CUTS: A Deep Learning and Topological Framework for Multigranular Unsupervised Medical Image Segmentation",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "liu",
+      "amodio",
+      "shen",
+      "gao",
+      "avesta",
+      "aneja",
+      "wang",
+      "priore",
+      "krishnaswamy"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "published DOI failed (year 2022 vs 2024); citing arXiv version",
+     "citable": true,
+     "published_attempt": {
+      "doi": "10.1007/978-3-031-72111-3_15",
+      "resolved": true,
+      "status": "mismatch",
+      "title_score": 100.0,
+      "author_overlap": 1.0,
+      "year_ok": false,
+      "resolved_title": "CUTS: A Deep Learning and\u00a0Topological Framework for\u00a0Multigranular Unsupervised Medical Image Segmentation",
+      "resolved_year": 2024,
+      "resolved_authors": [
+       "liu",
+       "amodio",
+       "shen",
+       "gao",
+       "avesta",
+       "aneja",
+       "wang",
+       "priore",
+       "krishnaswamy"
+      ],
+      "resolver": "doi.org/csl+json",
+      "reason": "year 2022 vs 2024",
+      "citable": false
+     },
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.768,
+     "topic_match": 7.7,
+     "method_match": 7.7,
+     "recency": 6.7,
+     "citation_impact": 4.2,
+     "score": 6.85,
+     "why_cite": "Closest match in the abstract to your question: \u201cWe present CUTS, an unsupervised deep learning framework for medical image segmentation.\u201d",
+     "evidence_quote": "We present CUTS, an unsupervised deep learning framework for medical image segmentation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1007/978-3-031-72111-3_15"
+   },
+   {
+    "title": "Ensemble Learning for Three-dimensional Medical Image Segmentation of Organ at Risk in Brachytherapy Using Double U-Net, Bi-directional ConvLSTM U-Net, and Transformer Network",
+    "authors": [
+     "S. Pal",
+     "R. P. Singh",
+     "Anuj Kumar"
+    ],
+    "year": 2024,
+    "abstract": "Aim: This article presents a novel approach to automate the segmentation of organ at risk (OAR) for high-dose-rate brachytherapy patients using three deep learning models combined with ensemble learning techniques. It aims to improve the accuracy and efficiency of segmentation. Materials and Methods: The dataset comprised computed tomography (CT) scans of 60 patients obtained from our own institutional image bank and 10 patients from the other institute, all in Digital Imaging and Communications in Medicine format. Experienced radiation oncologists manually segmented four OARs for each scan. Each scan was preprocessed and three models, Double U-Net (DUN), Bi-directional ConvLSTM U-Net (BCUN), and Transformer Networks (TN), were trained on reduced CT scans (240 \u00d7 240 \u00d7 128) due to memory limitations. Ensemble learning techniques were employed to enhance accuracy and segmentation metrics. Testing and validation were conducted on 12 patients from our institute (OID) and 10 patients from another institute (DID). Results: For DID test dataset, using the ensemble learning technique combining Transformer Network (TN) and BCUN, i.e., TN + BCUN, the average Dice similarity coefficient (DSC) ranged from 0.992 to 0.998, and for DUN and BCUN (DUN + BCUN) combination, the average DSC ranged from 0.990 to 0.993, which reflecting high segmentation accuracy. The 95% Hausdorff distance (HD) ranged from 0.9 to 1.2 mm for TN + BCUN and 1.1 to 1.4 mm for DUN + BCUN, demonstrating precise segmentation boundaries. Conclusion: The proposed method leverages the strengths of each network architecture. The DUN setup excels in sequential processing, the BCUN captures spatiotemporal dependencies, and transformer networks provide a robust understanding of global context. This combination enables efficient and accurate segmentation, surpassing human expert performance in both time and accuracy.",
+    "venue": "Journal of Medical Physics",
+    "doi": "10.4103/jmp.jmp_160_24",
+    "arxiv_id": null,
+    "s2_id": "abdb0d1160ae0f56ccfdd24ca200f0f156787e84",
+    "openalex_id": null,
+    "url": "https://doi.org/10.4103/jmp.jmp_160_24",
+    "pdf_url": null,
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 6,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.4103/jmp.jmp_160_24",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Ensemble Learning for Three-dimensional Medical Image Segmentation of Organ at Risk in Brachytherapy Using Double U-Net, Bi-directional ConvLSTM U-Net, and Transformer Network",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "pal",
+      "singh",
+      "kumar"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 10.0,
+     "citation_impact": 2.4,
+     "score": 6.79,
+     "why_cite": "Closest match in the abstract to your question: \u201cEnsemble learning techniques were employed to enhance accuracy and segmentation metrics.\u201d",
+     "evidence_quote": "Ensemble learning techniques were employed to enhance accuracy and segmentation metrics.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.4103/jmp.jmp_160_24"
+   },
+   {
+    "title": "DG-TTA: Out-of-domain Medical Image Segmentation through Augmentation and Descriptor-driven Domain Generalization and Test-Time Adaptation",
+    "authors": [
+     "Christian Weihsbach",
+     "Christian N. Kruse",
+     "Alexander Bigalke",
+     "Mattias P. Heinrich"
+    ],
+    "year": 2023,
+    "abstract": "Purpose: Applying pre-trained medical deep learning segmentation models on out-of-domain images often yields predictions of insufficient quality. In this study, we propose to use a powerful generalizing descriptor along with augmentation to enable domain-generalized pre-training and test-time adaptation, achieving high-quality segmentation in unseen domains. Materials and Methods: In this retrospective study five different publicly available datasets (2012 to 2022) including 3D CT and MRI images are used to evaluate segmentation performance in out-of-domain scenarios. The settings include abdominal, spine, and cardiac imaging. The data is randomly split into training and test samples. Domain-generalized pre-training on source data is used to obtain the best initial performance in the target domain. We introduce the combination of the generalizing SSC descriptor and GIN intensity augmentation for optimal generalization. Segmentation results are subsequently optimized at test time, where we propose to adapt the pre-trained models for every unseen scan with a consistency scheme using the same augmentation-descriptor combination. The segmentation is evaluated using Dice similarity and Hausdorff distance and the significance of improvements is tested with the Wilcoxon signed-rank test. Results: The proposed generalized pre-training and subsequent test-time adaptation improves model performance significantly in CT to MRI cross-domain prediction for abdominal (+46.2% and +28.2% Dice), spine (+72.9%), and cardiac (+14.2% and +55.7% Dice) scenarios (p<0.001). Conclusion: Our method enables optimal, independent usage of medical image source and target data and bridges domain gaps successfully with a compact and efficient methodology. Open-source code available at: https://github.com/multimodallearning/DG-TTA",
+    "venue": "Italian National Conference on Sensors",
+    "doi": "10.3390/s25175603",
+    "arxiv_id": "2312.06275",
+    "s2_id": "366e12cedae0a99fb8ec44cc8191ff0c9872169f",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2312.06275",
+    "pdf_url": "https://arxiv.org/pdf/2312.06275",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 3,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2312.06275",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "DG-TTA: Out-of-domain Medical Image Segmentation through Augmentation and Descriptor-driven Domain Generalization and Test-Time Adaptation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "weihsbach",
+      "kruse",
+      "bigalke",
+      "heinrich"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "published DOI failed (year 2023 vs 2025); citing arXiv version",
+     "citable": true,
+     "published_attempt": {
+      "doi": "10.3390/s25175603",
+      "resolved": true,
+      "status": "mismatch",
+      "title_score": 100.0,
+      "author_overlap": 1.0,
+      "year_ok": false,
+      "resolved_title": "DG-TTA: Out-of-Domain Medical Image Segmentation Through Augmentation, Descriptor-Driven Domain Generalization, and Test-Time Adaptation",
+      "resolved_year": 2025,
+      "resolved_authors": [
+       "weihsbach",
+       "kruse",
+       "bigalke",
+       "heinrich"
+      ],
+      "resolver": "doi.org/csl+json",
+      "reason": "year 2023 vs 2025",
+      "citable": false
+     },
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.808,
+     "topic_match": 8.1,
+     "method_match": 8.1,
+     "recency": 8.3,
+     "citation_impact": 1.2,
+     "score": 6.75,
+     "why_cite": "Closest match in the abstract to your question: \u201cPurpose: Applying pre-trained medical deep learning segmentation models on out-of-domain images often yields predictions of insufficient quality.\u201d",
+     "evidence_quote": "Purpose: Applying pre-trained medical deep learning segmentation models on out-of-domain images often yields predictions of insufficient quality.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.3390/s25175603"
+   },
+   {
+    "title": "Unsupervised Domain Adaptation through Shape Modeling for Medical Image Segmentation",
+    "authors": [
+     "Yuan Yao",
+     "Fengze Liu",
+     "Zongwei Zhou",
+     "Yan Wang",
+     "Wei Shen",
+     "Alan Yuille",
+     "Yongyi Lu"
+    ],
+    "year": 2022,
+    "abstract": "Shape information is a strong and valuable prior in segmenting organs in medical images. However, most current deep learning based segmentation algorithms have not taken shape information into consideration, which can lead to bias towards texture. We aim at modeling shape explicitly and using it to help medical image segmentation. Previous methods proposed Variational Autoencoder (VAE) based models to learn the distribution of shape for a particular organ and used it to automatically evaluate the quality of a segmentation prediction by fitting it into the learned shape distribution. Based on which we aim at incorporating VAE into current segmentation pipelines. Specifically, we propose a new unsupervised domain adaptation pipeline based on a pseudo loss and a VAE reconstruction loss under a teacher-student learning paradigm. Both losses are optimized simultaneously and, in return, boost the segmentation task performance. Extensive experiments on three public Pancreas segmentation datasets as well as two in-house Pancreas segmentation datasets show consistent improvements with at least 2.8 points gain in the Dice score, demonstrating the effectiveness of our method in challenging unsupervised domain adaptation scenarios for medical image segmentation. We hope this work will advance shape analysis and geometric learning in medical imaging.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2207.02529",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2207.02529",
+    "pdf_url": "https://arxiv.org/pdf/2207.02529",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2207.02529",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Unsupervised Domain Adaptation through Shape Modeling for Medical Image Segmentation",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "yao",
+      "liu",
+      "zhou",
+      "wang",
+      "shen",
+      "yuille",
+      "lu"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.728,
+     "topic_match": 7.3,
+     "method_match": 7.3,
+     "recency": 6.7,
+     "citation_impact": 5.0,
+     "score": 6.75,
+     "why_cite": "Closest match in the abstract to your question: \u201cWe aim at modeling shape explicitly and using it to help medical image segmentation.\u201d",
+     "evidence_quote": "We aim at modeling shape explicitly and using it to help medical image segmentation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.48550/arxiv.2207.02529"
+   },
+   {
+    "title": "EigenRank by Committee: A Data Subset Selection and Failure Prediction paradigm for Robust Deep Learning based Medical Image Segmentation",
+    "authors": [
+     "Bilwaj Gaonkar",
+     "Joel Beckett",
+     "Mark Attiah",
+     "Christine Ahn",
+     "Matthew Edwards",
+     "Bayard Wilson",
+     "Azim Laiwalla",
+     "Banafsheh Salehi",
+     "Bryan Yoo",
+     "Alex Bui",
+     "Luke Macyszyn"
+    ],
+    "year": 2019,
+    "abstract": "Translation of fully automated deep learning based medical image segmentation technologies to clinical workflows face two main algorithmic challenges. The first, is the collection and archival of large quantities of manually annotated ground truth data for both training and validation. The second is the relative inability of the majority of deep learning based segmentation techniques to alert physicians to a likely segmentation failure. Here we propose a novel algorithm, named `Eigenrank' which addresses both of these challenges. Eigenrank can select for manual labeling, a subset of medical images from a large database, such that a U-Net trained on this subset is superior to one trained on a randomly selected subset of the same size. Eigenrank can also be used to pick out, cases in a large database, where deep learning segmentation will fail. We present our algorithm, followed by results and a discussion of how Eigenrank exploits the Von Neumann information to perform both data subset selection and failure prediction for medical image segmentation using deep learning.",
+    "venue": "Medical Image Analysis, Volume 67, 2021, Medical Image Analysis, Volume 67,2021,101834,ISSN 1361-8415,",
+    "doi": "10.1016/j.media.2020.101834",
+    "arxiv_id": "1908.06337",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/1908.06337",
+    "pdf_url": "https://arxiv.org/pdf/1908.06337",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.1908.06337",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "EigenRank by Committee: A Data Subset Selection and Failure Prediction paradigm for Robust Deep Learning based Medical Image Segmentation",
+     "resolved_year": 2019,
+     "resolved_authors": [
+      "gaonkar",
+      "beckett",
+      "attiah",
+      "ahn",
+      "edwards",
+      "wilson",
+      "laiwalla",
+      "salehi",
+      "yoo",
+      "bui",
+      "macyszyn"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "published DOI failed (year 2019 vs 2021); citing arXiv version",
+     "citable": true,
+     "published_attempt": {
+      "doi": "10.1016/j.media.2020.101834",
+      "resolved": true,
+      "status": "mismatch",
+      "title_score": 92.9,
+      "author_overlap": 1.0,
+      "year_ok": false,
+      "resolved_title": "Eigenrank by committee: Von-Neumann entropy based data subset selection and failure prediction for deep learning based medical image segmentation",
+      "resolved_year": 2021,
+      "resolved_authors": [
+       "gaonkar",
+       "beckett",
+       "attiah",
+       "ahn",
+       "edwards",
+       "wilson",
+       "laiwalla",
+       "salehi",
+       "yoo",
+       "bui",
+       "macyszyn"
+      ],
+      "resolver": "doi.org/csl+json",
+      "reason": "year 2019 vs 2021",
+      "citable": false
+     },
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.836,
+     "topic_match": 8.4,
+     "method_match": 8.4,
+     "recency": 1.7,
+     "citation_impact": 5.0,
+     "score": 6.72,
+     "why_cite": "Closest match in the abstract to your question: \u201cTranslation of fully automated deep learning based medical image segmentation technologies to clinical workflows face two main algorithmic challenges.\u201d",
+     "evidence_quote": "Translation of fully automated deep learning based medical image segmentation technologies to clinical workflows face two main algorithmic challenges.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1016/j.media.2020.101834"
+   },
+   {
+    "title": "Application of belief functions to medical image segmentation: A review",
+    "authors": [
+     "Ling Huang",
+     "Su Ruan",
+     "Thierry Denoeux"
+    ],
+    "year": 2022,
+    "abstract": "The investigation of uncertainty is of major importance in risk-critical applications, such as medical image segmentation. Belief function theory, a formal framework for uncertainty analysis and multiple evidence fusion, has made significant contributions to medical image segmentation, especially since the development of deep learning. In this paper, we provide an introduction to the topic of medical image segmentation methods using belief function theory. We classify the methods according to the fusion step and explain how information with uncertainty or imprecision is modeled and fused with belief function theory. In addition, we discuss the challenges and limitations of present belief function-based medical image segmentation and propose orientations for future research. Future research could investigate both belief function theory and deep learning to achieve more promising and reliable segmentation results.",
+    "venue": "Information Fusion, Volume 91, March 2023, Pages 737-756",
+    "doi": "10.1016/j.inffus.2022.11.008",
+    "arxiv_id": "2205.01733",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2205.01733",
+    "pdf_url": "https://arxiv.org/pdf/2205.01733",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1016/j.inffus.2022.11.008",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 0.67,
+     "year_ok": true,
+     "resolved_title": "Application of belief functions to medical image segmentation: A review",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "huang",
+      "ruan",
+      "denux"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.72,
+     "topic_match": 7.2,
+     "method_match": 7.2,
+     "recency": 6.7,
+     "citation_impact": 5.0,
+     "score": 6.69,
+     "why_cite": "Closest match in the abstract to your question: \u201cBelief function theory, a formal framework for uncertainty analysis and multiple evidence fusion, has made significant contributions to medical image segmentation, especially since the development of deep learning.\u201d",
+     "evidence_quote": "Belief function theory, a formal framework for uncertainty analysis and multiple evidence fusion, has made significant contributions to medical image segmentation, especially since the development of deep learning.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "publisher": {},
+    "best_doi": "10.1016/j.inffus.2022.11.008"
+   }
+  ],
+  "paywalled": [
+   {
+    "title": "U-NET Architecture for Liver Segmentation using Multi Model Scans",
+    "authors": [
+     "Ayush Kumar",
+     "Tripty Singh"
+    ],
+    "year": 2022,
+    "abstract": "Medical Image segmentation performs a very helpful task before diagnosis of a disease as well as pre-surgery. Deep learning models helped a lot in segmentation of medical image and in identifying of tissue characteristics. This research paper is all about designing U-NET architecture for liver tumor segmentation. Present study also reveals the performance analysis of CT scans and MRI scans of different patient collected from different online and offline sources. This research employed U-NET with an encoder-decoder architecture with RELU function as an activation function. In order to get elevated accuracy different operators where experimented. As a result, max-pooling operation was used which gives us maximum accuracy of 98.5%. The data and result verification were done at HCG Hospital, Bengaluru. To measure the segmentation performance Volume Overlapped (VO) (%), Volume Difference (VD) (%), Relative Volume Difference (mm), Average systematic surface Distance (mm), Maximum Surface Distance MSD (mm). This novel architecture has pushed the benchmark of multi model liver scans for segmentation up to 98.5% which is better than the previously reported architectures.",
+    "venue": "IEEE India Conference",
+    "doi": "10.1109/indicon56171.2022.10039786",
+    "arxiv_id": null,
+    "s2_id": "fcd2bb2bdd5dda216d4509d44513c6f385ba45b2",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/fcd2bb2bdd5dda216d4509d44513c6f385ba45b2",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 14,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/indicon56171.2022.10039786",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "U-NET Architecture for Liver Segmentation using Multi Model Scans",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "kumar",
+      "singh"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.887
+    },
+    "publisher": {
+     "via": "browserbase-session",
+     "session_id": "8b35e9e1-4f3d-439d-8baa-ed645ab5939e",
+     "replay_url": "https://www.browserbase.com/sessions/8b35e9e1-4f3d-439d-8baa-ed645ab5939e",
+     "status": 202,
+     "final_url": "https://ieeexplore.ieee.org/document/10039786",
+     "page_title": "<!----><!---->",
+     "paywall_markers": [],
+     "oa_markers": [],
+     "has_citation_pdf_meta": false,
+     "verdict": "inconclusive",
+     "fetch_verdict": "inconclusive",
+     "doi": "10.1109/indicon56171.2022.10039786",
+     "publisher_host": "ieeexplore.ieee.org",
+     "policy": "evidence only; Unpaywall/OpenAlex decide OA; no paywall bypass"
+    },
+    "best_doi": "10.1109/indicon56171.2022.10039786"
+   },
+   {
+    "title": "Segmentation of Different Human Organs on 3D Computer Tomography and Magnetic Resonance Imaging using an Open Source 3D U-Net Framework",
+    "authors": [
+     "D. Popa",
+     "R. Popa",
+     "Lucian Barbulescu",
+     "R. Ivanescu",
+     "M. Mocanu"
+    ],
+    "year": 2022,
+    "abstract": "Medical segmentation represents a method to delineate the borders of internal human organs on acquired 3D Computer Tomography or MRI images, which are the most currently used imaging modalities. The U-net represents a deep neural network architecture that has the basic structure consisting in two paths and can be used for medical image segmentation. For U-Net Framework implementation we used Monai Toolkit from Kitware Inc, which is a PyTorch-based, open-source framework for deep learning in healthcare imaging used to create advanced training workflows and provides deep learning models.As input data we used two types of internal organs acquired with two image modalities:3D CT and MRI. For visualization we used an in-house VTK based 3D Volume Visualization ApplicationCardioCTNav.For the manual segmentation of the training datasets we used an open source segmentation application ITK-SNAP.Our results shows that the U-Net segmentation method delivers good final results and that is represents an robust method to segment internal organs.",
+    "venue": "2022 23rd International Carpathian Control Conference (ICCC)",
+    "doi": "10.1109/iccc54292.2022.9805911",
+    "arxiv_id": null,
+    "s2_id": "babd5f3228a2be62b7831e282637d76f47b9ba9e",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/babd5f3228a2be62b7831e282637d76f47b9ba9e",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 3,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/iccc54292.2022.9805911",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Segmentation of Different Human Organs on 3D Computer Tomography and Magnetic Resonance Imaging using an Open Source 3D U-Net Framework",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "popa",
+      "popa",
+      "barbulescu",
+      "ivanescu",
+      "mocanu"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.887
+    },
+    "publisher": {},
+    "best_doi": "10.1109/iccc54292.2022.9805911"
+   },
+   {
+    "title": "Leveraging U-Net Architecture for Accurate Localization in Brain Tumor Segmentation",
+    "authors": [
+     "Jeckey Ng Kah Poo",
+     "M. Saealal",
+     "M. Z. Ibrahim",
+     "M. Yakno"
+    ],
+    "year": 2023,
+    "abstract": "This study presents an approach based on deep learning to segment brain tumors in medical imaging accurately. The segmentation of brain tumors plays a crucial role in diagnosing, planning treatments, and monitoring disease progression. However, existing methods have limitations such as time-consuming procedures, inadequate accuracy, and delayed detection. The U-Net model architecture, a widely used convolutional neural network (CNN) for medical image segmentation tasks, was employed to segment brain tumors in CT and MRI scans to overcome these challenges. The performance of the U-Net model was evaluated on datasets consisting of 32, 64, and 128 slices, respectively. The results demonstrated the achievement of the highest percentage of mean Intersection Over Union (IOU), with an impressive 80.89% for brain tumor segmentation. These results outperformed other existing methods. The proposed model exhibits the potential to reduce manual segmentation time and subjectivity while enhancing the accuracy of brain tumor diagnosis, treatment planning, and disease monitoring. This research contributes to the field by addressing the problem of brain tumor detection and showcasing the promising results attained using deep learning techniques.",
+    "venue": "IEEE International Conference on Information Theory and Information Security",
+    "doi": "10.1109/itis59651.2023.10419915",
+    "arxiv_id": null,
+    "s2_id": "714bcd6af9b924999dc87966ee3736457b86d928",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/714bcd6af9b924999dc87966ee3736457b86d928",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/itis59651.2023.10419915",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Leveraging U-Net Architecture for Accurate Localization in Brain Tumor Segmentation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "poo",
+      "saealal",
+      "ibrahim",
+      "yakno"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.865
+    },
+    "publisher": {},
+    "best_doi": "10.1109/itis59651.2023.10419915"
+   },
+   {
+    "title": "Medical Image Segmentation with Stochastic Aggregated Loss in a Unified U-Net",
+    "authors": [
+     "P. Nguyen",
+     "Zhongkang Lu",
+     "Weimin Huang",
+     "Su Huang",
+     "A. Katsuki",
+     "Zhi-Ping Lin"
+    ],
+    "year": 2019,
+    "abstract": "Automatic segmentation of medical images, such as computed tomography (CT) or magnetic resonance imaging (MRI), plays an essential role in efficient clinical diagnosis. While deep learning have gained popularity in academia and industry, more works have to be done to improve the performance for clinical practice. U-Net architecture, along with Dice coefficient optimization, has shown its effectiveness in medical image segmentation. Although it is an efficient measurement of the difference between the ground truth and the network's output, the Dice loss struggles to train with samples that do not contain targeted objects. While the situation is unusual in standard datasets, it is commonly seen in clinical data, where many training data available without the anomalies shown in the images, such as lesions and anatomic structures in some CTs/regions. In this paper, we propose a novel loss function - Stochastic Aggregated Dice Coefficient (SA Dice) and a modification of the network structure to improve its performance. Experimentally, in our own heart aorta CT dataset, our models beats the baseline by 4% in cross-validation Dice scores. In BRATS 2017 brain tumor segmentation challenge, the models also perform better than the state-of-the-art by approximately 2%.",
+    "venue": "2019 IEEE EMBS International Conference on Biomedical & Health Informatics (BHI)",
+    "doi": "10.1109/bhi.2019.8834667",
+    "arxiv_id": null,
+    "s2_id": "ffcc20b0d309aceb65b4bcf2dfdb3db628fced56",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/ffcc20b0d309aceb65b4bcf2dfdb3db628fced56",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 8,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/bhi.2019.8834667",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Medical Image Segmentation with Stochastic Aggregated Loss in a Unified U-Net",
+     "resolved_year": 2019,
+     "resolved_authors": [
+      "nguyen",
+      "lu",
+      "huang",
+      "huang",
+      "katsuki",
+      "lin"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.848
+    },
+    "publisher": {},
+    "best_doi": "10.1109/bhi.2019.8834667"
+   },
+   {
+    "title": "Dense Dilated Deep Multiscale Supervised U-Network for biomedical image segmentation",
+    "authors": [
+     "S. Bose",
+     "Ritesh Sur Chowdhury",
+     "Rangan Das",
+     "U. Maulik"
+    ],
+    "year": 2022,
+    "abstract": "Biomedical image segmentation is essential for computerized medical image analysis. Deep learning algorithms allow us to design state-of-the-art models for solving segmentation problems. The U-Net and its variants have provided positive results across various datasets. However, the existing networks have the same receptive field at each level and the models are supervised only at the shallow level. Considering these two ideas, we have proposed the D3MSU-Net where the field of view in each level is varied depending upon the depth of the resolution layer and the model is supervised at each resolution level. We have evaluated our network in eight benchmark datasets such as Electron Microscopy, Lung segmentation, Montgomery Chest X-ray, Covid-Radiopaedia, Wound, Medetec, Brain MRI, and Covid-19 lung CT dataset. Additionally, we have provided the performance for various ablations. The experimental results show the superiority of the proposed network. The proposed D3MSU-Net and ablation models are available at www.github.com/shirshabose/D3MSUNET.",
+    "venue": "Comput. Biol. Medicine",
+    "doi": "10.1016/j.compbiomed.2022.105274",
+    "arxiv_id": null,
+    "s2_id": "f366827f1ae67104c0ed4809cf0b934a8cc43880",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/f366827f1ae67104c0ed4809cf0b934a8cc43880",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 28,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1016/j.compbiomed.2022.105274",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Dense Dilated Deep Multiscale Supervised U-Network for biomedical image segmentation",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "bose",
+      "chowdhury",
+      "das",
+      "maulik"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.848
+    },
+    "publisher": {},
+    "best_doi": "10.1016/j.compbiomed.2022.105274"
+   },
+   {
+    "title": "Medical Image Denoising with Recurrent Residual U-Net (R2U-Net) base Auto-Encoder",
+    "authors": [
+     "S. Nasrin",
+     "M. Alom",
+     "Ranga Burada",
+     "Tarek M. Taha",
+     "Vijayan K. Asari"
+    ],
+    "year": 2019,
+    "abstract": "Deep learning (DL) approaches have been applied in different sectors of medical imaging applications, i.e. classification, segmentation and detection tasks and shown superior performance. The DL based generative methods are used for image denoising, enhancement and restoration task. In case of image analysis, image denoising is one of the most crucial preprocessing steps. Recently, there are various DL approaches are applied in image denoising problems and achieved state-of-the-art performance. In this work, we apply recurrent residual U-Net (R2U-Net) based autoencoder model for medical image denoising which is applied for digital pathology, dermoscopy, Magnetic Resonance Imaging (MRI) and Computed Tomography (CT) images denoising tasks. The performance of R2U-Net based autoencoder model is also evaluated for Transfer domain (TD) between MRI and CT scan images. The experiments have conducted on different publicly available medical image datasets and shows promising denoising results which can be applied in different medical imaging applications.",
+    "venue": "National Aerospace and Electronics Conference",
+    "doi": "10.1109/naecon46414.2019.9057834",
+    "arxiv_id": null,
+    "s2_id": "59f208ee3992156837e2d4ca481105dda35c3715",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/59f208ee3992156837e2d4ca481105dda35c3715",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 47,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/naecon46414.2019.9057834",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Medical Image Denoising with Recurrent Residual U-Net (R2U-Net) base Auto-Encoder",
+     "resolved_year": 2019,
+     "resolved_authors": [
+      "nasrin",
+      "alom",
+      "burada",
+      "taha",
+      "asari"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.808
+    },
+    "publisher": {},
+    "best_doi": "10.1109/naecon46414.2019.9057834"
+   },
+   {
+    "title": "Deep learning-based medical image segmentation of the aorta using XR-MSF-U-Net",
+    "authors": [
+     "Weimin Chen",
+     "Hongyuan Huang",
+     "Jing Huang",
+     "Ke Wang",
+     "Hua Qin",
+     "K. Wong"
+    ],
+    "year": 2022,
+    "abstract": "PURPOSE\nThis paper proposes a CT images and MRI segmentation technology of cardiac aorta based on XR-MSF-U-Net model. The purpose of this method is to better analyze the patient's condition, reduce the misdiagnosis and mortality rate of cardiovascular disease in inhabitants, and effectively avoid the subjectivity and unrepeatability of manual segmentation of heart aorta, and reduce the workload of doctors.\n\n\nMETHOD\nWe implement the X ResNet (XR) convolution module to replace the different convolution kernels of each branch of two-layer convolution XR of common model U-Net, which can make the model extract more useful features more efficiently. Meanwhile, a plug and play attention module integrating multi-scale features Multi-scale features fusion module (MSF) is proposed, which integrates global local and spatial features of different receptive fields to enhance network details to achieve the goal of efficient segmentation of cardiac aorta through CT images and MRI.\n\n\nRESULTS\nThe model is trained on common cardiac CT images and MRI data sets and tested on our collected data sets to verify the generalization ability of the model. The results show that the proposed XR-MSF-U-Net model achieves a good segmentation effect on CT images and MRI. In the CT data set, the XR-MSF-U-Net model improves 7.99% in key index DSC and reduces 11.01\u00a0mm in HD compared with the benchmark model U-Net, respectively. In the MRI data set, XR-MSF-U-Net model improves 10.19% and reduces 6.86\u00a0mm error in key index DSC and HD compared with benchmark model U-Net, respectively. And it is superior to similar models in segmentation effect, proving that this model has significant advantages.\n\n\nCONCLUSION\nThis study provides new possibilities for the segmentation of aortic CT images and MRI, improves the accuracy and efficiency of diagnosis, and hopes to provide substantial help for the segmentation of aortic CT images and MRI.",
+    "venue": "Comput. Methods Programs Biomed.",
+    "doi": "10.1016/j.cmpb.2022.107073",
+    "arxiv_id": null,
+    "s2_id": "18f654b971840f1f3cf7308de500aa57777ee867",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/18f654b971840f1f3cf7308de500aa57777ee867",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 20,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1016/j.cmpb.2022.107073",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Deep learning-based medical image segmentation of the aorta using XR-MSF-U-Net",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "chen",
+      "huang",
+      "huang",
+      "wang",
+      "qin",
+      "wong"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.766
+    },
+    "publisher": {},
+    "best_doi": "10.1016/j.cmpb.2022.107073"
+   },
+   {
+    "title": "3D U-Net for segmentation of pulmonary nodules in volumetric CT scans from multi-annotator truth estimation",
+    "authors": [
+     "W. Funke",
+     "B. Veasey",
+     "J. \u017burada",
+     "H. Frigui",
+     "A. Amini"
+    ],
+    "year": 2020,
+    "abstract": "Low dose CT screening has been shown to significantly reduce mortality rates due to lung cancer. To assist radiologists, CAD systems continue to be developed for automatically detecting, segmenting, and categorizing potentially malignant lung nodules. Deep learning with the U-Net architecture has shown to be effective for automatic segmentation of 2-D images. The network consists of a down-sampling and up-sampling path, similar to an auto-encoder. However, the concept driving its success is skip-connections between down-sampling and up-sampling, allowing the network to preserve details and for easier backpropagation of error to deep layers. This concept has previously been brought into 3-D and successfully applied to image volumes such as MRI and CT scans. This paper applies concepts from these works (skip connections, batch normalization, Dice similarity coefficient loss, and stride convolution for down sampling) to a 3-D Convolutional Neural Network for segmenting nodule image patches in thoracic CT scans from the LIDC-IDRI database. This database contains scans from 1018 cases with annotations from up to 4 human experts. Within each scan, nodules are delineated by each of these experts. It is well known that manual delineation can be subjective between annotators. This paper proposes a model trained on a ground truth estimation from the four expert annotations using the STAPLE algorithm. Experiments in this paper show that when trained on STAPLE, automatic segmentation with a 3-D U-Net can result in improved similarity scores to human annotators than similarity scores between human annotators.",
+    "venue": "Medical Imaging",
+    "doi": "10.1117/12.2548496",
+    "arxiv_id": null,
+    "s2_id": "e9dce60129e81c77636eb3c09da90692f77d7423",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/e9dce60129e81c77636eb3c09da90692f77d7423",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 5,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1117/12.2548496",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "3D U-Net for segmentation of pulmonary nodules in volumetric CT scans from multi-annotator truth estimation",
+     "resolved_year": 2020,
+     "resolved_authors": [
+      "funke",
+      "veasey",
+      "zurada",
+      "frigui",
+      "amini"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.696
+    },
+    "publisher": {},
+    "best_doi": "10.1117/12.2548496"
+   }
+  ],
+  "flagged": []
+ },
+ "stats": {
+  "gemini (gemini-3.8-flash)": {
+   "calls": 30,
+   "secs": 11.4929653000072,
+   "retries": 20
+  },
+  "gemini (gemini-3.6-flash)": {
+   "calls": 30,
+   "secs": 11.161847400006081,
+   "retries": 20
+  },
+  "gemini (gemini-3.5-flash-lite)": {
+   "calls": 10,
+   "secs": 22.194296300000133,
+   "retries": 0
+  },
+  "export.arxiv.org": {
+   "calls": 1,
+   "secs": 1.1706490000033227,
+   "retries": 0,
+   "cache_hits": 1
+  },
+  "api.semanticscholar.org": {
+   "calls": 8,
+   "secs": 6.575355699995271,
+   "retries": 2,
+   "cache_hits": 9
+  },
+  "api.unpaywall.org": {
+   "calls": 16,
+   "secs": 6.9264091000004555,
+   "retries": 0,
+   "cache_hits": 3
+  },
+  "doi.org": {
+   "calls": 27,
+   "secs": 18.441236399994523,
+   "retries": 0,
+   "cache_hits": 25
+  },
+  "api.crossref.org": {
+   "calls": 24,
+   "secs": 6.487737200000993,
+   "retries": 0,
+   "cache_hits": 16
+  },
+  "api.browserbase.com": {
+   "calls": 2,
+   "secs": 8.435626900001807,
+   "retries": 0
+  }
+ },
+ "evidence": [
+  {
+   "ts": 1792437880.75,
+   "host": "export.arxiv.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://export.arxiv.org/api/query?search_query=%28ti%3Adeep+OR+abs%3Adeep%29+AND+%28ti%3Alearning+OR+abs%3Alearning%29+AND+%28ti%3Amedical+OR+abs%3Amedical%29+AND+%28ti%3Aimage+OR+abs%3Aimage%29+AND+%28ti%3Asegmentation+OR+abs%3Asegmentation%29&start=0&max_results=80&sortBy=relevance"
+  },
+  {
+   "ts": 1792437902.93,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=deep+learning+medical+image+segmentation+U-Net+MRI+CT&limit=40&fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl&year=2018-2024"
+  },
+  {
+   "ts": 1792437921.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2412.02242?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437921.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2001.02387?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437921.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2302.02289?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437921.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2006.15320?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437921.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2101.07721?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437921.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2209.11359?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437921.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2106.09157?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437924.08,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2406.12646?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437924.09,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.unpaywall.org/v2/10.1145/3723178.3723307?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437924.09,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.unpaywall.org/v2/10.1109/access.2024.3374108?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437924.09,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.unpaywall.org/v2/10.1016/j.jbo.2024.100654?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437924.79,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/indicon56171.2022.10039786?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437924.97,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/iccc54292.2022.9805911?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437925.13,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.47852/bonviewmedin42023518?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437925.19,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.65606/22/2024/4?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437925.33,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/bhi.2019.8834667?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437925.38,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/itis59651.2023.10419915?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437925.54,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1016/j.compbiomed.2022.105274?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437925.74,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.14569/ijacsa.2022.0130639?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437925.95,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/naecon46414.2019.9057834?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437926.14,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1038/s41598-023-47107-7?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437926.35,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.3390/bioengineering11101034?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437926.55,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.3390/app9030404?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437926.76,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1016/j.cmpb.2022.107073?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437926.77,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1109/access.2021.3086020"
+  },
+  {
+   "ts": 1792437926.77,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1145/3723178.3723307"
+  },
+  {
+   "ts": 1792437926.77,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1109/access.2024.3374108"
+  },
+  {
+   "ts": 1792437926.77,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1016/j.media.2020.101834"
+  },
+  {
+   "ts": 1792437926.77,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.1908.06337"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2412.02242"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1109/isbi45749.2020.9098597"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.3389/fradi.2023.1175473"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2006.15320"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1109/rbme.2021.3136343"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2101.07721"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1186/s12880-020-00543-7"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.1910.09308"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1007/978-3-031-72111-3_15"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2209.11359"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1007/978-3-030-87196-3_21"
+  },
+  {
+   "ts": 1792437926.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1016/j.jbo.2024.100654"
+  },
+  {
+   "ts": 1792437927.69,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/indicon56171.2022.10039786"
+  },
+  {
+   "ts": 1792437927.75,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/iccc54292.2022.9805911"
+  },
+  {
+   "ts": 1792437928.11,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/bhi.2019.8834667"
+  },
+  {
+   "ts": 1792437928.19,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/itis59651.2023.10419915"
+  },
+  {
+   "ts": 1792437928.21,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.65606/22/2024/4"
+  },
+  {
+   "ts": 1792437928.31,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1007/s12559-023-10126-7"
+  },
+  {
+   "ts": 1792437928.37,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.47852/bonviewmedin42023518"
+  },
+  {
+   "ts": 1792437928.5,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1016/j.compbiomed.2022.105274"
+  },
+  {
+   "ts": 1792437928.88,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.11159/icbes24.158"
+  },
+  {
+   "ts": 1792437929.32,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/tmi.2020.3048055"
+  },
+  {
+   "ts": 1792437929.35,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.14569/ijacsa.2022.0130639"
+  },
+  {
+   "ts": 1792437929.51,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/naecon46414.2019.9057834"
+  },
+  {
+   "ts": 1792437929.52,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2406.12646"
+  },
+  {
+   "ts": 1792437929.74,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1038/s41598-023-47107-7"
+  },
+  {
+   "ts": 1792437929.93,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3390/bioengineering11101034"
+  },
+  {
+   "ts": 1792437930.13,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3390/app9030404"
+  },
+  {
+   "ts": 1792437930.35,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1016/j.cmpb.2022.107073"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Faccess.2021.3086020&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1145%2F3723178.3723307&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Faccess.2024.3374108&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1016%2Fj.media.2020.101834&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fisbi45749.2020.9098597&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3389%2Ffradi.2023.1175473&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Frbme.2021.3136343&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1186%2Fs12880-020-00543-7&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2F978-3-031-72111-3_15&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2F978-3-030-87196-3_21&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.36,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1016%2Fj.jbo.2024.100654&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.62,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Findicon56171.2022.10039786&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437930.81,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ficcc54292.2022.9805911&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437931.06,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.65606%2F22%2F2024%2F4&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437931.22,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fitis59651.2023.10419915&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437931.45,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.47852%2Fbonviewmedin42023518&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437931.63,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fbhi.2019.8834667&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437931.88,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2Fs12559-023-10126-7&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437932.03,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1016%2Fj.compbiomed.2022.105274&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437932.3,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.11159%2Ficbes24.158&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437932.45,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.14569%2Fijacsa.2022.0130639&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437932.76,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ftmi.2020.3048055&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437932.86,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fnaecon46414.2019.9057834&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437933.07,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1038%2Fs41598-023-47107-7&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437933.27,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3390%2Fbioengineering11101034&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437933.48,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3390%2Fapp9030404&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437933.67,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1016%2Fj.cmpb.2022.107073&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437951.97,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2305.17456?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437951.97,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2104.04809?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792437952.67,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.65521/ijeecs.v13i1.2658?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437952.87,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.4103/jmp.jmp_160_24?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437953.06,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1117/12.2548496?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437953.07,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1049/ipr2.12419"
+  },
+  {
+   "ts": 1792437953.07,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2009.13120"
+  },
+  {
+   "ts": 1792437953.07,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2305.17456"
+  },
+  {
+   "ts": 1792437953.07,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1016/j.array.2019.100004"
+  },
+  {
+   "ts": 1792437953.07,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1007/s12559-024-10257-5"
+  },
+  {
+   "ts": 1792437953.07,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2104.04809"
+  },
+  {
+   "ts": 1792437953.07,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.11409/mit.36.63"
+  },
+  {
+   "ts": 1792437953.08,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1016/j.inffus.2022.11.008"
+  },
+  {
+   "ts": 1792437954.07,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.4103/jmp.jmp_160_24"
+  },
+  {
+   "ts": 1792437954.12,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.65521/ijeecs.v13i1.2658"
+  },
+  {
+   "ts": 1792437954.27,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/nss/mic44845.2022.10399050"
+  },
+  {
+   "ts": 1792437954.48,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1117/12.2548496"
+  },
+  {
+   "ts": 1792437954.48,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1049%2Fipr2.12419&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437954.48,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1016%2Fj.array.2019.100004&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437954.48,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2Fs12559-024-10257-5&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437954.48,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.11409%2Fmit.36.63&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437954.48,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1016%2Fj.inffus.2022.11.008&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437954.73,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.65521%2Fijeecs.v13i1.2658&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437954.95,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.4103%2Fjmp.jmp_160_24&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437955.14,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fnss%2Fmic44845.2022.10399050&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437955.33,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1117%2F12.2548496&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792437992.97,
+   "host": "export.arxiv.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://export.arxiv.org/api/query?search_query=%28ti%3Adomain+OR+abs%3Adomain%29+AND+%28ti%3Aadaptation+OR+abs%3Aadaptation%29+AND+%28ti%3Amedical+OR+abs%3Amedical%29+AND+%28ti%3Aimage+OR+abs%3Aimage%29+AND+%28ti%3Asegmentation+OR+abs%3Asegmentation%29&start=0&max_results=80&sortBy=relevance"
+  },
+  {
+   "ts": 1792438013.65,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1910.13681?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792438014.38,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2110.15823?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792438015.57,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2312.06275?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792438016.61,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2207.02529?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792438017.89,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1007/978-3-030-32245-8_69"
+  },
+  {
+   "ts": 1792438018.06,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1117/12.2611499"
+  },
+  {
+   "ts": 1792438018.13,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/tmi.2023.3318364"
+  },
+  {
+   "ts": 1792438018.24,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3390/s25175603"
+  },
+  {
+   "ts": 1792438018.3,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2207.02529"
+  },
+  {
+   "ts": 1792438018.64,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2312.06275"
+  },
+  {
+   "ts": 1792438018.91,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2F978-3-030-32245-8_69&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792438019.12,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1117%2F12.2611499&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792438019.37,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3390%2Fs25175603&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792438019.53,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ftmi.2023.3318364&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792438057.44,
+   "host": "api.browserbase.com",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.browserbase.com/v1/fetch -> https://doi.org/10.1109/indicon56171.2022.10039786"
+  },
+  {
+   "ts": 1792438057.88,
+   "host": "api.browserbase.com",
+   "status": 201,
+   "cached": false,
+   "url": "https://api.browserbase.com/v1/sessions (browser session) -> https://doi.org/10.1109/indicon56171.2022.10039786"
+  }
+ ]
+}

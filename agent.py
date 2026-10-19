@@ -155,6 +155,10 @@ async def t_finish(st: AgentState, reason: str = "") -> dict:
     if "search_s2" not in used:  # code gate: published versions + paywall detection need S2/OpenAlex
         return {"finished": False, "error": "finish rejected: call search_s2 at least once first, so published "
                 "versions are merged and paywalled papers are identified", "tally": st.tally()}
+    unchecked = [p.best_doi for p in st.bucket("paywalled") if p.best_doi and not getattr(p, "publisher", None)]
+    if unchecked and "inspect_publisher" not in used:  # code gate: back the link-only list with evidence
+        return {"finished": False, "error": "finish rejected: paywalled papers have no publisher-page evidence; "
+                f"call inspect_publisher on 1-2 of these DOIs first: {unchecked[:3]}", "tally": st.tally()}
     if st.pool and st.tally()["cited"] < st.target:
         return {"finished": False, "error": f"finish rejected: {len(st.pool)} pending papers not yet verified; "
                 "call verify_pool first", "tally": st.tally()}
@@ -344,6 +348,10 @@ async def run_agent(question: str, keywords: list[str], year_from=None, year_to=
             log(st.trace[-1])
     if st.tally()["cited"] < target and (not use_gemini or st.trace[-1]["tool"] == "fallback"):
         await _scripted(st, log)
+    if not any(s["tool"] == "inspect_publisher" for s in st.trace):  # safety net (e.g. step budget hit)
+        for p in [p for p in st.bucket("paywalled") if p.best_doi][:2]:
+            await _call(st, "inspect_publisher", {"doi": p.best_doi},
+                        "Post-check: record publisher-page evidence for a paywalled paper.", "system", log)
     return st
 
 if __name__ == "__main__":
