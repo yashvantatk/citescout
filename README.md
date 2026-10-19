@@ -1,5 +1,7 @@
 # 📚 CiteScout AI
 
+[![tests](https://github.com/yashvantatk/citescout/actions/workflows/tests.yml/badge.svg)](https://github.com/yashvantatk/citescout/actions/workflows/tests.yml)
+
 **Literature Scout & Bibliography Builder** · Ziro Agentic AI Hackathon 2026 · Team Three Pointers
 
 A faculty member types a research question, a year range and keywords. CiteScout's agent returns
