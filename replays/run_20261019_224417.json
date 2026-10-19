@@ -1,0 +1,2693 @@
+{
+ "meta": {
+  "question": "How do transformers improve neural machine translation?",
+  "keywords": [
+   "transformer",
+   "attention",
+   "machine translation"
+  ],
+  "year_from": 2017,
+  "year_to": 2024,
+  "target": 25,
+  "seconds": 125.6,
+  "tool_calls": 4,
+  "run_id": "5f68916c0185",
+  "model": "gemini-3.8-flash",
+  "recorded_at": "2026-10-19 22:44:17"
+ },
+ "steps": [
+  {
+   "step": 1,
+   "planner": "gemini",
+   "thought": "Initial search for foundational and recent papers on transformers in NMT.",
+   "tool": "search_arxiv",
+   "args": {
+    "query": "transformer neural machine translation attention"
+   },
+   "result": {
+    "found": 40,
+    "new_unique": 40,
+    "tally": {
+     "cited": 0,
+     "paywalled": 0,
+     "flagged": 0,
+     "pending": 40,
+     "target": 25
+    }
+   },
+   "ms": 1022
+  },
+  {
+   "step": 2,
+   "planner": "gemini",
+   "thought": "Initial search on Semantic Scholar for peer-reviewed papers.",
+   "tool": "search_s2",
+   "args": {
+    "query": "transformers neural machine translation attention mechanism"
+   },
+   "result": {
+    "found": 40,
+    "via": "s2",
+    "new_unique": 39,
+    "tally": {
+     "cited": 0,
+     "paywalled": 0,
+     "flagged": 0,
+     "pending": 79,
+     "target": 25
+    }
+   },
+   "ms": 2301
+  },
+  {
+   "step": 3,
+   "planner": "gemini",
+   "thought": "Verify OA and DOI for the top pending papers from our initial searches.",
+   "tool": "verify_pool",
+   "args": {
+    "max_papers": 40
+   },
+   "result": {
+    "checked": 40,
+    "newly": {
+     "cited": 35,
+     "paywalled": 3,
+     "flagged": 2
+    },
+    "retracted": 0,
+    "tally": {
+     "cited": 35,
+     "paywalled": 3,
+     "flagged": 2,
+     "pending": 39,
+     "target": 25
+    }
+   },
+   "ms": 23100
+  },
+  {
+   "step": 4,
+   "planner": "gemini",
+   "thought": "Target of 25 verified OA papers has been met (35 cited).",
+   "tool": "finish",
+   "args": {
+    "reason": "Successfully reached and exceeded the target of 25 verified open-access papers on transformers in neural machine translation."
+   },
+   "result": {
+    "finished": true,
+    "reason": "Successfully reached and exceeded the target of 25 verified open-access papers on transformers in neural machine translation.",
+    "tally": {
+     "cited": 35,
+     "paywalled": 3,
+     "flagged": 2,
+     "pending": 39,
+     "target": 25
+    }
+   },
+   "ms": 0
+  }
+ ],
+ "buckets": {
+  "cited": [
+   {
+    "title": "Mega: Moving Average Equipped Gated Attention",
+    "authors": [
+     "Xuezhe Ma",
+     "Chunting Zhou",
+     "Xiang Kong",
+     "Junxian He",
+     "Liang-Ke Gui",
+     "Graham Neubig",
+     "Jonathan May",
+     "Luke Zettlemoyer"
+    ],
+    "year": 2022,
+    "abstract": "The design choices in the Transformer attention mechanism, including weak inductive bias and quadratic computational complexity, have limited its application for modeling long sequences. In this paper, we introduce Mega, a simple, theoretically grounded, single-head gated attention mechanism equipped with (exponential) moving average to incorporate inductive bias of position-aware local dependencies into the position-agnostic attention mechanism. We further propose a variant of Mega that offers linear time and space complexity yet yields only minimal quality loss, by efficiently splitting the whole sequence into multiple chunks with fixed length. Extensive experiments on a wide range of sequence modeling benchmarks, including the Long Range Arena, neural machine translation, auto-regressive language modeling, and image and speech classification, show that Mega achieves significant improvements over other sequence models, including variants of Transformers and recent state space models.",
+    "venue": "International Conference on Learning Representations",
+    "doi": null,
+    "arxiv_id": "2209.10655",
+    "s2_id": "70e91e16eb321067d9402710e14a40cf28311f73",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/70e91e16eb321067d9402710e14a40cf28311f73",
+    "pdf_url": "http://arxiv.org/pdf/2209.10655",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 256,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2209.10655",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Mega: Moving Average Equipped Gated Attention",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "ma",
+      "zhou",
+      "kong",
+      "he",
+      "gui",
+      "neubig",
+      "may",
+      "zettlemoyer"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.795,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 7.1,
+     "citation_impact": 8.6,
+     "score": 7.99,
+     "why_cite": "Closest match in the abstract to your question: \u201cExtensive experiments on a wide range of sequence modeling benchmarks, including the Long Range Arena, neural machine translation, auto-regressive language modeling, and image and speech classification, show that Mega achieves significant improvements over other sequence models, including variants of Transformers and recent state space models.\u201d",
+     "evidence_quote": "Extensive experiments on a wide range of sequence modeling benchmarks, including the Long Range Arena, neural machine translation, auto-regressive language modeling, and image and speech classification, show that Mega achieves significant improvements over other sequence models, including variants of Transformers and recent state space models.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2209.10655"
+   },
+   {
+    "title": "Is Encoder-Decoder Redundant for Neural Machine Translation?",
+    "authors": [
+     "Yingbo Gao",
+     "Christian Herold",
+     "Zijian Yang",
+     "Hermann Ney"
+    ],
+    "year": 2022,
+    "abstract": "Encoder-decoder architecture is widely adopted for sequence-to-sequence modeling tasks. For machine translation, despite the evolution from long short-term memory networks to Transformer networks, plus the introduction and development of attention mechanism, encoder-decoder is still the de facto neural network architecture for state-of-the-art models. While the motivation for decoding information from some hidden space is straightforward, the strict separation of the encoding and decoding steps into an encoder and a decoder in the model architecture is not necessarily a must. Compared to the task of autoregressive language modeling in the target language, machine translation simply has an additional source sentence as context. Given the fact that neural language models nowadays can already handle rather long contexts in the target language, it is natural to ask whether simply concatenating the source and target sentences and training a language model to do translation would work. In this work, we investigate the aforementioned concept for machine translation. Specifically, we experiment with bilingual translation, translation with additional target monolingual data, and multilingual translation. In all cases, this alternative approach performs on par with the baseline encoder-decoder Transformer, suggesting that an encoder-decoder architecture might be redundant for neural machine translation.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2210.11807",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2210.11807",
+    "pdf_url": "https://arxiv.org/pdf/2210.11807",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2210.11807",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Is Encoder-Decoder Redundant for Neural Machine Translation?",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "gao",
+      "herold",
+      "yang",
+      "ney"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.824,
+     "topic_match": 8.2,
+     "method_match": 8.2,
+     "recency": 7.1,
+     "citation_impact": 5.0,
+     "score": 7.39,
+     "why_cite": "Closest match in the abstract to your question: \u201cIn this work, we investigate the aforementioned concept for machine translation.\u201d",
+     "evidence_quote": "In this work, we investigate the aforementioned concept for machine translation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2210.11807"
+   },
+   {
+    "title": "Low-resource neural machine translation with morphological modeling",
+    "authors": [
+     "Antoine Nzeyimana"
+    ],
+    "year": 2024,
+    "abstract": "Morphological modeling in neural machine translation (NMT) is a promising approach to achieving open-vocabulary machine translation for morphologically-rich languages. However, existing methods such as sub-word tokenization and character-based models are limited to the surface forms of the words. In this work, we propose a framework-solution for modeling complex morphology in low-resource settings. A two-tier transformer architecture is chosen to encode morphological information at the inputs. At the target-side output, a multi-task multi-label training scheme coupled with a beam search-based decoder are found to improve machine translation performance. An attention augmentation scheme to the transformer model is proposed in a generic form to allow integration of pre-trained language models and also facilitate modeling of word order relationships between the source and target languages. Several data augmentation techniques are evaluated and shown to increase translation performance in low-resource settings. We evaluate our proposed solution on Kinyarwanda - English translation using public-domain parallel text. Our final models achieve competitive performance in relation to large multi-lingual models. We hope that our results will motivate more use of explicit morphological information and the proposed model and data augmentations in low-resource NMT.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2404.02392",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2404.02392",
+    "pdf_url": "https://arxiv.org/pdf/2404.02392",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2404.02392",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Low-resource neural machine translation with morphological modeling",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "nzeyimana"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 10.0,
+     "citation_impact": 5.0,
+     "score": 7.31,
+     "why_cite": "Closest match in the abstract to your question: \u201cAt the target-side output, a multi-task multi-label training scheme coupled with a beam search-based decoder are found to improve machine translation performance.\u201d",
+     "evidence_quote": "At the target-side output, a multi-task multi-label training scheme coupled with a beam search-based decoder are found to improve machine translation performance.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2404.02392"
+   },
+   {
+    "title": "A real-time Arabic avatar for deaf\u2013mute community using attention mechanism",
+    "authors": [
+     "Diana T. Mosa",
+     "Nadine Nasef",
+     "Mohamed A. Lotfy",
+     "A. Abohany",
+     "Reham M. Essa",
+     "Ahmed Salem"
+    ],
+    "year": 2023,
+    "abstract": "Speech-impaired people use Sign Language (SL), an efficient natural form of communication, all over the world. This paper aims to use deep learning technology in the realm of SL translation and identification. In order to ease communication between hearing-impaired and sighted individuals and to enable the social inclusion of hearing-impaired people in their daily lives, it presents a transformer as a neural machine translation model. The article details the creation of a machine translation system that converts Arabic audio and text into Arabic Sign Language (ArSL) automatically. It does this by utilizing an animated character to produce the correct sign for each spoken word. Since Arabic has few resources, it was challenging to obtain an Arabic-Sign dataset, so we created our own Arabic\u2013Arabic sign gloss, which consists of 12,187 pairs, to train the model. We use bidirectional encoder representations from transformers as an embedding layer to interpret input text tokens and represent an appropriate natural language vector space for deep learning models. To represent the structure of each Arabic word, the Ferasa Part-of-Speech Tagging module was used and then the extracted rules from the ArSL structure were applied. This paper shows a detailed description of a natural language translator (for converting an Arabic word sequence into a sequence of signs belonging to the ArSL) and a 2D avatar animation module (for playing back the signs). In our prototype, we train the software-based module using the attention mechanism. The evaluation was carried out in our developed Arabic sentences with the corresponding Arabic gloss. The proposed model achieves promising results and indicates significant improvements to direct communication between hearing and deaf people, with a training accuracy of 94.71% and an 87.04% testing accuracy for Arabic\u2013Arabic sign gloss translation.",
+    "venue": "Neural computing & applications (Print)",
+    "doi": "10.1007/s00521-023-08858-6",
+    "arxiv_id": null,
+    "s2_id": "d5301649ef452d908bf3d52ab2aab9f95f4f29e1",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/d5301649ef452d908bf3d52ab2aab9f95f4f29e1",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1007/s00521-023-08858-6.pdf",
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_source": "unpaywall",
+    "citation_count": 14,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1007/s00521-023-08858-6",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A real-time Arabic avatar for deaf\u2013mute community using attention mechanism",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "mosa",
+      "nasef",
+      "lotfy",
+      "abohany",
+      "essa",
+      "salem"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.795,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 8.6,
+     "citation_impact": 3.3,
+     "score": 7.15,
+     "why_cite": "Closest match in the abstract to your question: \u201cThis paper aims to use deep learning technology in the realm of SL translation and identification.\u201d",
+     "evidence_quote": "This paper aims to use deep learning technology in the realm of SL translation and identification.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1007/s00521-023-08858-6"
+   },
+   {
+    "title": "Toward Practical Usage of the Attention Mechanism as a Tool for Interpretability",
+    "authors": [
+     "Martin Tutek",
+     "J. \u0160najder"
+    ],
+    "year": 2022,
+    "abstract": "Natural language processing (NLP) has been one of the subfields of artificial intelligence much affected by the recent neural revolution. Architectures such as recurrent neural networks (RNNs) and attention-based transformers helped propel the state of the art across various NLP tasks, such as sequence classification, machine translation, and natural language inference. However, if neural models are to be used in high-stakes decision making scenarios, the explainability of their decisions becomes a paramount issue. The attention mechanism has offered some transparency in the workings of otherwise black-box RNN models: attention weights (scalar values assigned input words) invite to be interpreted as the importance of that word, providing a simple method of interpretability. Recent work, however, has questioned the faithfulness of this practice. Subsequent experiments have shown that faithfulness of attention weights may still be achieved by incorporating word-level objectives in the training process of neural networks. In this article, we present a study that extends the techniques for improving faithfulness of attention based on regularization methods which promote retention of word-level information. We perform extensive experiments on a wide array of recurrent neural architectures commonly used in practice including Elman RNN, GRU and LSTM cells. In addition, we analyze to what extent the explanations provided by inspecting attention weights are correlated with the human notion of importance. We find that incorporating tying regularization consistently improves both the faithfulness and plausibility of explanations obtained through inspecting attention weights across analyzed datasets and models.",
+    "venue": "IEEE Access",
+    "doi": "10.1109/access.2022.3169772",
+    "arxiv_id": null,
+    "s2_id": "45fc7014fae3c73921ea3541ab405beb19e52637",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/45fc7014fae3c73921ea3541ab405beb19e52637",
+    "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/9668973/09762294.pdf",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 32,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/access.2022.3169772",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Toward Practical Usage of the Attention Mechanism as a Tool for Interpretability",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "tutek",
+      "snajder"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.795,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 7.1,
+     "citation_impact": 4.3,
+     "score": 7.13,
+     "why_cite": "Closest match in the abstract to your question: \u201cArchitectures such as recurrent neural networks (RNNs) and attention-based transformers helped propel the state of the art across various NLP tasks, such as sequence classification, machine translation, and natural language inference.\u201d",
+     "evidence_quote": "Architectures such as recurrent neural networks (RNNs) and attention-based transformers helped propel the state of the art across various NLP tasks, such as sequence classification, machine translation, and natural language inference.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1109/access.2022.3169772"
+   },
+   {
+    "title": "Bilingual Neural Machine Translation From English To Yoruba Using A Transformer Model",
+    "authors": [
+     "Adeboje Olawale Timothy",
+     "Adetunmbi Olusola Adebayo",
+     "A. J. Gabriel",
+     "Akinyede Raphael Olufemi"
+    ],
+    "year": 2024,
+    "abstract": "The necessity for language translation in Nigeria arises from its linguistic diversity, facilitating effective communication and understanding across communities. Yoruba, considered a language with limited resources, has potential for greater online presence. This research proposes a neural machine translation model using a transformer architecture to convert English text into Yoruba text. While previous studies have addressed this area, challenges such as vanishing gradients, translation accuracy, and computational efficiency for longer sequences persist. This research proposes to address these limitations by employing a transformer- based model, which has demonstrated efficacy in overcoming issues associated with Recurrent Neural Networks (RNNs). Unlike RNNs, transformers utilize attention mechanisms to establish comprehensive connections between input and output, improving translation quality and computational efficiency.",
+    "venue": "International Journal of Innovative Science and Research Technology",
+    "doi": "10.38124/ijisrt/ijisrt24jul767",
+    "arxiv_id": null,
+    "s2_id": "432fac2e0a77acbf2371726c737a4453fc5e1d80",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/432fac2e0a77acbf2371726c737a4453fc5e1d80",
+    "pdf_url": "https://www.ijisrt.com/assets/upload/files/IJISRT24JUL767.pdf",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 5,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.38124/ijisrt/ijisrt24jul767",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 0.75,
+     "year_ok": true,
+     "resolved_title": "Bilingual Neural Machine Translation From English To Yoruba Using A Transformer Model",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "timothy",
+      "adebayo",
+      "junior",
+      "olufemi"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.795,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 10.0,
+     "citation_impact": 2.1,
+     "score": 7.12,
+     "why_cite": "Closest match in the abstract to your question: \u201cThis research proposes a neural machine translation model using a transformer architecture to convert English text into Yoruba text.\u201d",
+     "evidence_quote": "This research proposes a neural machine translation model using a transformer architecture to convert English text into Yoruba text.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.38124/ijisrt/ijisrt24jul767"
+   },
+   {
+    "title": "Heterogeneous Encoders Scaling In The Transformer For Neural Machine Translation",
+    "authors": [
+     "Jia Cheng Hu",
+     "Roberto Cavicchioli",
+     "Giulia Berardinelli",
+     "Alessandro Capotondi"
+    ],
+    "year": 2023,
+    "abstract": "Although the Transformer is currently the best-performing architecture in the homogeneous configuration (self-attention only) in Neural Machine Translation, many State-of-the-Art models in Natural Language Processing are made of a combination of different Deep Learning approaches. However, these models often focus on combining a couple of techniques only and it is unclear why some methods are chosen over others. In this work, we investigate the effectiveness of integrating an increasing number of heterogeneous methods. Based on a simple combination strategy and performance-driven synergy criteria, we designed the Multi-Encoder Transformer, which consists of up to five diverse encoders. Results showcased that our approach can improve the quality of the translation across a variety of languages and dataset sizes and it is particularly effective in low-resource languages where we observed a maximum increase of 7.16 BLEU compared to the single-encoder model.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2312.15872",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2312.15872",
+    "pdf_url": "https://arxiv.org/pdf/2312.15872",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2312.15872",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Heterogeneous Encoders Scaling In The Transformer For Neural Machine Translation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "hu",
+      "cavicchioli",
+      "berardinelli",
+      "capotondi"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 8.6,
+     "citation_impact": 5.0,
+     "score": 7.1,
+     "why_cite": "Closest match in the abstract to your question: \u201cAlthough the Transformer is currently the best-performing architecture in the homogeneous configuration (self-attention only) in Neural Machine Translation, many State-of-the-Art models in Natural Language Processing are made of a combination of different Deep Learning approaches.\u201d",
+     "evidence_quote": "Although the Transformer is currently the best-performing architecture in the homogeneous configuration (self-attention only) in Neural Machine Translation, many State-of-the-Art models in Natural Language Processing are made of a combination of different Deep Learning approaches.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2312.15872"
+   },
+   {
+    "title": "Active Learning for Neural Machine Translation",
+    "authors": [
+     "Neeraj Vashistha",
+     "Kriti Singh",
+     "Ramakant Shakya"
+    ],
+    "year": 2023,
+    "abstract": "The machine translation mechanism translates texts automatically between different natural languages, and Neural Machine Translation (NMT) has gained attention for its rational context analysis and fluent translation accuracy. However, processing low-resource languages that lack relevant training attributes like supervised data is a current challenge for Natural Language Processing (NLP). We incorporated a technique known Active Learning with the NMT toolkit Joey NMT to reach sufficient accuracy and robust predictions of low-resource language translation. With active learning, a semi-supervised machine learning strategy, the training algorithm determines which unlabeled data would be the most beneficial for obtaining labels using selected query techniques. We implemented two model-driven acquisition functions for selecting the samples to be validated. This work uses transformer-based NMT systems; baseline model (BM), fully trained model (FTM) , active learning least confidence based model (ALLCM), and active learning margin sampling based model (ALMSM) when translating English to Hindi. The Bilingual Evaluation Understudy (BLEU) metric has been used to evaluate system results. The BLEU scores of BM, FTM, ALLCM and ALMSM systems are 16.26, 22.56 , 24.54, and 24.20, respectively. The findings in this paper demonstrate that active learning techniques helps the model to converge early and improve the overall quality of the translation system.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2301.00688",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2301.00688",
+    "pdf_url": "https://arxiv.org/pdf/2301.00688",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2301.00688",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Active Learning for Neural Machine Translation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "vashistha",
+      "singh",
+      "shakya"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 8.6,
+     "citation_impact": 5.0,
+     "score": 7.1,
+     "why_cite": "Closest match in the abstract to your question: \u201cThe findings in this paper demonstrate that active learning techniques helps the model to converge early and improve the overall quality of the translation system.\u201d",
+     "evidence_quote": "The findings in this paper demonstrate that active learning techniques helps the model to converge early and improve the overall quality of the translation system.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2301.00688"
+   },
+   {
+    "title": "Neural Machine Translation Model Using GRU with Hybrid Attention Mechanism for English to Kannada Language",
+    "authors": [
+     "Gunti Spandan",
+     "P. Theerthagiri"
+    ],
+    "year": 2024,
+    "abstract": "Neural machine translation is a machine translation system that uses artificial neural networks to identify nonlinear relationships between bilingual sentence pairs. The language English-Kannada pair has met with less attention in the field of Neural Machine Translation (NMT), mostly due to lack of parallel corpora and the complexity of Kannada's linguistic structure. This research proposes a novel NMT model based on Gated Recurrent Units (GRU) and a Hybrid attention mechanism designed specifically for Kannada's morphological complexity and compared with existing models. By adding language-specific preprocessing techniques and employing data augmentation tactics, our model outperforms previous LSTM, GRU and Bi-LSTM-based algorithms in terms of BLEU and METEOR scores. The proposed model with hybrid attention might be a useful substitute in low-resource settings because transformers and other large models require more resources. The comparative study indicates that the proposed methodology improves the translation by 10% increase in Bilingual Evaluation Understudy (BLEU) and accuracy of 80% and achieved a Rouge Score of 0.9.",
+    "venue": "J. Wirel. Mob. Networks Ubiquitous Comput. Dependable Appl.",
+    "doi": "10.58346/jowua.2024.i4.017",
+    "arxiv_id": null,
+    "s2_id": "e576b9329eecd4bcddd4b2300672c2fa0d6c98d6",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/e576b9329eecd4bcddd4b2300672c2fa0d6c98d6",
+    "pdf_url": "https://doi.org/10.58346/jowua.2024.i4.017",
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_source": "unpaywall",
+    "citation_count": 4,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.58346/jowua.2024.i4.017",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Neural Machine Translation Model Using GRU with Hybrid Attention Mechanism for English to Kannada Language",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "spandan",
+      "theerthagiri"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.795,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 10.0,
+     "citation_impact": 1.8,
+     "score": 7.06,
+     "why_cite": "Closest match in the abstract to your question: \u201cNeural machine translation is a machine translation system that uses artificial neural networks to identify nonlinear relationships between bilingual sentence pairs.\u201d",
+     "evidence_quote": "Neural machine translation is a machine translation system that uses artificial neural networks to identify nonlinear relationships between bilingual sentence pairs.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.58346/jowua.2024.i4.017"
+   },
+   {
+    "title": "Neural Architecture Search on Efficient Transformers and Beyond",
+    "authors": [
+     "Zexiang Liu",
+     "Dong Li",
+     "Kaiyue Lu",
+     "Zhen Qin",
+     "Weixuan Sun",
+     "Jiacheng Xu",
+     "Yiran Zhong"
+    ],
+    "year": 2022,
+    "abstract": "Recently, numerous efficient Transformers have been proposed to reduce the quadratic computational complexity of standard Transformers caused by the Softmax attention. However, most of them simply swap Softmax with an efficient attention mechanism without considering the customized architectures specially for the efficient attention. In this paper, we argue that the handcrafted vanilla Transformer architectures for Softmax attention may not be suitable for efficient Transformers. To address this issue, we propose a new framework to find optimal architectures for efficient Transformers with the neural architecture search (NAS) technique. The proposed method is validated on popular machine translation and image classification tasks. We observe that the optimal architecture of the efficient Transformer has the reduced computation compared with that of the standard Transformer, but the general accuracy is less comparable. It indicates that the Softmax attention and efficient attention have their own distinctions but neither of them can simultaneously balance the accuracy and efficiency well. This motivates us to mix the two types of attention to reduce the performance imbalance. Besides the search spaces that commonly used in existing NAS Transformer approaches, we propose a new search space that allows the NAS algorithm to automatically search the attention variants along with architectures. Extensive experiments on WMT' 14 En-De and CIFAR-10 demonstrate that our searched architecture maintains comparable accuracy to the standard Transformer with notably improved computational efficiency.",
+    "venue": "arXiv.org",
+    "doi": null,
+    "arxiv_id": "2207.13955",
+    "s2_id": "86c8d930b492a4f9cadc6c60aecdaaded49acc86",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/86c8d930b492a4f9cadc6c60aecdaaded49acc86",
+    "pdf_url": "http://arxiv.org/pdf/2207.13955",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 24,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2207.13955",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Neural Architecture Search on Efficient Transformers and Beyond",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "liu",
+      "li",
+      "lu",
+      "qin",
+      "sun",
+      "xu",
+      "zhong"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.795,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 7.1,
+     "citation_impact": 3.8,
+     "score": 7.03,
+     "why_cite": "Closest match in the abstract to your question: \u201cTo address this issue, we propose a new framework to find optimal architectures for efficient Transformers with the neural architecture search (NAS) technique.\u201d",
+     "evidence_quote": "To address this issue, we propose a new framework to find optimal architectures for efficient Transformers with the neural architecture search (NAS) technique.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2207.13955"
+   },
+   {
+    "title": "Parallel Attention Forcing for Machine Translation",
+    "authors": [
+     "Qingyun Dou",
+     "Mark Gales"
+    ],
+    "year": 2022,
+    "abstract": "Attention-based autoregressive models have achieved state-of-the-art performance in various sequence-to-sequence tasks, including Text-To-Speech (TTS) and Neural Machine Translation (NMT), but can be difficult to train. The standard training approach, teacher forcing, guides a model with the reference back-history. During inference, the generated back-history must be used. This mismatch limits the evaluation performance. Attention forcing has been introduced to address the mismatch, guiding the model with the generated back-history and reference attention. While successful in tasks with continuous outputs like TTS, attention forcing faces additional challenges in tasks with discrete outputs like NMT. This paper introduces the two extensions of attention forcing to tackle these challenges. (1) Scheduled attention forcing automatically turns attention forcing on and off, which is essential for tasks with discrete outputs. (2) Parallel attention forcing makes training parallel, and is applicable to Transformer-based models. The experiments show that the proposed approaches improve the performance of models based on RNNs and Transformers.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2211.03237",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2211.03237",
+    "pdf_url": "https://arxiv.org/pdf/2211.03237",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2211.03237",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Parallel Attention Forcing for Machine Translation",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "dou",
+      "gales"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 7.1,
+     "citation_impact": 5.0,
+     "score": 6.88,
+     "why_cite": "Closest match in the abstract to your question: \u201cThe experiments show that the proposed approaches improve the performance of models based on RNNs and Transformers.\u201d",
+     "evidence_quote": "The experiments show that the proposed approaches improve the performance of models based on RNNs and Transformers.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2211.03237"
+   },
+   {
+    "title": "Dynamic Position Encoding for Transformers",
+    "authors": [
+     "Joyce Zheng",
+     "Mehdi Rezagholizadeh",
+     "Peyman Passban"
+    ],
+    "year": 2022,
+    "abstract": "Recurrent models have been dominating the field of neural machine translation (NMT) for the past few years. Transformers have radically changed it by proposing a novel architecture that relies on a feed-forward backbone and self-attention mechanism. Although Transformers are powerful, they could fail to properly encode sequential/positional information due to their non-recurrent nature. To solve this problem, position embeddings are defined exclusively for each time step to enrich word information. However, such embeddings are fixed after training regardless of the task and word ordering system of the source and target languages. In this paper, we address this shortcoming by proposing a novel architecture with new position embeddings that take the order of the target words into consideration. Instead of using predefined position embeddings, our solution generates new embeddings to refine each word\u2019s position information. Since we do not dictate the position of the source tokens and we learn them in an end-to-end fashion, we refer to our method as dynamic position encoding (DPE). We evaluated the impact of our model on multiple datasets to translate from English to German, French, and Italian and observed meaningful improvements in comparison to the original Transformer.",
+    "venue": "International Conference on Computational Linguistics",
+    "doi": null,
+    "arxiv_id": "2204.08142",
+    "s2_id": "633851a323990270461b49e8068a2c9ca1cea530",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/633851a323990270461b49e8068a2c9ca1cea530",
+    "pdf_url": "http://arxiv.org/pdf/2204.08142",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 5,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2204.08142",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Dynamic Position Encoding for Transformers",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "zheng",
+      "rezagholizadeh",
+      "passban"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.824,
+     "topic_match": 8.2,
+     "method_match": 8.2,
+     "recency": 7.1,
+     "citation_impact": 1.5,
+     "score": 6.69,
+     "why_cite": "Closest match in the abstract to your question: \u201cRecurrent models have been dominating the field of neural machine translation (NMT) for the past few years.\u201d",
+     "evidence_quote": "Recurrent models have been dominating the field of neural machine translation (NMT) for the past few years.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2204.08142"
+   },
+   {
+    "title": "ClusterFormer: Neural Clustering Attention for Efficient and Effective Transformer",
+    "authors": [
+     "Ning Wang",
+     "G. Gan",
+     "Peng Zhang",
+     "Shuai Zhang",
+     "Junqiu Wei",
+     "Qun Liu",
+     "Xin Jiang"
+    ],
+    "year": 2022,
+    "abstract": "Recently, a lot of research has been carried out to improve the efficiency of Transformer. Among them, the sparse pattern-based method is an important branch of efficient Transformers. However, some existing sparse methods usually use fixed patterns to select words, without considering similarities between words. Other sparse methods use clustering patterns to select words, but the clustering process is separate from the training process of the target task, which causes a decrease in effectiveness. To address these limitations, we design a neural clustering method, which can be seamlessly integrated into the Self-Attention Mechanism in Transformer. The clustering task and the target task are jointly trained and optimized to benefit each other, leading to significant effectiveness improvement. In addition, our method groups the words with strong dependencies into the same cluster and performs the attention mechanism for each cluster independently, which improves the efficiency. We verified our method on machine translation, text classification, natural language inference, and text matching tasks. Experimental results show that our method outperforms two typical sparse attention methods, Reformer and Routing Transformer while having a comparable or even better time and memory efficiency.",
+    "venue": "Annual Meeting of the Association for Computational Linguistics",
+    "doi": "10.18653/v1/2022.acl-long.170",
+    "arxiv_id": null,
+    "s2_id": "1f53e69f94a1020b48ea7d282221c576555c38a3",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/1f53e69f94a1020b48ea7d282221c576555c38a3",
+    "pdf_url": "https://aclanthology.org/2022.acl-long.170.pdf",
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_source": "unpaywall",
+    "citation_count": 25,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.18653/v1/2022.acl-long.170",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "ClusterFormer: Neural Clustering Attention for Efficient and Effective Transformer",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "wang",
+      "gan",
+      "zhang",
+      "zhang",
+      "wei",
+      "liu",
+      "jiang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 7.1,
+     "citation_impact": 3.9,
+     "score": 6.66,
+     "why_cite": "Closest match in the abstract to your question: \u201cWe verified our method on machine translation, text classification, natural language inference, and text matching tasks.\u201d",
+     "evidence_quote": "We verified our method on machine translation, text classification, natural language inference, and text matching tasks.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.18653/v1/2022.acl-long.170"
+   },
+   {
+    "title": "P-Transformer: Towards Better Document-to-Document Neural Machine Translation",
+    "authors": [
+     "Yachao Li",
+     "Junhui Li",
+     "Jing Jiang",
+     "Shimin Tao",
+     "Hao Yang",
+     "Min Zhang"
+    ],
+    "year": 2022,
+    "abstract": "Directly training a document-to-document (Doc2Doc) neural machine translation (NMT) via Transformer from scratch, especially on small datasets usually fails to converge. Our dedicated probing tasks show that 1) both the absolute position and relative position information gets gradually weakened or even vanished once it reaches the upper encoder layers, and 2) the vanishing of absolute position information in encoder output causes the training failure of Doc2Doc NMT. To alleviate this problem, we propose a position-aware Transformer (P-Transformer) to enhance both the absolute and relative position information in both self-attention and cross-attention. Specifically, we integrate absolute positional information, i.e., position embeddings, into the query-key pairs both in self-attention and cross-attention through a simple yet effective addition operation. Moreover, we also integrate relative position encoding in self-attention. The proposed P-Transformer utilizes sinusoidal position encoding and does not require any task-specified position embedding, segment embedding, or attention mechanism. Through the above methods, we build a Doc2Doc NMT model with P-Transformer, which ingests the source document and completely generates the target document in a sequence-to-sequence (seq2seq) way. In addition, P-Transformer can be applied to seq2seq-based document-to-sentence (Doc2Sent) and sentence-to-sentence (Sent2Sent) translation. Extensive experimental results of Doc2Doc NMT show that P-Transformer significantly outperforms strong baselines on widely-used 9 document-level datasets in 7 language pairs, covering small-, middle-, and large-scales, and achieves a new state-of-the-art. Experimentation on discourse phenomena shows that our Doc2Doc NMT models improve the translation quality in both BLEU and discourse coherence. We make our code available on Github.",
+    "venue": "IEEE/ACM Transactions on Audio Speech and Language Processing",
+    "doi": "10.1109/taslp.2023.3313445",
+    "arxiv_id": "2212.05830",
+    "s2_id": "f6d381941e2964872a283d5290a390126115ad03",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2212.05830",
+    "pdf_url": "https://arxiv.org/pdf/2212.05830",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 21,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/taslp.2023.3313445",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "P-Transformer: Towards Better Document-to-Document Neural Machine Translation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "li",
+      "li",
+      "jiang",
+      "tao",
+      "yang",
+      "zhang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 7.1,
+     "citation_impact": 3.6,
+     "score": 6.59,
+     "why_cite": "Closest match in the abstract to your question: \u201cExperimentation on discourse phenomena shows that our Doc2Doc NMT models improve the translation quality in both BLEU and discourse coherence.\u201d",
+     "evidence_quote": "Experimentation on discourse phenomena shows that our Doc2Doc NMT models improve the translation quality in both BLEU and discourse coherence.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1109/taslp.2023.3313445"
+   },
+   {
+    "title": "Can Transformer be Too Compositional? Analysing Idiom Processing in Neural Machine Translation",
+    "authors": [
+     "Verna Dankers",
+     "Christopher G. Lucas",
+     "Ivan Titov"
+    ],
+    "year": 2022,
+    "abstract": "Unlike literal expressions, idioms' meanings do not directly follow from their parts, posing a challenge for neural machine translation (NMT). NMT models are often unable to translate idioms accurately and over-generate compositional, literal translations. In this work, we investigate whether the non-compositionality of idioms is reflected in the mechanics of the dominant NMT model, Transformer, by analysing the hidden states and attention patterns for models with English as source language and one of seven European languages as target language. When Transformer emits a non-literal translation - i.e. identifies the expression as idiomatic - the encoder processes idioms more strongly as single lexical units compared to literal expressions. This manifests in idioms' parts being grouped through attention and in reduced interaction between idioms and their context. In the decoder's cross-attention, figurative inputs result in reduced attention on source-side tokens. These results suggest that Transformer's tendency to process idioms as compositional expressions contributes to literal translations of idioms.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2205.15301",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2205.15301",
+    "pdf_url": "https://arxiv.org/pdf/2205.15301",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2205.15301",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Can Transformer be Too Compositional? Analysing Idiom Processing in Neural Machine Translation",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "dankers",
+      "lucas",
+      "titov"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.683,
+     "topic_match": 6.8,
+     "method_match": 6.8,
+     "recency": 7.1,
+     "citation_impact": 5.0,
+     "score": 6.48,
+     "why_cite": "Closest match in the abstract to your question: \u201cWhen Transformer emits a non-literal translation - i.e.\u201d",
+     "evidence_quote": "When Transformer emits a non-literal translation - i.e.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2205.15301"
+   },
+   {
+    "title": "Explicit Reordering for Neural Machine Translation",
+    "authors": [
+     "Kehai Chen",
+     "Rui Wang",
+     "Masao Utiyama",
+     "Eiichiro Sumita"
+    ],
+    "year": 2020,
+    "abstract": "In Transformer-based neural machine translation (NMT), the positional encoding mechanism helps the self-attention networks to learn the source representation with order dependency, which makes the Transformer-based NMT achieve state-of-the-art results for various translation tasks. However, Transformer-based NMT only adds representations of positions sequentially to word vectors in the input sentence and does not explicitly consider reordering information in this sentence. In this paper, we first empirically investigate the relationship between source reordering information and translation performance. The empirical findings show that the source input with the target order learned from the bilingual parallel dataset can substantially improve translation performance. Thus, we propose a novel reordering method to explicitly model this reordering information for the Transformer-based NMT. The empirical results on the WMT14 English-to-German, WAT ASPEC Japanese-to-English, and WMT17 Chinese-to-English translation tasks show the effectiveness of the proposed approach.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2004.03818",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2004.03818",
+    "pdf_url": "https://arxiv.org/pdf/2004.03818",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2004.03818",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Explicit Reordering for Neural Machine Translation",
+     "resolved_year": 2020,
+     "resolved_authors": [
+      "chen",
+      "wang",
+      "utiyama",
+      "sumita"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 4.3,
+     "citation_impact": 5.0,
+     "score": 6.46,
+     "why_cite": "Closest match in the abstract to your question: \u201cIn this paper, we first empirically investigate the relationship between source reordering information and translation performance.\u201d",
+     "evidence_quote": "In this paper, we first empirically investigate the relationship between source reordering information and translation performance.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2004.03818"
+   },
+   {
+    "title": "Multi-Unit Transformers for Neural Machine Translation",
+    "authors": [
+     "Jianhao Yan",
+     "Fandong Meng",
+     "Jie Zhou"
+    ],
+    "year": 2020,
+    "abstract": "Transformer models achieve remarkable success in Neural Machine Translation. Many efforts have been devoted to deepening the Transformer by stacking several units (i.e., a combination of Multihead Attentions and FFN) in a cascade, while the investigation over multiple parallel units draws little attention. In this paper, we propose the Multi-Unit Transformers (MUTE), which aim to promote the expressiveness of the Transformer by introducing diverse and complementary units. Specifically, we use several parallel units and show that modeling with multiple units improves model performance and introduces diversity. Further, to better leverage the advantage of the multi-unit setting, we design biased module and sequential dependency that guide and encourage complementariness among different units. Experimental results on three machine translation tasks, the NIST Chinese-to-English, WMT'14 English-to-German and WMT'18 Chinese-to-English, show that the MUTE models significantly outperform the Transformer-Base, by up to +1.52, +1.90 and +1.10 BLEU points, with only a mild drop in inference speed (about 3.1%). In addition, our methods also surpass the Transformer-Big model, with only 54\\% of its parameters. These results demonstrate the effectiveness of the MUTE, as well as its efficiency in both the inference process and parameter usage.",
+    "venue": "Conference on Empirical Methods in Natural Language Processing",
+    "doi": "10.18653/v1/2020.emnlp-main.77",
+    "arxiv_id": "2010.10743",
+    "s2_id": "8f8701e17f1b14f5a0a69fa2b24e7d8515f6d711",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2010.10743",
+    "pdf_url": "https://arxiv.org/pdf/2010.10743",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 19,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.18653/v1/2020.emnlp-main.77",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Multi-Unit Transformers for Neural Machine Translation",
+     "resolved_year": 2020,
+     "resolved_authors": [
+      "yan",
+      "meng",
+      "zhou"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.795,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 4.3,
+     "citation_impact": 2.8,
+     "score": 6.4,
+     "why_cite": "Closest match in the abstract to your question: \u201cTransformer models achieve remarkable success in Neural Machine Translation.\u201d",
+     "evidence_quote": "Transformer models achieve remarkable success in Neural Machine Translation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.18653/v1/2020.emnlp-main.77"
+   },
+   {
+    "title": "Modeling Discourse Structure for Document-level Neural Machine Translation",
+    "authors": [
+     "Junxuan Chen",
+     "Xiang Li",
+     "Jiarui Zhang",
+     "Chulun Zhou",
+     "Jianwei Cui",
+     "Bin Wang",
+     "Jinsong Su"
+    ],
+    "year": 2020,
+    "abstract": "Recently, document-level neural machine translation (NMT) has become a hot topic in the community of machine translation. Despite its success, most of existing studies ignored the discourse structure information of the input document to be translated, which has shown effective in other tasks. In this paper, we propose to improve document-level NMT with the aid of discourse structure information. Our encoder is based on a hierarchical attention network (HAN). Specifically, we first parse the input document to obtain its discourse structure. Then, we introduce a Transformer-based path encoder to embed the discourse structure information of each word. Finally, we combine the discourse structure information with the word embedding before it is fed into the encoder. Experimental results on the English-to-German dataset show that our model can significantly outperform both Transformer and Transformer+HAN.",
+    "venue": "AUTOSIMTRANS",
+    "doi": "10.18653/v1/2020.autosimtrans-1.5",
+    "arxiv_id": "2006.04721",
+    "s2_id": "aa190c4d637fa46aae1ec21a4d319c45a7c44c09",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2006.04721",
+    "pdf_url": "https://arxiv.org/pdf/2006.04721",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 39,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.18653/v1/2020.autosimtrans-1.5",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Modeling Discourse Structure for Document-level Neural Machine Translation",
+     "resolved_year": 2020,
+     "resolved_authors": [
+      "chen",
+      "li",
+      "zhang",
+      "zhou",
+      "cui",
+      "wang",
+      "su"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 4.3,
+     "citation_impact": 4.1,
+     "score": 6.28,
+     "why_cite": "Closest match in the abstract to your question: \u201cRecently, document-level neural machine translation (NMT) has become a hot topic in the community of machine translation.\u201d",
+     "evidence_quote": "Recently, document-level neural machine translation (NMT) has become a hot topic in the community of machine translation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.18653/v1/2020.autosimtrans-1.5"
+   },
+   {
+    "title": "Semantics-aware Attention Improves Neural Machine Translation",
+    "authors": [
+     "Aviv Slobodkin",
+     "Leshem Choshen",
+     "Omri Abend"
+    ],
+    "year": 2021,
+    "abstract": "The integration of syntactic structures into Transformer machine translation has shown positive results, but to our knowledge, no work has attempted to do so with semantic structures. In this work we propose two novel parameter-free methods for injecting semantic information into Transformers, both rely on semantics-aware masking of (some of) the attention heads. One such method operates on the encoder, through a Scene-Aware Self-Attention (SASA) head. Another on the decoder, through a Scene-Aware Cross-Attention (SACrA) head. We show a consistent improvement over the vanilla Transformer and syntax-aware models for four language pairs. We further show an additional gain when using both semantic and syntactic structures in some language pairs.",
+    "venue": "arXiv",
+    "doi": "10.18653/v1/2022.starsem-1.3",
+    "arxiv_id": "2110.06920",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2110.06920",
+    "pdf_url": "https://arxiv.org/pdf/2110.06920",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.18653/v1/2022.starsem-1.3",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Semantics-aware Attention Improves Neural Machine Translation",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "slobodkin",
+      "choshen",
+      "abend"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.683,
+     "topic_match": 6.8,
+     "method_match": 6.8,
+     "recency": 5.7,
+     "citation_impact": 5.0,
+     "score": 6.28,
+     "why_cite": "Closest match in the abstract to your question: \u201cWe show a consistent improvement over the vanilla Transformer and syntax-aware models for four language pairs.\u201d",
+     "evidence_quote": "We show a consistent improvement over the vanilla Transformer and syntax-aware models for four language pairs.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.18653/v1/2022.starsem-1.3"
+   },
+   {
+    "title": "Universal Regular Conditional Distributions via Probabilistic Transformers",
+    "authors": [
+     "Anastasis Kratsios"
+    ],
+    "year": 2021,
+    "abstract": "We introduce a deep learning model that can universally approximate regular conditional distributions (RCDs). The proposed model operates in three phases: first, it linearizes inputs from a given metric space $$\\mathcal {X}$$ X to $$\\mathbb {R}^d$$ R d via a feature map, then a deep feedforward neural network processes these linearized features, and then the network\u2019s outputs are then transformed to the 1-Wasserstein space $$\\mathcal {P}_1(\\mathbb {R}^D)$$ P 1 ( R D ) via a probabilistic extension of the attention mechanism of Bahdanau et al. (Neural machine translation by jointly learning to align and translate, 2014. arXiv:1409.0473 ). Our model, called the probabilistic transformer (PT) , can approximate any continuous function from $$\\mathbb {R}^d $$ R d to $$\\mathcal {P}_1(\\mathbb {R}^D)$$ P 1 ( R D ) uniformly on compact sets, quantitatively. We identify two ways in which the PT avoids the curse of dimensionality when approximating $$\\mathcal {P}_1(\\mathbb {R}^D)$$ P 1 ( R D ) -valued functions. The first strategy builds functions in $$C(\\mathbb {R}^d,\\mathcal {P}_1(\\mathbb {R}^D))$$ C ( R d , P 1 ( R D ) ) which can be efficiently approximated by a PT, uniformly on any given compact subset of $$\\mathbb {R}^d$$ R d . In the second approach, given any function f in $$C(\\mathbb {R}^d,\\mathcal {P}_1(\\mathbb {R}^D))$$ C ( R d , P 1 ( R D ) ) , we build compact subsets of $$\\mathbb {R}^d$$ R d whereon f can be efficiently approximated by a PT.",
+    "venue": "Constructive approximation",
+    "doi": "10.1007/s00365-023-09635-3",
+    "arxiv_id": "2105.07743",
+    "s2_id": "2ae668c3d2a92e1727093cb7e9b302665a0d27ee",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/2ae668c3d2a92e1727093cb7e9b302665a0d27ee",
+    "pdf_url": "https://arxiv.org/pdf/2105.07743",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 4,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2105.07743",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Universal Regular Conditional Distributions",
+     "resolved_year": 2021,
+     "resolved_authors": [
+      "kratsios"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "published DOI failed (year 2021 vs 2023); citing arXiv version",
+     "citable": true,
+     "published_attempt": {
+      "doi": "10.1007/s00365-023-09635-3",
+      "resolved": true,
+      "status": "mismatch",
+      "title_score": 100.0,
+      "author_overlap": 1.0,
+      "year_ok": false,
+      "resolved_title": "Universal Regular Conditional Distributions via Probabilistic Transformers",
+      "resolved_year": 2023,
+      "resolved_authors": [
+       "kratsios"
+      ],
+      "resolver": "doi.org/csl+json",
+      "reason": "year 2021 vs 2023",
+      "citable": false
+     },
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.795,
+     "topic_match": 8.0,
+     "method_match": 8.0,
+     "recency": 5.7,
+     "citation_impact": 1.1,
+     "score": 6.27,
+     "why_cite": "Closest match in the abstract to your question: \u201c(Neural machine translation by jointly learning to align and translate, 2014.\u201d",
+     "evidence_quote": "(Neural machine translation by jointly learning to align and translate, 2014.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1007/s00365-023-09635-3"
+   },
+   {
+    "title": "Fixed Encoder Self-Attention Patterns in Transformer-Based Machine Translation",
+    "authors": [
+     "Alessandro Raganato",
+     "Yves Scherrer",
+     "J\u00f6rg Tiedemann"
+    ],
+    "year": 2020,
+    "abstract": "Transformer-based models have brought a radical change to neural machine translation. A key feature of the Transformer architecture is the so-called multi-head attention mechanism, which allows the model to focus simultaneously on different parts of the input. However, recent works have shown that most attention heads learn simple, and often redundant, positional patterns. In this paper, we propose to replace all but one attention head of each encoder layer with simple fixed -- non-learnable -- attentive patterns that are solely based on position and do not require any external knowledge. Our experiments with different data sizes and multiple language pairs show that fixing the attention heads on the encoder side of the Transformer at training time does not impact the translation quality and even increases BLEU scores by up to 3 points in low-resource scenarios.",
+    "venue": "Findings",
+    "doi": "10.18653/v1/2020.findings-emnlp.49",
+    "arxiv_id": "2002.10260",
+    "s2_id": "57f123c95ecf9d901be3a53291f53302740451e2",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2002.10260",
+    "pdf_url": "https://arxiv.org/pdf/2002.10260",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 101,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.18653/v1/2020.findings-emnlp.49",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Fixed Encoder Self-Attention Patterns in Transformer-Based Machine Translation",
+     "resolved_year": 2020,
+     "resolved_authors": [
+      "raganato",
+      "scherrer",
+      "tiedemann"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.683,
+     "topic_match": 6.8,
+     "method_match": 6.8,
+     "recency": 4.3,
+     "citation_impact": 5.9,
+     "score": 6.24,
+     "why_cite": "Closest match in the abstract to your question: \u201cTransformer-based models have brought a radical change to neural machine translation.\u201d",
+     "evidence_quote": "Transformer-based models have brought a radical change to neural machine translation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.18653/v1/2020.findings-emnlp.49"
+   },
+   {
+    "title": "Lattice-Based Transformer Encoder for Neural Machine Translation",
+    "authors": [
+     "Fengshun Xiao",
+     "Jiangtong Li",
+     "Hai Zhao",
+     "Rui Wang",
+     "Kehai Chen"
+    ],
+    "year": 2019,
+    "abstract": "Neural machine translation (NMT) takes deterministic sequences for source representations. However, either word-level or subword-level segmentations have multiple choices to split a source sequence with different word segmentors or different subword vocabulary sizes. We hypothesize that the diversity in segmentations may affect the NMT performance. To integrate different segmentations with the state-of-the-art NMT model, Transformer, we propose lattice-based encoders to explore effective word or subword representation in an automatic way during training. We propose two methods: 1) lattice positional encoding and 2) lattice-aware self-attention. These two methods can be used together and show complementary to each other to further improve translation performance. Experiment results show superiorities of lattice-based encoders in word-level and subword-level representations over conventional Transformer encoder.",
+    "venue": "Annual Meeting of the Association for Computational Linguistics",
+    "doi": "10.18653/v1/p19-1298",
+    "arxiv_id": "1906.01282",
+    "s2_id": "0ab0fda8774c303be8f8f8c8f684a890dcf5d455",
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/1906.01282",
+    "pdf_url": "https://arxiv.org/pdf/1906.01282",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 45,
+    "sources": [
+     "arxiv",
+     "s2"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.18653/v1/p19-1298",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Lattice-Based Transformer Encoder for Neural Machine Translation",
+     "resolved_year": 2019,
+     "resolved_authors": [
+      "xiao",
+      "li",
+      "zhao",
+      "wang",
+      "chen"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.743,
+     "topic_match": 7.4,
+     "method_match": 7.4,
+     "recency": 2.9,
+     "citation_impact": 4.1,
+     "score": 6.07,
+     "why_cite": "Closest match in the abstract to your question: \u201cNeural machine translation (NMT) takes deterministic sequences for source representations.\u201d",
+     "evidence_quote": "Neural machine translation (NMT) takes deterministic sequences for source representations.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.18653/v1/p19-1298"
+   },
+   {
+    "title": "Capsule-Transformer for Neural Machine Translation",
+    "authors": [
+     "Sufeng Duan",
+     "Juncheng Cao",
+     "Hai Zhao"
+    ],
+    "year": 2020,
+    "abstract": "Transformer hugely benefits from its key design of the multi-head self-attention network (SAN), which extracts information from various perspectives through transforming the given input into different subspaces. However, its simple linear transformation aggregation strategy may still potentially fail to fully capture deeper contextualized information. In this paper, we thus propose the capsule-Transformer, which extends the linear transformation into a more general capsule routing algorithm by taking SAN as a special case of capsule network. So that the resulted capsule-Transformer is capable of obtaining a better attention distribution representation of the input sequence via information aggregation among different heads and words. Specifically, we see groups of attention weights in SAN as low layer capsules. By applying the iterative capsule routing algorithm they can be further aggregated into high layer capsules which contain deeper contextualized information. Experimental results on the widely-used machine translation datasets show our proposed capsule-Transformer outperforms strong Transformer baseline significantly.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2004.14649",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2004.14649",
+    "pdf_url": "https://arxiv.org/pdf/2004.14649",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2004.14649",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Capsule-Transformer for Neural Machine Translation",
+     "resolved_year": 2020,
+     "resolved_authors": [
+      "duan",
+      "cao",
+      "zhao"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.643,
+     "topic_match": 6.4,
+     "method_match": 6.4,
+     "recency": 4.3,
+     "citation_impact": 5.0,
+     "score": 5.8,
+     "why_cite": "Closest match in the abstract to your question: \u201cExperimental results on the widely-used machine translation datasets show our proposed capsule-Transformer outperforms strong Transformer baseline significantly.\u201d",
+     "evidence_quote": "Experimental results on the widely-used machine translation datasets show our proposed capsule-Transformer outperforms strong Transformer baseline significantly.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2004.14649"
+   },
+   {
+    "title": "BERT-JAM: Boosting BERT-Enhanced Neural Machine Translation with Joint Attention",
+    "authors": [
+     "Zhebin Zhang",
+     "Sai Wu",
+     "Dawei Jiang",
+     "Gang Chen"
+    ],
+    "year": 2020,
+    "abstract": "BERT-enhanced neural machine translation (NMT) aims at leveraging BERT-encoded representations for translation tasks. A recently proposed approach uses attention mechanisms to fuse Transformer's encoder and decoder layers with BERT's last-layer representation and shows enhanced performance. However, their method doesn't allow for the flexible distribution of attention between the BERT representation and the encoder/decoder representation. In this work, we propose a novel BERT-enhanced NMT model called BERT-JAM which improves upon existing models from two aspects: 1) BERT-JAM uses joint-attention modules to allow the encoder/decoder layers to dynamically allocate attention between different representations, and 2) BERT-JAM allows the encoder/decoder layers to make use of BERT's intermediate representations by composing them using a gated linear unit (GLU). We train BERT-JAM with a novel three-phase optimization strategy that progressively unfreezes different components of BERT-JAM. Our experiments show that BERT-JAM achieves SOTA BLEU scores on multiple translation tasks.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "2011.04266",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/2011.04266",
+    "pdf_url": "https://arxiv.org/pdf/2011.04266",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2011.04266",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "BERT-JAM: Boosting BERT-Enhanced Neural Machine Translation with Joint Attention",
+     "resolved_year": 2020,
+     "resolved_authors": [
+      "zhang",
+      "wu",
+      "jiang",
+      "chen"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.643,
+     "topic_match": 6.4,
+     "method_match": 6.4,
+     "recency": 4.3,
+     "citation_impact": 5.0,
+     "score": 5.8,
+     "why_cite": "Closest match in the abstract to your question: \u201cBERT-enhanced neural machine translation (NMT) aims at leveraging BERT-encoded representations for translation tasks.\u201d",
+     "evidence_quote": "BERT-enhanced neural machine translation (NMT) aims at leveraging BERT-encoded representations for translation tasks.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2011.04266"
+   },
+   {
+    "title": "Doubly Attentive Transformer Machine Translation",
+    "authors": [
+     "Hasan Sait Arslan",
+     "Mark Fishel",
+     "Gholamreza Anbarjafari"
+    ],
+    "year": 2018,
+    "abstract": "In this paper a doubly attentive transformer machine translation model (DATNMT) is presented in which a doubly-attentive transformer decoder normally joins spatial visual features obtained via pretrained convolutional neural networks, conquering any gap between image captioning and translation. In this framework, the transformer decoder figures out how to take care of source-language words and parts of an image freely by methods for two separate attention components in an Enhanced Multi-Head Attention Layer of doubly attentive transformer, as it generates words in the target language. We find that the proposed model can effectively exploit not just the scarce multimodal machine translation data, but also large general-domain text-only machine translation corpora, or image-text image captioning corpora. The experimental results show that the proposed doubly-attentive transformer-decoder performs better than a single-decoder transformer model, and gives the state-of-the-art results in the English-German multimodal machine translation task.",
+    "venue": "arXiv",
+    "doi": null,
+    "arxiv_id": "1807.11605",
+    "s2_id": null,
+    "openalex_id": null,
+    "url": "https://arxiv.org/abs/1807.11605",
+    "pdf_url": "https://arxiv.org/pdf/1807.11605",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": null,
+    "sources": [
+     "arxiv"
+    ],
+    "provenance": "search:arxiv",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.1807.11605",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Doubly Attentive Transformer Machine Translation",
+     "resolved_year": 2018,
+     "resolved_authors": [
+      "arslan",
+      "fishel",
+      "anbarjafari"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.696,
+     "topic_match": 7.0,
+     "method_match": 7.0,
+     "recency": 1.4,
+     "citation_impact": 5.0,
+     "score": 5.76,
+     "why_cite": "Closest match in the abstract to your question: \u201cIn this paper a doubly attentive transformer machine translation model (DATNMT) is presented in which a doubly-attentive transformer decoder normally joins spatial visual features obtained via pretrained convolutional neural networks, conquering any gap between image captioning and translation.\u201d",
+     "evidence_quote": "In this paper a doubly attentive transformer machine translation model (DATNMT) is presented in which a doubly-attentive transformer decoder normally joins spatial visual features obtained via pretrained convolutional neural networks, conquering any gap between image captioning and translation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.1807.11605"
+   }
+  ],
+  "paywalled": [
+   {
+    "title": "LETR: A Lightweight and Efficient Transformer for Keyword Spotting",
+    "authors": [
+     "Ke Ding",
+     "Martin Zong",
+     "Jiakui Li",
+     "Baoxiang Li"
+    ],
+    "year": 2022,
+    "abstract": "Transformer recently has achieved impressive success in a number of domains, including machine translation, image recognition, and speech recognition. Most of the previous work on Keyword Spotting (KWS) is built upon convolutional or recurrent neural networks. In this paper, we explore a family of Transformer architectures for keyword spotting, optimizing the trade-off between accuracy and efficiency in a high-speed regime. We also studied the effectiveness and summarized the principles of applying key components in vision Transformers to KWS, including patch embedding, position encoding, attention mechanism, and class token. On top of the findings, we propose the LeTR: a lightweight and highly efficient Transformer for KWS. We consider different efficiency measures on different edge devices so as to reflect a wide range of application scenarios best. Experimental results on two common benchmarks demonstrate that LeTR has achieved state-of-the-art results over competing methods with respect to the speed/accuracy trade-off.",
+    "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+    "doi": "10.1109/icassp43922.2022.9747295",
+    "arxiv_id": null,
+    "s2_id": "7109bd9a3e407e1b840d52fe5fb261195c89dc04",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/7109bd9a3e407e1b840d52fe5fb261195c89dc04",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 31,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/icassp43922.2022.9747295",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "LETR: A Lightweight and Efficient Transformer for Keyword Spotting",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "ding",
+      "zong",
+      "li",
+      "li"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.795
+    },
+    "best_doi": "10.1109/icassp43922.2022.9747295"
+   },
+   {
+    "title": "A Comparative Analysis of Transformers for Multilingual Neural Machine Translation",
+    "authors": [
+     "R. P. Kumar",
+     "S. Sudharson",
+     "A. A. Reddy",
+     "B. S. J. N. Reddy",
+     "Vemireddy Anvitha"
+    ],
+    "year": 2023,
+    "abstract": "Multilingual neural machine translation (NMT) has emerged as a promising solution to break down language barriers and promote cross-lingual communication. Transformer-based NMT models have gained significant attention due to their ability to learn contextual information and their effectiveness in handling long-range dependencies. The transformer model, with its self-attention and cross-attention mechanisms, fundamentally alters machine translation when compared to other neural machine translation models and traditional machine translation models. Token alignments between source and target sentences are successfully modelled by these mechanisms. This paper deals with the performance of a transformer-based multilingual NMT model that uses a shared encoder and decoder. We conducted experiments on the publicly available Multi30k dataset for translation jobs involving German, French, and Czech into English. In comparison of models, the Transformer model has performed better against the Convolutional SeqtoSeq and Attention-Based Seq2Seq models. We have evaluated our model on the metric Bilingual Evaluation Understudy (BLEU), where the transformer achieved 36.67, 48.47, and 33.66 for DE, FR, and CZ to EN translations.",
+    "venue": "Conference Information and Communication Technology",
+    "doi": "10.1109/cict59886.2023.10455324",
+    "arxiv_id": null,
+    "s2_id": "6c815248c431a23d2be29003dce430d6a8c2de0c",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/6c815248c431a23d2be29003dce430d6a8c2de0c",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 3,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/cict59886.2023.10455324",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A Comparative Analysis of Transformers for Multilingual Neural Machine Translation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "kumar",
+      "sudharson",
+      "reddy",
+      "reddy",
+      "anvitha"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.795
+    },
+    "best_doi": "10.1109/cict59886.2023.10455324"
+   },
+   {
+    "title": "Neural Machine Translation Using Attention Mechanism",
+    "authors": [
+     "Sai Yashwanth Velpuri",
+     "Sonakshi Karanwal",
+     "R. Anita"
+    ],
+    "year": 2022,
+    "abstract": "",
+    "venue": "Proceedings of International Conference on Recent Trends in Computing",
+    "doi": "10.1007/978-981-16-7118-0_61",
+    "arxiv_id": null,
+    "s2_id": "4b55ee75d8d6ddc45db402b078e466eb098c1c81",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/4b55ee75d8d6ddc45db402b078e466eb098c1c81",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 1,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1007/978-981-16-7118-0_61",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Neural Machine Translation Using Attention Mechanism",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "velpuri",
+      "karanwal",
+      "anita"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.659
+    },
+    "best_doi": "10.1007/978-981-16-7118-0_61"
+   }
+  ],
+  "flagged": [
+   {
+    "title": "Deep Neural Transformer Model for Mono and Multi Lingual Machine Translation",
+    "authors": [
+     "M. I. Khaber",
+     "Abdelouahab Moussaoui",
+     "Mohamed Saidi",
+     "Nabila. Frahta"
+    ],
+    "year": 2021,
+    "abstract": "",
+    "venue": "",
+    "doi": null,
+    "arxiv_id": null,
+    "s2_id": "bfa431595d1fa3532817fa3cb2df79c947e67bc5",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/bfa431595d1fa3532817fa3cb2df79c947e67bc5",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": null,
+    "oa_source": null,
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "",
+     "resolved": false,
+     "status": "unresolved",
+     "title_score": 0.0,
+     "author_overlap": 0.0,
+     "year_ok": false,
+     "resolved_title": "",
+     "resolved_year": null,
+     "resolved_authors": null,
+     "resolver": "doi.org/csl+json",
+     "reason": "no DOI",
+     "citable": false
+    },
+    "relevance": {
+     "lexical": 0.697
+    },
+    "best_doi": null
+   },
+   {
+    "title": "Gated Position-based Attention for Neural Machine Translation",
+    "authors": [
+     "Alexander Kolesnikov"
+    ],
+    "year": 2023,
+    "abstract": "",
+    "venue": "",
+    "doi": null,
+    "arxiv_id": null,
+    "s2_id": "0c634cc002c6af7cdf4b170759318e05580b07e8",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/0c634cc002c6af7cdf4b170759318e05580b07e8",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": null,
+    "oa_source": null,
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "",
+     "resolved": false,
+     "status": "unresolved",
+     "title_score": 0.0,
+     "author_overlap": 0.0,
+     "year_ok": false,
+     "resolved_title": "",
+     "resolved_year": null,
+     "resolved_authors": null,
+     "resolver": "doi.org/csl+json",
+     "reason": "no DOI",
+     "citable": false
+    },
+    "relevance": {
+     "lexical": 0.649
+    },
+    "best_doi": null
+   }
+  ]
+ },
+ "stats": {
+  "gemini (gemini-3.8-flash)": {
+   "calls": 12,
+   "secs": 5.681462599997758,
+   "retries": 8
+  },
+  "gemini (gemini-3.6-flash)": {
+   "calls": 12,
+   "secs": 4.61842610000167,
+   "retries": 8
+  },
+  "gemini (gemini-3.5-flash-lite)": {
+   "calls": 4,
+   "secs": 15.170215799993457,
+   "retries": 0
+  },
+  "export.arxiv.org": {
+   "calls": 0,
+   "secs": 0.0,
+   "retries": 0,
+   "cache_hits": 1
+  },
+  "api.semanticscholar.org": {
+   "calls": 7,
+   "secs": 5.447788899997249,
+   "retries": 3,
+   "cache_hits": 25
+  },
+  "api.unpaywall.org": {
+   "calls": 4,
+   "secs": 2.847993800001859,
+   "retries": 0,
+   "cache_hits": 4
+  },
+  "doi.org": {
+   "calls": 9,
+   "secs": 6.376233399994817,
+   "retries": 0,
+   "cache_hits": 30
+  },
+  "api.crossref.org": {
+   "calls": 29,
+   "secs": 11.478650099994411,
+   "retries": 8
+  }
+ },
+ "evidence": [
+  {
+   "ts": 1792429957.42,
+   "host": "export.arxiv.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://export.arxiv.org/api/query?search_query=%28ti%3Atransformer+OR+abs%3Atransformer%29+AND+%28ti%3Aneural+OR+abs%3Aneural%29+AND+%28ti%3Amachine+OR+abs%3Amachine%29+AND+%28ti%3Atranslation+OR+abs%3Atranslation%29+AND+%28ti%3Aattention+OR+abs%3Aattention%29&start=0&max_results=80&sortBy=relevance"
+  },
+  {
+   "ts": 1792429978.71,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=transformers+neural+machine+translation+attention+mechanism&limit=40&fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl&year=2017-2024"
+  },
+  {
+   "ts": 1792429997.2,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2210.11807?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.2,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2010.10743?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.21,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2312.15872?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.21,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1906.01282?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.21,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2212.05830?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.21,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2004.03818?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.21,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2211.03237?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.21,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2006.04721?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.21,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2301.00688?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.22,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2404.02392?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.22,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1807.11605?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.22,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1809.03985?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.22,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2002.10260?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.22,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2205.15301?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.23,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1810.12427?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.23,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1711.02132?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.23,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1810.07595?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.23,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1811.00253?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.23,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1909.03149?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.23,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2004.14649?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1810.04101?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:1909.09779?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2010.02416?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2011.04266?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429997.24,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2002.06546?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429998.61,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2207.13955?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792429999.69,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2209.10655?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792430009.54,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2204.08142?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792430009.55,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.unpaywall.org/v2/10.58346/jowua.2024.i4.017?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430009.57,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.unpaywall.org/v2/10.1109/cict59886.2023.10455324?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430009.57,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.unpaywall.org/v2/10.38124/ijisrt/ijisrt24jul767?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430009.57,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://api.unpaywall.org/v2/10.18653/v1/2022.acl-long.170?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430010.29,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1007/s00521-023-08858-6?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430010.49,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/access.2022.3169772?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430010.66,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/icassp43922.2022.9747295?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430010.88,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1007/978-981-16-7118-0_61?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430010.91,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2210.11807"
+  },
+  {
+   "ts": 1792430010.92,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/2020.emnlp-main.77"
+  },
+  {
+   "ts": 1792430010.92,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.58346/jowua.2024.i4.017"
+  },
+  {
+   "ts": 1792430010.94,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1109/cict59886.2023.10455324"
+  },
+  {
+   "ts": 1792430010.95,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.38124/ijisrt/ijisrt24jul767"
+  },
+  {
+   "ts": 1792430010.95,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2312.15872"
+  },
+  {
+   "ts": 1792430010.95,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/p19-1298"
+  },
+  {
+   "ts": 1792430010.96,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1109/taslp.2023.3313445"
+  },
+  {
+   "ts": 1792430010.96,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2004.03818"
+  },
+  {
+   "ts": 1792430010.96,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2211.03237"
+  },
+  {
+   "ts": 1792430010.97,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/2020.autosimtrans-1.5"
+  },
+  {
+   "ts": 1792430010.97,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2301.00688"
+  },
+  {
+   "ts": 1792430010.97,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2404.02392"
+  },
+  {
+   "ts": 1792430010.97,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/2022.acl-long.170"
+  },
+  {
+   "ts": 1792430010.98,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.1807.11605"
+  },
+  {
+   "ts": 1792430010.98,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/w18-6318"
+  },
+  {
+   "ts": 1792430010.99,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/2020.findings-emnlp.49"
+  },
+  {
+   "ts": 1792430010.99,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2205.15301"
+  },
+  {
+   "ts": 1792430011.0,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/2022.starsem-1.3"
+  },
+  {
+   "ts": 1792430011.0,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1109/icmla.2018.00088"
+  },
+  {
+   "ts": 1792430011.01,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.1711.02132"
+  },
+  {
+   "ts": 1792430011.01,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/w18-6304"
+  },
+  {
+   "ts": 1792430011.01,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.1811.00253"
+  },
+  {
+   "ts": 1792430011.01,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/2020.acl-main.147"
+  },
+  {
+   "ts": 1792430011.02,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2004.14649"
+  },
+  {
+   "ts": 1792430011.02,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.1810.04101"
+  },
+  {
+   "ts": 1792430011.02,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.1909.09779"
+  },
+  {
+   "ts": 1792430011.03,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.18653/v1/2020.sustainlp-1.7"
+  },
+  {
+   "ts": 1792430011.03,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.48550/arxiv.2011.04266"
+  },
+  {
+   "ts": 1792430011.03,
+   "host": "doi.org",
+   "status": 200,
+   "cached": true,
+   "url": "https://doi.org/10.1609/aaai.v34i05.6344"
+  },
+  {
+   "ts": 1792430012.0,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2204.08142"
+  },
+  {
+   "ts": 1792430012.03,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1007/s00521-023-08858-6"
+  },
+  {
+   "ts": 1792430012.11,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/access.2022.3169772"
+  },
+  {
+   "ts": 1792430012.32,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1007/s00365-023-09635-3"
+  },
+  {
+   "ts": 1792430012.47,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/icassp43922.2022.9747295"
+  },
+  {
+   "ts": 1792430012.54,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2207.13955"
+  },
+  {
+   "ts": 1792430012.72,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2209.10655"
+  },
+  {
+   "ts": 1792430012.85,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1007/978-981-16-7118-0_61"
+  },
+  {
+   "ts": 1792430012.98,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2105.07743"
+  },
+  {
+   "ts": 1792430013.49,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.58346%2Fjowua.2024.i4.017&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430013.87,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Faccess.2022.3169772&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430014.2,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2Fs00521-023-08858-6&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430014.28,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ficassp43922.2022.9747295&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430014.49,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fcict59886.2023.10455324&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430014.67,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2F2020.emnlp-main.77&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430014.74,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.38124%2Fijisrt%2Fijisrt24jul767&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430015.13,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ftaslp.2023.3313445&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430015.99,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2F2020.findings-emnlp.49&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430016.15,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2F2022.starsem-1.3&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430016.37,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2F978-981-16-7118-0_61&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430016.55,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ficmla.2018.00088&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430016.75,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2Fw18-6304&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430017.16,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2F2020.sustainlp-1.7&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430017.38,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1609%2Faaai.v34i05.6344&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430018.33,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2F2022.acl-long.170&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430018.4,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2F2020.autosimtrans-1.5&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430018.57,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2F2020.acl-main.147&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430019.35,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2Fw18-6318&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430019.83,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2Fs00365-023-09635-3&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430020.29,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.18653%2Fv1%2Fp19-1298&rows=20&mailto=yashvant280607%40gmail.com"
+  }
+ ]
+}

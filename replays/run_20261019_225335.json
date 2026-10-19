@@ -1,0 +1,3794 @@
+{
+ "meta": {
+  "question": "How do vision-based SLAM techniques enhance autonomous rover navigation in multi-terrain environments?",
+  "keywords": [
+   "visual SLAM",
+   "autonomous navigation",
+   "multi-terrain",
+   "planetary rover",
+   "computer vision"
+  ],
+  "year_from": 2020,
+  "year_to": 2024,
+  "target": 20,
+  "seconds": 194.0,
+  "tool_calls": 7,
+  "run_id": "4390a028deda",
+  "model": "gemini-3.8-flash",
+  "recorded_at": "2026-10-19 22:53:35"
+ },
+ "steps": [
+  {
+   "step": 1,
+   "planner": "gemini",
+   "thought": "Initial arXiv search for relevant papers on visual SLAM for rovers in multi-terrain environments.",
+   "tool": "search_arxiv",
+   "args": {
+    "query": "visual SLAM autonomous navigation multi-terrain rover"
+   },
+   "result": {
+    "found": 0,
+    "new_unique": 0,
+    "tally": {
+     "cited": 0,
+     "paywalled": 0,
+     "flagged": 0,
+     "pending": 0,
+     "target": 20
+    }
+   },
+   "ms": 1766
+  },
+  {
+   "step": 2,
+   "planner": "gemini",
+   "thought": "Searching Semantic Scholar for visual SLAM rover navigation papers.",
+   "tool": "search_s2",
+   "args": {
+    "query": "visual SLAM autonomous navigation multi terrain rover"
+   },
+   "result": {
+    "found": 40,
+    "via": "s2",
+    "new_unique": 40,
+    "tally": {
+     "cited": 0,
+     "paywalled": 0,
+     "flagged": 0,
+     "pending": 40,
+     "target": 20
+    }
+   },
+   "ms": 4142
+  },
+  {
+   "step": 3,
+   "planner": "gemini",
+   "thought": "Verifying OA status and DOIs for the first batch of Semantic Scholar results.",
+   "tool": "verify_pool",
+   "args": {
+    "max_papers": 20
+   },
+   "result": {
+    "checked": 20,
+    "newly": {
+     "cited": 10,
+     "paywalled": 9,
+     "flagged": 1
+    },
+    "retracted": 0,
+    "tally": {
+     "cited": 10,
+     "paywalled": 9,
+     "flagged": 1,
+     "pending": 20,
+     "target": 20
+    }
+   },
+   "ms": 12188
+  },
+  {
+   "step": 4,
+   "planner": "gemini",
+   "thought": "Verifying more pending papers to reach the target of 20 cited OA papers.",
+   "tool": "verify_pool",
+   "args": {
+    "max_papers": 20
+   },
+   "result": {
+    "checked": 20,
+    "newly": {
+     "cited": 9,
+     "paywalled": 9,
+     "flagged": 2
+    },
+    "retracted": 0,
+    "tally": {
+     "cited": 19,
+     "paywalled": 18,
+     "flagged": 3,
+     "pending": 0,
+     "target": 20
+    }
+   },
+   "ms": 17964
+  },
+  {
+   "step": 5,
+   "planner": "gemini",
+   "thought": "Searching Semantic Scholar for vision-based SLAM planetary rover navigation to find one more OA paper.",
+   "tool": "search_s2",
+   "args": {
+    "query": "vision-based SLAM planetary rover autonomous navigation"
+   },
+   "result": {
+    "found": 40,
+    "via": "s2",
+    "new_unique": 35,
+    "tally": {
+     "cited": 19,
+     "paywalled": 18,
+     "flagged": 3,
+     "pending": 35,
+     "target": 20
+    }
+   },
+   "ms": 6545
+  },
+  {
+   "step": 6,
+   "planner": "gemini",
+   "thought": "Verifying one more paper to reach the target of 20 cited OA papers.",
+   "tool": "verify_pool",
+   "args": {
+    "max_papers": 5
+   },
+   "result": {
+    "checked": 5,
+    "newly": {
+     "cited": 2,
+     "paywalled": 3,
+     "flagged": 0
+    },
+    "retracted": 0,
+    "tally": {
+     "cited": 21,
+     "paywalled": 21,
+     "flagged": 3,
+     "pending": 30,
+     "target": 20
+    }
+   },
+   "ms": 6161
+  },
+  {
+   "step": 7,
+   "planner": "gemini",
+   "thought": "Target of 20 verified open-access papers has been successfully met.",
+   "tool": "finish",
+   "args": {
+    "reason": "Successfully gathered 21 verified open-access papers matching the research criteria (target was 20)."
+   },
+   "result": {
+    "finished": true,
+    "reason": "Successfully gathered 21 verified open-access papers matching the research criteria (target was 20).",
+    "tally": {
+     "cited": 21,
+     "paywalled": 21,
+     "flagged": 3,
+     "pending": 30,
+     "target": 20
+    }
+   },
+   "ms": 0
+  }
+ ],
+ "buckets": {
+  "cited": [
+   {
+    "title": "A Survey of Computer Vision Detection, Visual SLAM Algorithms, and Their Applications in Energy-Efficient Autonomous Systems",
+    "authors": [
+     "Lu Chen",
+     "Gun Li",
+     "Weisi Xie",
+     "Jie Tan",
+     "Yang Li",
+     "Junfeng Pu",
+     "Li-Zhu Chen",
+     "D. Gan",
+     "Wei Shi"
+    ],
+    "year": 2024,
+    "abstract": "Within the area of environmental perception, automatic navigation, object detection, and computer vision are crucial and demanding fields with many applications in modern industries, such as multi-target long-term visual tracking in automated production, defect detection, and driverless robotic vehicles. The performance of computer vision has greatly improved recently thanks to developments in deep learning algorithms and hardware computing capabilities, which have spawned the creation of a large number of related applications. At the same time, with the rapid increase in autonomous systems in the market, energy consumption has become an increasingly critical issue in computer vision and SLAM (Simultaneous Localization and Mapping) algorithms. This paper presents the results of a detailed review of over 100 papers published over the course of two decades (1999\u20132024), with a primary focus on the technical advancement in computer vision. To elucidate the foundational principles, an examination of typical visual algorithms based on traditional correlation filtering was initially conducted. Subsequently, a comprehensive overview of the state-of-the-art advancements in deep learning-based computer vision techniques was compiled. Furthermore, a comparative analysis of conventional and novel algorithms was undertaken to discuss the future trends and directions of computer vision. Lastly, the feasibility of employing visual SLAM algorithms in the context of autonomous vehicles was explored. Additionally, in the context of intelligent robots for low-carbon, unmanned factories, we discussed model optimization techniques such as pruning and quantization, highlighting their importance in enhancing energy efficiency. We conducted a comprehensive comparison of the performance and energy consumption of various computer vision algorithms, with a detailed exploration of how to balance these factors and a discussion of potential future development trends.",
+    "venue": "Energies",
+    "doi": "10.3390/en17205177",
+    "arxiv_id": null,
+    "s2_id": "bf238aee862f7dedf262395c8a55f4507046304e",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/bf238aee862f7dedf262395c8a55f4507046304e",
+    "pdf_url": "https://www.mdpi.com/1996-1073/17/20/5177/pdf?version=1729173182",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 37,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [
+     {
+      "title": "A Survey of Computer Vision Detection, Visual SLAM Algorithms, and Their Applications in Energy-Efficient Autonomous Systems",
+      "doi": "10.3390/en17205177",
+      "arxiv_id": null,
+      "venue": "Energies",
+      "year": 2024,
+      "reason": "same DOI",
+      "sources": [
+       "s2"
+      ]
+     }
+    ],
+    "verification": {
+     "doi": "10.3390/en17205177",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A Survey of Computer Vision Detection, Visual SLAM Algorithms, and Their Applications in Energy-Efficient Autonomous Systems",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "chen",
+      "li",
+      "xie",
+      "tan",
+      "li",
+      "pu",
+      "chen",
+      "gan",
+      "shi"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.453,
+     "topic_match": 4.5,
+     "method_match": 4.5,
+     "recency": 10.0,
+     "citation_impact": 5.6,
+     "score": 5.54,
+     "why_cite": "Closest match in the abstract to your question: \u201cLastly, the feasibility of employing visual SLAM algorithms in the context of autonomous vehicles was explored.\u201d",
+     "evidence_quote": "Lastly, the feasibility of employing visual SLAM algorithms in the context of autonomous vehicles was explored.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.3390/en17205177"
+   },
+   {
+    "title": "ROVER: A Multiseason Dataset for Visual SLAM",
+    "authors": [
+     "Fabian Schmidt",
+     "Julian Daubermann",
+     "Marcel Mitschke",
+     "C. Blessing",
+     "St\u00e9phane Meyer",
+     "Markus Enzweiler",
+     "Abhinav Valada"
+    ],
+    "year": 2024,
+    "abstract": "Robust simultaneous localization and mapping (SLAM) is a crucial enabler for autonomous navigation in natural, semistructured environments such as parks and gardens. However, these environments present unique challenges for SLAM due to frequent seasonal changes, varying light conditions, and dense vegetation. These factors often degrade the performance of visual SLAM algorithms originally developed for structured urban environments. To address this gap, we present robot outdoor visual SLAM dataset for environmental robustness (ROVER), a comprehensive benchmark dataset tailored for evaluating visual SLAM algorithms under diverse environmental conditions and spatial configurations. We captured the dataset with a robotic platform equipped with monocular, stereo, and RGBD cameras, as well as inertial sensors. It covers 39 recordings across five outdoor locations, collected through all seasons and various lighting scenarios, i.e., day, dusk, and night with and without external lighting. With this novel dataset, we evaluate several traditional and deep learning-based SLAM methods and study their performance in diverse challenging conditions. The results demonstrate that while stereo-inertial and RGBD configurations generally perform better under favorable lighting and moderate vegetation, most SLAM systems perform poorly in low-light and high-vegetation scenarios, particularly during summer and autumn. Our analysis highlights the need for improved adaptability in visual SLAM algorithms for outdoor applications, as current systems struggle with dynamic environmental factors affecting scale, feature extraction, and trajectory consistency. This dataset provides a solid foundation for advancing visual SLAM research in real-world, semistructured environments, fostering the development of more resilient SLAM systems for long-term outdoor localization and mapping.",
+    "venue": "IEEE Transactions on robotics",
+    "doi": "10.1109/tro.2025.3577026",
+    "arxiv_id": "2412.02506",
+    "s2_id": "7dc72084521967238a7a7ce68fcfdb8f119182e3",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/7dc72084521967238a7a7ce68fcfdb8f119182e3",
+    "pdf_url": "https://arxiv.org/pdf/2412.02506",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 11,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/tro.2025.3577026",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "ROVER: A Multiseason Dataset for Visual SLAM",
+     "resolved_year": 2025,
+     "resolved_authors": [
+      "schmidt",
+      "daubermann",
+      "mitschke",
+      "blessing",
+      "meyer",
+      "enzweiler",
+      "valada"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.426,
+     "topic_match": 4.3,
+     "method_match": 4.3,
+     "recency": 10.0,
+     "citation_impact": 3.3,
+     "score": 4.96,
+     "why_cite": "Closest match in the abstract to your question: \u201cRobust simultaneous localization and mapping (SLAM) is a crucial enabler for autonomous navigation in natural, semistructured environments such as parks and gardens.\u201d",
+     "evidence_quote": "Robust simultaneous localization and mapping (SLAM) is a crucial enabler for autonomous navigation in natural, semistructured environments such as parks and gardens.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1109/tro.2025.3577026"
+   },
+   {
+    "title": "ADM-SLAM: Accurate and Fast Dynamic Visual SLAM with Adaptive Feature Point Extraction, Deeplabv3pro, and Multi-View Geometry",
+    "authors": [
+     "Xiaotao Huang",
+     "Xing-Bin Chen",
+     "Ning Zhang",
+     "Hong-Jie He",
+     "Sang Feng"
+    ],
+    "year": 2024,
+    "abstract": "Visual Simultaneous Localization and Mapping (V-SLAM) plays a crucial role in the development of intelligent robotics and autonomous navigation systems. However, it still faces significant challenges in handling highly dynamic environments. The prevalent method currently used for dynamic object recognition in the environment is deep learning. However, models such as Yolov5 and Mask R-CNN require significant computational resources, which limits their potential in real-time applications due to hardware and time constraints. To overcome this limitation, this paper proposes ADM-SLAM, a visual SLAM system designed for dynamic environments that builds upon the ORB-SLAM2. This system integrates efficient adaptive feature point homogenization extraction, lightweight deep learning semantic segmentation based on an improved DeepLabv3, and multi-view geometric segmentation. It optimizes keyframe extraction, segments potential dynamic objects using contextual information with the semantic segmentation network, and detects the motion states of dynamic objects using multi-view geometric methods, thereby eliminating dynamic interference points. The results indicate that ADM-SLAM outperforms ORB-SLAM2 in dynamic environments, especially in high-dynamic scenes, where it achieves up to a 97% reduction in Absolute Trajectory Error (ATE). In various highly dynamic test sequences, ADM-SLAM outperforms DS-SLAM and DynaSLAM in terms of real-time performance and accuracy, proving its excellent adaptability.",
+    "venue": "Italian National Conference on Sensors",
+    "doi": "10.3390/s24113578",
+    "arxiv_id": null,
+    "s2_id": "212556f9bc5fd21d38ab382cb60655319dff6b2c",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/212556f9bc5fd21d38ab382cb60655319dff6b2c",
+    "pdf_url": "https://www.mdpi.com/1424-8220/24/11/3578/pdf?version=1717308950",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 11,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.3390/s24113578",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "ADM-SLAM: Accurate and Fast Dynamic Visual SLAM with Adaptive Feature Point Extraction, Deeplabv3pro, and Multi-View Geometry",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "huang",
+      "chen",
+      "zhang",
+      "he",
+      "feng"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.426,
+     "topic_match": 4.3,
+     "method_match": 4.3,
+     "recency": 10.0,
+     "citation_impact": 3.3,
+     "score": 4.96,
+     "why_cite": "Closest match in the abstract to your question: \u201cVisual Simultaneous Localization and Mapping (V-SLAM) plays a crucial role in the development of intelligent robotics and autonomous navigation systems.\u201d",
+     "evidence_quote": "Visual Simultaneous Localization and Mapping (V-SLAM) plays a crucial role in the development of intelligent robotics and autonomous navigation systems.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.3390/s24113578"
+   },
+   {
+    "title": "Collaborative Autonomous Navigation of Quadrotors in Unknown Outdoor Environments: An Active Visual SLAM Approach",
+    "authors": [
+     "Samaneh Elahian",
+     "M. A. Amiri-Atashgah",
+     "Bahram Tarvirdizadeh"
+    ],
+    "year": 2024,
+    "abstract": "The development of an integrated path-planning and Simultaneous Localization and Mapping (ASLAM) system, specifically designed for the autonomous and real-time guidance of quadrotors navigating through unexplored outdoor environments helps to map the generation of unknown natural resources. To achieve this goal, a path-planning methodology that leverages system observability is exploited for a quadrotor. This path-planning method is underpinned by the eigenvalues of the Gramian matrix, which are used as a measure of system observability degree, to increase the precision of the quadrotor\u2019s estimated position. In SLAM, high accuracy in the quadrotor\u2019s state estimation improves the accuracy of the map landmarks position estimation. To enhance the accuracy and fortify system robustness, implementing a centralized distributed architecture within a group of three quadrotors is advocated. In this setup, the role of a central hub for information fusion from all agents and determining the most observable path for the entire group is assigned to the leader quadrotor. An assessment of the proposed path-planning method against a random path-planning approach within a single-agent architecture is conducted across various scenarios. This evaluation compares the Root Mean Square Error (RMSE) of the quadrotor\u2019s state estimation. The results illustrate a notable improvement in accuracy. Furthermore, a comparison is conducted to assess the performance of the multi-agent architecture in contrast to the single-agent architecture using the proposed method. The simulation and experimental results confirm a better accuracy in all scenarios and highlight the increased robustness of the cooperative architecture, particularly in fault scenarios, compared to a single-agent architecture.",
+    "venue": "IEEE Access",
+    "doi": "10.1109/access.2024.3473792",
+    "arxiv_id": null,
+    "s2_id": "92596e02651a4236fcab81ed00a617759e6653f3",
+    "openalex_id": null,
+    "url": "https://doi.org/10.1109/access.2024.3473792",
+    "pdf_url": null,
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 2,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/access.2024.3473792",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Collaborative Autonomous Navigation of Quadrotors in Unknown Outdoor Environments: An Active Visual SLAM Approach",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "elahian",
+      "atashgah",
+      "tarvirdizadeh"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.479,
+     "topic_match": 4.8,
+     "method_match": 4.8,
+     "recency": 10.0,
+     "citation_impact": 1.1,
+     "score": 4.84,
+     "why_cite": "Closest match in the abstract to your question: \u201cIn SLAM, high accuracy in the quadrotor\u2019s state estimation improves the accuracy of the map landmarks position estimation.\u201d",
+     "evidence_quote": "In SLAM, high accuracy in the quadrotor\u2019s state estimation improves the accuracy of the map landmarks position estimation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1109/access.2024.3473792"
+   },
+   {
+    "title": "Path Planning and Motion Control of Robot Dog Through Rough Terrain Based on Vision Navigation",
+    "authors": [
+     "Tian-Xiang Chen",
+     "Yipeng Huangfu",
+     "S. Srigrarom",
+     "B. Khoo"
+    ],
+    "year": 2024,
+    "abstract": "This article delineates the enhancement of an autonomous navigation and obstacle avoidance system for a quadruped robot dog. Part one of this paper presents the integration of a sophisticated multi-level dynamic control framework, utilizing Model Predictive Control (MPC) and Whole-Body Control (WBC) from MIT Cheetah. The system employs an Intel RealSense D435i depth camera for depth vision-based navigation, which enables high-fidelity 3D environmental mapping and real-time path planning. A significant innovation is the customization of the EGO-Planner to optimize trajectory planning in dynamically changing terrains, coupled with the implementation of a multi-body dynamics model that significantly improves the robot\u2019s stability and maneuverability across various surfaces. The experimental results show that the RGB-D system exhibits superior velocity stability and trajectory accuracy to the SLAM system, with a 20% reduction in the cumulative velocity error and a 10% improvement in path tracking precision. The experimental results also show that the RGB-D system achieves smoother navigation, requiring 15% fewer iterations for path planning, and a 30% faster success rate recovery in challenging environments. The successful application of these technologies in simulated urban disaster scenarios suggests promising future applications in emergency response and complex urban environments. Part two of this paper presents the development of a robust path planning algorithm for a robot dog on a rough terrain based on attached binocular vision navigation. We use a commercial-of-the-shelf (COTS) robot dog. An optical CCD binocular vision dynamic tracking system is used to provide environment information. Likewise, the pose and posture of the robot dog are obtained from the robot\u2019s own sensors, and a kinematics model is established. Then, a binocular vision tracking method is developed to determine the optimal path, provide a proposal (commands to actuators) of the position and posture of the bionic robot, and achieve stable motion on tough terrains. The terrain is assumed to be a gentle uneven terrain to begin with and subsequently proceeds to a more rough surface. This work consists of four steps: (1) pose and position data are acquired from the robot dog\u2019s own inertial sensors, (2) terrain and environment information is input from onboard cameras, (3) information is fused (integrated), and (4) path planning and motion control proposals are made. Ultimately, this work provides a robust framework for future developments in the vision-based navigation and control of quadruped robots, offering potential solutions for navigating complex and dynamic terrains.",
+    "venue": "Italian National Conference on Sensors",
+    "doi": "10.3390/s24227306",
+    "arxiv_id": null,
+    "s2_id": "d183f5cbf4249dfe55a4d288666e7ca69f0bfeba",
+    "openalex_id": null,
+    "url": "https://doi.org/10.3390/s24227306",
+    "pdf_url": "https://doi.org/10.3390/s24227306",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 7,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [
+     {
+      "title": "Path Planning and Motion Control of Robot Dog Through Rough Terrain Based on Vision Navigation",
+      "doi": "10.3390/s24227306",
+      "arxiv_id": null,
+      "venue": "Italian National Conference on Sensors",
+      "year": 2024,
+      "reason": "same DOI",
+      "sources": [
+       "s2"
+      ]
+     }
+    ],
+    "verification": {
+     "doi": "10.3390/s24227306",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Path Planning and Motion Control of Robot Dog Through Rough Terrain Based on Vision Navigation",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "chen",
+      "huangfu",
+      "srigrarom",
+      "khoo"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.43,
+     "topic_match": 4.3,
+     "method_match": 4.3,
+     "recency": 10.0,
+     "citation_impact": 2.6,
+     "score": 4.81,
+     "why_cite": "Closest match in the abstract to your question: \u201cAn optical CCD binocular vision dynamic tracking system is used to provide environment information.\u201d",
+     "evidence_quote": "An optical CCD binocular vision dynamic tracking system is used to provide environment information.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.3390/s24227306"
+   },
+   {
+    "title": "Robot Tracking Navigation Based on Visual SLAM",
+    "authors": [
+     "Wei-Li Sun"
+    ],
+    "year": 2024,
+    "abstract": "Visual Simulation Localization and Mapping technology is an important research direction in the fields of computer vision and robotics. The research background of this technology mainly stems from the insufficient accuracy of traditional positioning and map construction methods in the face of environmental changes. With the development of artificial intelligence, this technology has been involved in multiple disciplinary fields. Since 2015, researchers have begun to focus on the combination with deep learning to improve algorithm robustness, dynamic scene planning and other aspects. This article which introduces the existing tracking car system and visual SLAM (Simultaneous Localization and Mapping) system framework explores the robot tracking and navigation technology based on visual SLAM. Visual SLAM technology provides robots with an autonomous navigation solution that does not require external sensors through feature extraction, real-time positioning, mapping, and closed-loop detection. This article also discusses the advantages and disadvantages of visual SLAM navigation, and offers insights into the future development of VSLAM technology in robot tracking navigation.",
+    "venue": "Applied and Computational Engineering",
+    "doi": "10.54254/2755-2721/2024.ch17853",
+    "arxiv_id": null,
+    "s2_id": "7adde468205483d6ae2b6f9f0add9f8ccbbf4804",
+    "openalex_id": null,
+    "url": "https://doi.org/10.54254/2755-2721/2024.ch17853",
+    "pdf_url": null,
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_source": "unpaywall",
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.54254/2755-2721/2024.ch17853",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Robot Tracking Navigation Based on Visual SLAM",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "sun"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.506,
+     "topic_match": 5.1,
+     "method_match": 5.1,
+     "recency": 10.0,
+     "citation_impact": 0.0,
+     "score": 4.81,
+     "why_cite": "Closest match in the abstract to your question: \u201cThis article also discusses the advantages and disadvantages of visual SLAM navigation, and offers insights into the future development of VSLAM technology in robot tracking navigation.\u201d",
+     "evidence_quote": "This article also discusses the advantages and disadvantages of visual SLAM navigation, and offers insights into the future development of VSLAM technology in robot tracking navigation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.54254/2755-2721/2024.ch17853"
+   },
+   {
+    "title": "TerrainNet: Visual Modeling of Complex Terrain for High-speed, Off-road Navigation",
+    "authors": [
+     "Xiangyu Meng",
+     "Nathan Hatch",
+     "Alexander Lambert",
+     "Anqi Li",
+     "Nolan Wagener",
+     "Matt Schmittle",
+     "Joonho Lee",
+     "Wentao Yuan",
+     "Zoey Chen",
+     "Samuel Deng",
+     "Greg Okopal",
+     "D. Fox",
+     "Byron Boots",
+     "Amirreza Shaban"
+    ],
+    "year": 2023,
+    "abstract": "Effective use of camera-based vision systems is essential for robust performance in autonomous off-road driving, particularly in the high-speed regime. Despite success in structured, on-road settings, current end-to-end approaches for scene prediction have yet to be successfully adapted for complex outdoor terrain. To this end, we present TerrainNet, a vision-based terrain perception system for semantic and geometric terrain prediction for aggressive, off-road navigation. The approach relies on several key insights and practical considerations for achieving reliable terrain modeling. The network includes a multi-headed output representation to capture fine- and coarse-grained terrain features necessary for estimating traversability. Accurate depth estimation is achieved using self-supervised depth completion with multi-view RGB and stereo inputs. Requirements for real-time performance and fast inference speeds are met using efficient, learned image feature projections. Furthermore, the model is trained on a large-scale, real-world off-road dataset collected across a variety of diverse outdoor environments. We show how TerrainNet can also be used for costmap prediction and provide a detailed framework for integration into a planning module. We demonstrate the performance of TerrainNet through extensive comparison to current state-of-the-art baselines for camera-only scene prediction. Finally, we showcase the effectiveness of integrating TerrainNet within a complete autonomous-driving stack by conducting a real-world vehicle test in a challenging off-road scenario.",
+    "venue": "Robotics: Science and Systems Conference",
+    "doi": null,
+    "arxiv_id": "2303.15771",
+    "s2_id": "33fd1bc0a4cd1af507480798e354454e854ce8a2",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/33fd1bc0a4cd1af507480798e354454e854ce8a2",
+    "pdf_url": "http://arxiv.org/pdf/2303.15771",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 110,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2303.15771",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "TerrainNet: Visual Modeling of Complex Terrain for High-speed, Off-road Navigation",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "meng",
+      "hatch",
+      "lambert",
+      "li",
+      "wagener",
+      "schmittle",
+      "lee",
+      "yuan",
+      "chen",
+      "deng",
+      "okopal",
+      "fox",
+      "boots",
+      "shaban"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.344,
+     "topic_match": 3.4,
+     "method_match": 3.4,
+     "recency": 7.5,
+     "citation_impact": 7.3,
+     "score": 4.79,
+     "why_cite": "Closest match in the abstract to your question: \u201cWe show how TerrainNet can also be used for costmap prediction and provide a detailed framework for integration into a planning module.\u201d",
+     "evidence_quote": "We show how TerrainNet can also be used for costmap prediction and provide a detailed framework for integration into a planning module.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2303.15771"
+   },
+   {
+    "title": "An Autonomous Navigation Method for Planetary Rover Based on Multi-modal Fusion and Multi-factor Graph Optimization",
+    "authors": [
+     "Bo Zheng",
+     "Tao Cao",
+     "Tao Hu",
+     "Zhouyuan Qian",
+     "Shisun Wang",
+     "Fei Han"
+    ],
+    "year": 2024,
+    "abstract": "Planetary surface is a complex unstructured environment with strong light, strong shadows, weak textures and numerous obstacles. There is no GPS signal support and satellite networking support on the planetary surface. The limited computer and sensor capabilities of planetary rover have a significant gap from the ground autonomous driving configuration, which presents a great challenge to the autonomous navigation methods of planetary rover. Extreme lighting conditions will increase the camera mismatching rate, and poor texture will increase the lidar matching error, which will reduce the estimation accuracy. Moreover, camera and lidar produce great motion distortion in the rugged terrain and bumpy environment, which leads to a large increase in the cumulative error of odometer. Camera and lidar are not suitable as the main sensor of SLAM algorithm in unstructured environment because they are sensitive to the change of environment. Therefore, an autonomous navigation method for planetary rover based on multi-modal fusion and multi-factor graph optimization is presented in this paper. The IMU (Inertial Measurement Unit) odometer node is added to the lidar odometer and visual odometer thread, and the IMU is taken as the central node to build a multi-factor graph optimization model. A multi-factor graph optimization model and a strong adaptive constraint strategy with reasonable weights are constructed. The pose estimation of other sensors is used to constrain IMU bias, meanwhile historical rut tracking, obstacle contour matching and skyline feature matching are introduced. Finally, motion prediction is achieved in the IMU odometer node. Simulation results and field tests show that this method can effectively cope with the unstructured environment on planetary surface, which achieves adaptive and robust autonomous navigation of planetary rover.",
+    "venue": "Journal of Physics: Conference Series",
+    "doi": "10.1088/1742-6596/2762/1/012002",
+    "arxiv_id": null,
+    "s2_id": "bc7d4f383a1b0aa78957b762d88342b13975a884",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/bc7d4f383a1b0aa78957b762d88342b13975a884",
+    "pdf_url": "https://iopscience.iop.org/article/10.1088/1742-6596/2762/1/012002/pdf",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 2,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [
+     {
+      "title": "An Autonomous Navigation Method for Planetary Rover Based on Multi-modal Fusion and Multi-factor Graph Optimization",
+      "doi": "10.1088/1742-6596/2762/1/012002",
+      "arxiv_id": null,
+      "venue": "Journal of Physics: Conference Series",
+      "year": 2024,
+      "reason": "same DOI",
+      "sources": [
+       "s2"
+      ]
+     }
+    ],
+    "verification": {
+     "doi": "10.1088/1742-6596/2762/1/012002",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "An Autonomous Navigation Method for Planetary Rover Based on Multi-modal Fusion and Multi-factor Graph Optimization",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "zheng",
+      "cao",
+      "hu",
+      "qian",
+      "wang",
+      "han"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.467,
+     "topic_match": 4.7,
+     "method_match": 4.7,
+     "recency": 10.0,
+     "citation_impact": 1.1,
+     "score": 4.77,
+     "why_cite": "Closest match in the abstract to your question: \u201cTherefore, an autonomous navigation method for planetary rover based on multi-modal fusion and multi-factor graph optimization is presented in this paper.\u201d",
+     "evidence_quote": "Therefore, an autonomous navigation method for planetary rover based on multi-modal fusion and multi-factor graph optimization is presented in this paper.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1088/1742-6596/2762/1/012002"
+   },
+   {
+    "title": "Deep Learning for Visual SLAM: The State-of-the-Art and Future Trends",
+    "authors": [
+     "M. Favorskaya"
+    ],
+    "year": 2023,
+    "abstract": "Visual Simultaneous Localization and Mapping (VSLAM) has been a hot topic of research since the 1990s, first based on traditional computer vision and recognition techniques and later on deep learning models. Although the implementation of VSLAM methods is far from perfect and complete, recent research in deep learning has yielded promising results for applications such as autonomous driving and navigation, service robots, virtual and augmented reality, and pose estimation. The pipeline of traditional VSLAM methods based on classical image processing algorithms consists of six main steps, including initialization (data acquisition), feature extraction, feature matching, pose estimation, map construction, and loop closure. Since 2017, deep learning has changed this approach from individual steps to implementation as a whole. Currently, three ways are developing with varying degrees of integration of deep learning into traditional VSLAM systems: (1) adding auxiliary modules based on deep learning, (2) replacing the original modules of traditional VSLAM with deep learning modules, and (3) replacing the traditional VSLAM system with end-to-end deep neural networks. The first way is the most elaborate and includes multiple algorithms. The other two are in the early stages of development due to complex requirements and criteria. The available datasets with multi-modal data are also of interest. The discussed challenges, advantages, and disadvantages underlie future VSLAM trends, guiding subsequent directions of research.",
+    "venue": "Electronics",
+    "doi": "10.3390/electronics12092006",
+    "arxiv_id": null,
+    "s2_id": "0768350daa5c0400d93a15870d6d7a192a935547",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/0768350daa5c0400d93a15870d6d7a192a935547",
+    "pdf_url": "https://www.mdpi.com/2079-9292/12/9/2006/pdf?version=1682500878",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 39,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.3390/electronics12092006",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Deep Learning for Visual SLAM: The State-of-the-Art and Future Trends",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "favorskaya"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.389,
+     "topic_match": 3.9,
+     "method_match": 3.9,
+     "recency": 7.5,
+     "citation_impact": 5.2,
+     "score": 4.7,
+     "why_cite": "Closest match in the abstract to your question: \u201cVisual Simultaneous Localization and Mapping (VSLAM) has been a hot topic of research since the 1990s, first based on traditional computer vision and recognition techniques and later on deep learning models.\u201d",
+     "evidence_quote": "Visual Simultaneous Localization and Mapping (VSLAM) has been a hot topic of research since the 1990s, first based on traditional computer vision and recognition techniques and later on deep learning models.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.3390/electronics12092006"
+   },
+   {
+    "title": "Tightly-Coupled LiDAR-Visual SLAM Based on Geometric Features for Mobile Agents",
+    "authors": [
+     "Ke Cao",
+     "R. Liu",
+     "Ze Wang",
+     "Kun-Yu Peng",
+     "Jiaming Zhang",
+     "Junwei Zheng",
+     "Zhifeng Teng",
+     "Kailun Yang",
+     "R. Stiefelhagen"
+    ],
+    "year": 2023,
+    "abstract": "The mobile robot relies on SLAM (Simultaneous Localization and Mapping) to provide autonomous navigation and task execution in complex and unknown environments. However, it is hard to develop a dedicated algorithm for mobile robots due to dynamic and challenging situations, such as poor lighting conditions and motion blur. To tackle this issue, we propose a tightly-coupled LiDAR-visual SLAM based on geometric features, which includes two sub-systems (LiDAR and monocular visual SLAM) and a fusion framework. The fusion framework associates the depth and semantics of the multi-modal geometric features to complement the visual line landmarks and to add direction optimization in Bundle Adjustment (BA). This further constrains visual odometry. On the other hand, the entire line segment detected by the visual subsystem overcomes the limitation of the LiDAR subsystem, which can only perform the local calculation for geometric features. It adjusts the direction of linear feature points and filters out outliers, leading to a higher accurate odometry system. Finally, we employ a module to detect the subsystem\u2019s operation, providing the LiDAR subsystem\u2019s output as a complementary trajectory to our system while visual subsystem tracking fails. The evaluation results on the public dataset M2DGR, gathered from ground robots across various indoor and outdoor scenarios, show that our system achieves more accurate and robust pose estimation compared to current state-of-the-art multi-modal methods.",
+    "venue": "IEEE International Conference on Robotics and Biomimetics",
+    "doi": "10.1109/robio58561.2023.10354794",
+    "arxiv_id": "2307.07763",
+    "s2_id": "368eec1a79032079a0f868659863a309af493b84",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/368eec1a79032079a0f868659863a309af493b84",
+    "pdf_url": "https://arxiv.org/pdf/2307.07763",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 14,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/robio58561.2023.10354794",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Tightly-Coupled LiDAR-Visual SLAM Based on Geometric Features for Mobile Agents",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "cao",
+      "liu",
+      "wang",
+      "peng",
+      "zhang",
+      "zheng",
+      "teng",
+      "yang",
+      "stiefelhagen"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.426,
+     "topic_match": 4.3,
+     "method_match": 4.3,
+     "recency": 7.5,
+     "citation_impact": 3.3,
+     "score": 4.58,
+     "why_cite": "Closest match in the abstract to your question: \u201cThe mobile robot relies on SLAM (Simultaneous Localization and Mapping) to provide autonomous navigation and task execution in complex and unknown environments.\u201d",
+     "evidence_quote": "The mobile robot relies on SLAM (Simultaneous Localization and Mapping) to provide autonomous navigation and task execution in complex and unknown environments.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1109/robio58561.2023.10354794"
+   },
+   {
+    "title": "Real-Time Metric-Semantic Mapping for Autonomous Navigation in Outdoor Environments",
+    "authors": [
+     "Jian-Hao Jiao",
+     "Ruoyu Geng",
+     "Yuanhang Li",
+     "Ren Xin",
+     "Bowen Yang",
+     "Jin Wu",
+     "Lu-Jia Wang",
+     "Ming Liu",
+     "Rui Fan",
+     "Dimitrios Kanoulas"
+    ],
+    "year": 2024,
+    "abstract": "The creation of a metric-semantic map, which encodes human-prior knowledge, represents a high-level abstraction of environments. However, constructing such a map poses challenges related to the fusion of multi-modal sensor data, the attainment of real-time mapping performance, and the preservation of structural and semantic information consistency. In this paper, we introduce an online metric-semantic mapping system that utilizes LiDAR-Visual-Inertial sensing to generate a global metric-semantic mesh map of large-scale outdoor environments. Leveraging GPU acceleration, our mapping process achieves exceptional speed, with frame processing taking less than $7ms$ , regardless of scenario scale. Furthermore, we seamlessly integrate the resultant map into a real-world navigation system, enabling metric-semantic-based terrain assessment and autonomous point-to-point navigation within a campus environment. Through extensive experiments conducted on both publicly available and self-collected datasets comprising 24 sequences, we demonstrate the effectiveness of our mapping and navigation methodologies. Note to Practitioners\u2014This paper tackles the challenge of autonomous navigation for mobile robots in complex, unstructured environments with rich semantic elements. Traditional navigation relies on geometric analysis and manual annotations, struggling to differentiate similar structures like roads and sidewalks. We propose an online mapping system that creates a global metric-semantic mesh map for large-scale outdoor environments, utilizing GPU acceleration for speed and overcoming the limitations of existing real-time semantic mapping methods, which are generally confined to indoor settings. Our map integrates into a real-world navigation system, proven effective in localization and terrain assessment through experiments with both public and proprietary datasets. Future work will focus on integrating kernel-based methods to improve the map\u2019s semantic accuracy.",
+    "venue": "IEEE Transactions on Automation Science and Engineering",
+    "doi": "10.1109/tase.2024.3429280",
+    "arxiv_id": "2412.00291",
+    "s2_id": "ba39f71b40f82e3393fd9bdce569437b28284d75",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/ba39f71b40f82e3393fd9bdce569437b28284d75",
+    "pdf_url": "https://arxiv.org/pdf/2412.00291",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 31,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/tase.2024.3429280",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Real-Time Metric-Semantic Mapping for Autonomous Navigation in Outdoor Environments",
+     "resolved_year": 2025,
+     "resolved_authors": [
+      "jiao",
+      "geng",
+      "li",
+      "xin",
+      "yang",
+      "wu",
+      "wang",
+      "liu",
+      "fan",
+      "kanoulas"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.309,
+     "topic_match": 3.1,
+     "method_match": 3.1,
+     "recency": 10.0,
+     "citation_impact": 5.3,
+     "score": 4.58,
+     "why_cite": "Closest match in the abstract to your question: \u201cNote to Practitioners\u2014This paper tackles the challenge of autonomous navigation for mobile robots in complex, unstructured environments with rich semantic elements.\u201d",
+     "evidence_quote": "Note to Practitioners\u2014This paper tackles the challenge of autonomous navigation for mobile robots in complex, unstructured environments with rich semantic elements.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1109/tase.2024.3429280"
+   },
+   {
+    "title": "Visual\u2010Inertial SLAM for Unstructured Outdoor Environments: Benchmarking the Benefits and Computational Costs of Loop Closing",
+    "authors": [
+     "Fabian Schmidt",
+     "C. Blessing",
+     "Markus Enzweiler",
+     "Abhinav Valada"
+    ],
+    "year": 2024,
+    "abstract": "Simultaneous localization and mapping (SLAM) is essential for mobile robotics, enabling autonomous navigation in dynamic, unstructured outdoor environments without relying on external positioning systems. These environments pose significant challenges due to variable lighting, weather conditions, and complex terrain. Visual\u2010Inertial SLAM has emerged as a promising solution for robust localization under such conditions. This paper benchmarks several open\u2010source visual\u2010Inertial SLAM systems, including traditional methods (ORB\u2010SLAM3, VINS\u2010Fusion, OpenVINS, Kimera, and SVO Pro) and learning\u2010based approaches (HFNet\u2010SLAM, AirSLAM), to evaluate their performance in unstructured natural outdoor settings. We focus on the impact of loop closing on localization accuracy and computational demands, providing a comprehensive analysis of these systems' effectiveness in real\u2010world environments and especially their application to embedded systems in outdoor robotics. Our contributions further include an assessment of varying frame rates on localization accuracy and computational load. The findings highlight the importance of loop closing in improving localization accuracy while managing computational resources efficiently, offering valuable insights for optimizing Visual\u2010Inertial SLAM systems for practical outdoor applications in mobile robotics. The data set and the benchmark code are available under https://github.com/iis-esslingen/vi-slam_lc_benchmark.",
+    "venue": "J. Field Robotics",
+    "doi": "10.1002/rob.22581",
+    "arxiv_id": "2408.01716",
+    "s2_id": "0d7d1f9096ad887f00ae2c03cb7b98f35777455a",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/0d7d1f9096ad887f00ae2c03cb7b98f35777455a",
+    "pdf_url": "https://doi.org/10.1002/rob.22581",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 14,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1002/rob.22581",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Visual\u2010Inertial SLAM for Unstructured Outdoor Environments: Benchmarking the Benefits and Computational Costs of Loop Closing",
+     "resolved_year": 2025,
+     "resolved_authors": [
+      "schmidt",
+      "blessing",
+      "enzweiler",
+      "valada"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.346,
+     "topic_match": 3.5,
+     "method_match": 3.5,
+     "recency": 10.0,
+     "citation_impact": 3.8,
+     "score": 4.54,
+     "why_cite": "Closest match in the abstract to your question: \u201cSimultaneous localization and mapping (SLAM) is essential for mobile robotics, enabling autonomous navigation in dynamic, unstructured outdoor environments without relying on external positioning systems.\u201d",
+     "evidence_quote": "Simultaneous localization and mapping (SLAM) is essential for mobile robotics, enabling autonomous navigation in dynamic, unstructured outdoor environments without relying on external positioning systems.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1002/rob.22581"
+   },
+   {
+    "title": "Artificial Intelligence based Rover with Robotic Arm using Raspberry Pi",
+    "authors": [
+     "Abhishek Ganvir"
+    ],
+    "year": 2024,
+    "abstract": "This paper presents the design, implementation, and evaluation of an Artificial Intelligence (AI)-Based Rover with a Robotic Arm, powered by Raspberry Pi technology. The integration of AI algorithms with Raspberry Pi provides a versatile platform for developing intelligent robotic systems capable of autonomous navigation and manipulation tasks. The rover's autonomous navigation system utilizes computer vision and machine learning algorithms to perceive its environment, plan optimal paths, and navigate autonomously while avoiding obstacles. Additionally, the inclusion of a robotic arm extends the rover's capabilities, enabling it to perform manipulation tasks with precision and versatility. Key components of the system include Raspberry Pi as the central processing unit, cameras for environmental perception, motors for locomotion and manipulation, and sensors for feedback and environmental monitoring. The integration of these components facilitates seamless communication and coordination, enabling the rover to execute complex tasks autonomously. Experimental results demonstrate the effectiveness of the proposed system in various scenarios, showcasing its ability to navigate challenging environments, avoid obstacles, and manipulate objects with precision. The versatility and scalability of the platform make it suitable for a wide range of applications, including search and rescue missions, environmental monitoring, and industrial automation. Keywords- Robotics, Artificial Intelligence, Raspberry pi, Autonomous Navigation, Machine Learning",
+    "venue": "INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT",
+    "doi": "10.55041/ijsrem29791",
+    "arxiv_id": null,
+    "s2_id": "038dcf517361087b469a0ac67cef4484ca78f498",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/038dcf517361087b469a0ac67cef4484ca78f498",
+    "pdf_url": "https://ijsrem.com/download/artificial-intelligence-based-rover-with-robotic-arm-using-raspberry-pi/?wpdmdl=28799&refresh=66077627dabf91711765031",
+    "is_oa": true,
+    "oa_status": "bronze",
+    "oa_source": "unpaywall",
+    "citation_count": 2,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.55041/ijsrem29791",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Artificial Intelligence based Rover with Robotic Arm using Raspberry Pi",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "ganvir"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.433,
+     "topic_match": 4.3,
+     "method_match": 4.3,
+     "recency": 10.0,
+     "citation_impact": 1.1,
+     "score": 4.51,
+     "why_cite": "Closest match in the abstract to your question: \u201cThe rover's autonomous navigation system utilizes computer vision and machine learning algorithms to perceive its environment, plan optimal paths, and navigate autonomously while avoiding obstacles.\u201d",
+     "evidence_quote": "The rover's autonomous navigation system utilizes computer vision and machine learning algorithms to perceive its environment, plan optimal paths, and navigate autonomously while avoiding obstacles.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.55041/ijsrem29791"
+   },
+   {
+    "title": "ISFM-SLAM: dynamic visual SLAM with instance segmentation and feature matching",
+    "authors": [
+     "Chao Li",
+     "Yang Hu",
+     "Jianqiang Liu",
+     "Jianhai Jin",
+     "Jun Sun"
+    ],
+    "year": 2024,
+    "abstract": "Introduction Simultaneous Localization and Mapping (SLAM) is a technology used in intelligent systems such as robots and autonomous vehicles. Visual SLAM has become a more popular type of SLAM due to its acceptable cost and good scalability when applied in robot positioning, navigation and other functions. However, most of the visual SLAM algorithms assume a static environment, so when they are implemented in highly dynamic scenes, problems such as tracking failure and overlapped mapping are prone to occur. Methods To deal with this issue, we propose ISFM-SLAM, a dynamic visual SLAM built upon the classic ORB-SLAM2, incorporating an improved instance segmentation network and enhanced feature matching. Based on YOLACT, the improved instance segmentation network applies the multi-scale residual network Res2Net as its backbone, and utilizes CIoU_Loss in the bounding box loss function, to enhance the detection accuracy of the segmentation network. To improve the matching rate and calculation efficiency of the internal feature points, we fuse ORB key points with an efficient image descriptor to replace traditional ORB feature matching of ORB-SLAM2. Moreover, the motion consistency detection algorithm based on external variance values is proposed and integrated into ISFM-SLAM, to assist the proposed SLAM systems in culling dynamic feature points more effectively. Results and discussion Simulation results on the TUM dataset show that the overall pose estimation accuracy of the ISFM-SLAM is 97% better than the ORB-SLAM2, and is superior to other mainstream and state-of-the-art dynamic SLAM systems. Further real-world experiments validate the feasibility of the proposed SLAM system in practical applications.",
+    "venue": "Frontiers Neurorobotics",
+    "doi": "10.3389/fnbot.2024.1473937",
+    "arxiv_id": null,
+    "s2_id": "9ddcffe11556c09b46041b8baa781c8125088f24",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/9ddcffe11556c09b46041b8baa781c8125088f24",
+    "pdf_url": "https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2024.1473937/pdf",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 4,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.3389/fnbot.2024.1473937",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "ISFM-SLAM: dynamic visual SLAM with instance segmentation and feature matching",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "li",
+      "hu",
+      "liu",
+      "jin",
+      "sun"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.399,
+     "topic_match": 4.0,
+     "method_match": 4.0,
+     "recency": 10.0,
+     "citation_impact": 1.8,
+     "score": 4.46,
+     "why_cite": "Closest match in the abstract to your question: \u201cIntroduction Simultaneous Localization and Mapping (SLAM) is a technology used in intelligent systems such as robots and autonomous vehicles.\u201d",
+     "evidence_quote": "Introduction Simultaneous Localization and Mapping (SLAM) is a technology used in intelligent systems such as robots and autonomous vehicles.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.3389/fnbot.2024.1473937"
+   },
+   {
+    "title": "TAIL: A Terrain-Aware Multi-Modal SLAM Dataset for Robot Locomotion in Deformable Granular Environments",
+    "authors": [
+     "Chen Yao",
+     "Yangtao Ge",
+     "Guowei Shi",
+     "Zirui Wang",
+     "Ningbo Yang",
+     "Zheng Zhu",
+     "Hexiang Wei",
+     "Yuntian Zhao",
+     "Jing Wu",
+     "Zhenzhong Jia"
+    ],
+    "year": 2024,
+    "abstract": "Terrain-aware perception holds the potential to improve the robustness and accuracy of autonomous robot navigation in the wilds, thereby facilitating effective off-road traversals. However, the lack of multi-modal perception across various motion patterns hinders the solutions of Simultaneous Localization And Mapping (SLAM), especially when confronting non-geometric hazards in demanding landscapes. In this paper, we first propose a Terrain-Aware multI-modaL (TAIL) dataset tailored to deformable and sandy terrains. It incorporates various types of robotic proprioception and distinct ground interactions for the unique challenges and benchmark of multi-sensor fusion SLAM. The versatile sensor suite comprises stereo frame cameras, multiple ground-pointing RGB-D cameras, a rotating 3D LiDAR, an IMU, and an RTK device. This ensemble is hardware-synchronized, well-calibrated, and self-contained. Utilizing both wheeled and quadrupedal locomotion, we efficiently collect comprehensive sequences to capture rich unstructured scenarios. It spans the spectrum of scope, terrain interactions, scene changes, ground-level properties, and dynamic robot characteristics. We benchmark several state-of-the-art SLAM methods against ground truth and provide performance validations. Corresponding challenges and limitations are also reported.",
+    "venue": "IEEE Robotics and Automation Letters",
+    "doi": "10.1109/lra.2024.3407411",
+    "arxiv_id": "2403.16875",
+    "s2_id": "1562b87573e0acbf93afc36de48d933603ebdbba",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/1562b87573e0acbf93afc36de48d933603ebdbba",
+    "pdf_url": "https://arxiv.org/pdf/2403.16875",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 19,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/lra.2024.3407411",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "TAIL: A Terrain-Aware Multi-Modal SLAM Dataset for Robot Locomotion in Deformable Granular Environments",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "yao",
+      "ge",
+      "shi",
+      "wang",
+      "yang",
+      "zhu",
+      "wei",
+      "zhao",
+      "wu",
+      "jia"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.266,
+     "topic_match": 2.7,
+     "method_match": 2.7,
+     "recency": 10.0,
+     "citation_impact": 4.3,
+     "score": 4.12,
+     "why_cite": "Closest match in the abstract to your question: \u201cWe benchmark several state-of-the-art SLAM methods against ground truth and provide performance validations.\u201d",
+     "evidence_quote": "We benchmark several state-of-the-art SLAM methods against ground truth and provide performance validations.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1109/lra.2024.3407411"
+   },
+   {
+    "title": "LD-SLAM: A Robust and Accurate GNSS-Aided Multi-Map Method for Long-Distance Visual SLAM",
+    "authors": [
+     "Dongdong Li",
+     "Fang-Bing Zhang",
+     "Jiaxiao Feng",
+     "Zhi-Jun Wang",
+     "Jing Fan",
+     "Ye Li",
+     "Jing Li",
+     "Tao Yang"
+    ],
+    "year": 2023,
+    "abstract": "Continuous, robust, and precise localization is pivotal in enabling the autonomous operation of robots and aircraft in intricate environments, particularly in the absence of GNSS (global navigation satellite system) signals. However, commonly employed approaches, such as visual odometry and inertial navigation systems, encounter hindrances in achieving effective navigation and positioning due to issues of error accumulation. Additionally, the challenge of managing extensive map creation and exploration arises when deploying these systems on unmanned aerial vehicle terminals. This study introduces an innovative system capable of conducting long-range and multi-map visual SLAM (simultaneous localization and mapping) using monocular cameras equipped with pinhole and fisheye lens models. We formulate a graph optimization model integrating GNSS data and graphical information through multi-sensor fusion navigation and positioning technology. We propose partitioning SLAM maps based on map health status to augment accuracy and resilience in large-scale map generation. We introduce a multi-map matching and fusion algorithm leveraging geographical positioning and visual data to address excessive discrete mapping, leading to resource wastage and reduced map-switching efficiency. Furthermore, a multi-map-based visual SLAM online localization algorithm is presented, adeptly managing and coordinating distinct geographical maps in different temporal and spatial domains. We employ a quadcopter to establish a testing system and generate an aerial image dataset spanning several kilometers. Our experiments exhibit the framework\u2019s noteworthy robustness and accuracy in long-distance navigation. For instance, our GNSS-assisted multi-map SLAM achieves an average accuracy of 1.5 m within a 20 km range during unmanned aerial vehicle flights.",
+    "venue": "Remote Sensing",
+    "doi": "10.3390/rs15184442",
+    "arxiv_id": null,
+    "s2_id": "c74b5cf4500c1002301f07a62ea7698beaa057db",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/c74b5cf4500c1002301f07a62ea7698beaa057db",
+    "pdf_url": "https://www.mdpi.com/2072-4292/15/18/4442/pdf?version=1694414061",
+    "is_oa": true,
+    "oa_status": "gold",
+    "oa_source": "unpaywall",
+    "citation_count": 16,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.3390/rs15184442",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "LD-SLAM: A Robust and Accurate GNSS-Aided Multi-Map Method for Long-Distance Visual SLAM",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "li",
+      "zhang",
+      "feng",
+      "wang",
+      "fan",
+      "li",
+      "li",
+      "yang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.346,
+     "topic_match": 3.5,
+     "method_match": 3.5,
+     "recency": 7.5,
+     "citation_impact": 3.5,
+     "score": 4.1,
+     "why_cite": "Closest match in the abstract to your question: \u201cContinuous, robust, and precise localization is pivotal in enabling the autonomous operation of robots and aircraft in intricate environments, particularly in the absence of GNSS (global navigation satellite system) signals.\u201d",
+     "evidence_quote": "Continuous, robust, and precise localization is pivotal in enabling the autonomous operation of robots and aircraft in intricate environments, particularly in the absence of GNSS (global navigation satellite system) signals.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.3390/rs15184442"
+   },
+   {
+    "title": "A Review of Multi-Sensor Fusion Techniques for Indoor Mobile Robot Navigation",
+    "authors": [
+     "T. Shan"
+    ],
+    "year": 2024,
+    "abstract": "The application of multi-sensor fusion technology in indoor mobile robot navigation and localization has been increasingly gaining attention, especially in complex indoor environments where achieving high-precision autonomous navigation poses a significant challenge. This review summarizes various sensor fusion methods, including the combination of Light Detection and Ranging (LiDAR), Inertial Measurement Unit (IMU), Ultra-Wideband (UWB), and others, with a focus on discussing the progress of fusion algorithms such as Extended Kalman Filter (EKF) and Adaptive Monte Carlo Localization (AMCL) in improving navigation accuracy and stability. In addition, this paper explores the application of visual Simultaneous Localization and Mapping (SLAM) methods incorporating deep learning in indoor robot navigation. Finally, the main challenges currently faced by multi-sensor fusion technology in robot autonomous navigation are analyzed, and future research directions are proposed, aiming to provide valuable references for researchers in the field.",
+    "venue": "Applied and Computational Engineering",
+    "doi": "10.54254/2755-2721/80/2024ch0087",
+    "arxiv_id": null,
+    "s2_id": "3bc6e52346ee47ba995c96b6ada711174a356f5d",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/3bc6e52346ee47ba995c96b6ada711174a356f5d",
+    "pdf_url": "https://ace.ewapub.com/article/view/17461.pdf",
+    "is_oa": true,
+    "oa_status": "hybrid",
+    "oa_source": "unpaywall",
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.54254/2755-2721/80/2024ch0087",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A Review of Multi-Sensor Fusion Techniques for Indoor Mobile Robot Navigation",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "shan"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.387,
+     "topic_match": 3.9,
+     "method_match": 3.9,
+     "recency": 10.0,
+     "citation_impact": 0.0,
+     "score": 4.04,
+     "why_cite": "Closest match in the abstract to your question: \u201cFinally, the main challenges currently faced by multi-sensor fusion technology in robot autonomous navigation are analyzed, and future research directions are proposed, aiming to provide valuable references for researchers in the field.\u201d",
+     "evidence_quote": "Finally, the main challenges currently faced by multi-sensor fusion technology in robot autonomous navigation are analyzed, and future research directions are proposed, aiming to provide valuable references for researchers in the field.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.54254/2755-2721/80/2024ch0087"
+   },
+   {
+    "title": "Pixel to Elevation: Learning to Predict Elevation Maps at Long Range Using Images for Autonomous Offroad Navigation",
+    "authors": [
+     "Chanyoung Chung",
+     "Georgios Georgakis",
+     "Patrick Spieler",
+     "Curtis Padgett",
+     "Ali Agha",
+     "Shehryar Khattak"
+    ],
+    "year": 2024,
+    "abstract": "Understanding terrain topology at long-range is crucial for the success of off-road robotic missions, especially when navigating at high-speeds. LiDAR sensors, which are currently heavily relied upon for geometric mapping, provide sparse measurements when mapping at greater distances. To address this challenge, we present a novel learning-based approach capable of predicting terrain elevation maps at long-range using only onboard egocentric images in real-time. Our proposed method is comprised of three main elements. First, a transformer-based encoder is introduced that learns cross-view associations between the egocentric views and prior bird-eye-view elevation map predictions. Second, an orientation-aware positional encoding is proposed to incorporate the $3D$ vehicle pose information over complex unstructured terrain with multi-view visual image features. Lastly, a history-augmented learnable map embedding is proposed to achieve better temporal consistency between elevation map predictions to facilitate the downstream navigational tasks. We experimentally validate the applicability of our proposed approach for autonomous offroad robotic navigation in complex and unstructured terrain using real-world offroad driving data. Furthermore, the method is qualitatively and quantitatively compared against the current state-of-the-art methods. Extensive field experiments demonstrate that our method surpasses baseline models in accurately predicting terrain elevation while effectively capturing the overall terrain topology at long-ranges. Finally, ablation studies are conducted to highlight and understand the effect of key components of the proposed approach and validate their suitability to improve off-road robotic navigation capabilities.",
+    "venue": "IEEE Robotics and Automation Letters",
+    "doi": "10.1109/lra.2024.3396089",
+    "arxiv_id": "2401.17484",
+    "s2_id": "44a19cd80a2d36661e6a3c6dab7cd5e80fdce2e7",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/44a19cd80a2d36661e6a3c6dab7cd5e80fdce2e7",
+    "pdf_url": "https://arxiv.org/pdf/2401.17484",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 21,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/lra.2024.3396089",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Pixel to Elevation: Learning to Predict Elevation Maps at Long Range Using Images for Autonomous Offroad Navigation",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "chung",
+      "georgakis",
+      "spieler",
+      "padgett",
+      "agha",
+      "khattak"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.229,
+     "topic_match": 2.3,
+     "method_match": 2.3,
+     "recency": 10.0,
+     "citation_impact": 4.5,
+     "score": 3.9,
+     "why_cite": "Closest match in the abstract to your question: \u201cWe experimentally validate the applicability of our proposed approach for autonomous offroad robotic navigation in complex and unstructured terrain using real-world offroad driving data.\u201d",
+     "evidence_quote": "We experimentally validate the applicability of our proposed approach for autonomous offroad robotic navigation in complex and unstructured terrain using real-world offroad driving data.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.1109/lra.2024.3396089"
+   },
+   {
+    "title": "Multi-Session Visual SLAM for Illumination-Invariant Re-Localization in Indoor Environments",
+    "authors": [
+     "Mathieu Labb\u00e9",
+     "F. Michaud"
+    ],
+    "year": 2021,
+    "abstract": "For robots navigating using only a camera, illumination changes in indoor environments can cause re-localization failures during autonomous navigation. In this paper, we present a multi-session visual SLAM approach to create a map made of multiple variations of the same locations in different illumination conditions. The multi-session map can then be used at any hour of the day for improved re-localization capability. The approach presented is independent of the visual features used, and this is demonstrated by comparing re-localization performance between multi-session maps created using the RTAB-Map library with SURF, SIFT, BRIEF, BRISK, KAZE, DAISY, and SuperPoint visual features. The approach is tested on six mapping and six localization sessions recorded at 30 min intervals during sunset using a Google Tango phone in a real apartment.",
+    "venue": "Frontiers in Robotics and AI",
+    "doi": "10.3389/frobt.2022.801886",
+    "arxiv_id": "2103.03827",
+    "s2_id": "7e76a70395cea0eb1573ca4221da0aa401ecf0fb",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/7e76a70395cea0eb1573ca4221da0aa401ecf0fb",
+    "pdf_url": "https://www.frontiersin.org/articles/10.3389/frobt.2022.801886/pdf",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 36,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.3389/frobt.2022.801886",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Multi-Session Visual SLAM for Illumination-Invariant Re-Localization in Indoor Environments",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "labbe",
+      "michaud"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.34,
+     "topic_match": 3.4,
+     "method_match": 3.4,
+     "recency": 2.5,
+     "citation_impact": 4.2,
+     "score": 3.42,
+     "why_cite": "Closest match in the abstract to your question: \u201cFor robots navigating using only a camera, illumination changes in indoor environments can cause re-localization failures during autonomous navigation.\u201d",
+     "evidence_quote": "For robots navigating using only a camera, illumination changes in indoor environments can cause re-localization failures during autonomous navigation.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.3389/frobt.2022.801886"
+   },
+   {
+    "title": "The Use of Multi-Scale Fiducial Markers To Aid Takeoff and Landing Navigation by Rotorcraft",
+    "authors": [
+     "Jongwon Lee",
+     "Su-Ye-On Choi",
+     "Timothy Bretl"
+    ],
+    "year": 2023,
+    "abstract": "This paper quantifies the performance of visual SLAM that leverages multi-scale fiducial markers (i.e., artificial landmarks that can be detected at a wide range of distances) to show its potential for reliable takeoff and landing navigation in rotorcraft. Prior work has shown that square markers with a black-and-white pattern of grid cells can be used to improve the performance of visual SLAM with color cameras. We extend this prior work to allow nested marker layouts. We evaluate performance during semi-autonomous takeoff and landing operations in a variety of environmental conditions by a DJI Matrice 300 RTK rotorcraft with two FLIR Blackfly color cameras, using RTK GNSS to obtain ground truth pose estimates. Performance measures include absolute trajectory error and the fraction of the number of estimated poses to the total frame. We release all of our results -- our dataset and the code of the implementation of the visual SLAM with fiducial markers -- to the public as open-source.",
+    "venue": "AIAA SCITECH 2024 Forum",
+    "doi": null,
+    "arxiv_id": "2309.08769",
+    "s2_id": "a67085351ac6d322646fba16ad4d870fc4a0738c",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/a67085351ac6d322646fba16ad4d870fc4a0738c",
+    "pdf_url": "https://arxiv.org/pdf/2309.08769",
+    "is_oa": true,
+    "oa_status": "green",
+    "oa_source": null,
+    "citation_count": 6,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.48550/arxiv.2309.08769",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "The Use of Multi-Scale Fiducial Markers To Aid Takeoff and Landing Navigation by Rotorcraft",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "lee",
+      "choi",
+      "bretl"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "n/a",
+      "note": "preprint DOI (DataCite) - not covered by Crossref"
+     }
+    },
+    "relevance": {
+     "lexical": 0.26,
+     "topic_match": 2.6,
+     "method_match": 2.6,
+     "recency": 7.5,
+     "citation_impact": 2.0,
+     "score": 3.21,
+     "why_cite": "Closest match in the abstract to your question: \u201cPrior work has shown that square markers with a black-and-white pattern of grid cells can be used to improve the performance of visual SLAM with color cameras.\u201d",
+     "evidence_quote": "Prior work has shown that square markers with a black-and-white pattern of grid cells can be used to improve the performance of visual SLAM with color cameras.",
+     "quote_check": "extractive (no LLM)",
+     "ranker": "lexical"
+    },
+    "best_doi": "10.48550/arxiv.2309.08769"
+   }
+  ],
+  "paywalled": [
+   {
+    "title": "Modeling and Analysis of Terrestrial Locomotion Dynamics of Helical Drive-Propelled Multi-Terrain Vehicles",
+    "authors": [
+     "Sumedh Beknalkar",
+     "Aditya Varanwal",
+     "Ryan Lynch",
+     "Matthew Bryant",
+     "A. Mazzoleni"
+    ],
+    "year": 2023,
+    "abstract": "\n The diverse and heterogeneous terrains in the Arctic, consisting of snow, melting ice, permafrost, ice-covered lakes, sea ice and open ocean, pose serious challenges to locomotion and autonomous navigation capabilities of rovers deployed in the region for data collection and experimentation. The Multi-terrain Amphibious ARCtic explOrer or MAARCO rover is a proposed screw-propelled vehicle that uses helical drives (similar to Archimedes\u2019 screws) to move seamlessly across the diverse terrains in the Arctic. The motion of a pair of helical drives operating in soft or fluid terrain is dictated by the response of the surrounding substrate to the stresses exerted by the rotating helical drives. If the substrate under the rover does not fail when it is moving in a straight line, the linear displacement of the rover (x) and the number of rotations of the helical drives (n) are related through x = P \u00b7 n, where P is the pitch length of the helical drives. However, when the substrate fails, the linear displacement of the rover is less than P \u00b7 n, i.e., x < P \u00b7 n. Thus, \u201cx = P \u00b7 n\u201d motion represents the optimal mode of operation for the rover when moving in a straight line. This paper represents the first ever attempt, to the best of author\u2019s knowledge, to derive the conditions necessary for the application of the holonomic constraint x = P \u00b7 n to the dynamics of a helical drives-based rover.",
+    "venue": "Volume 6: Dynamics, Vibration, and Control",
+    "doi": "10.1115/imece2023-111018",
+    "arxiv_id": null,
+    "s2_id": "4466bee28ff33a05879f489ca4b6a2c75ea1b37c",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/4466bee28ff33a05879f489ca4b6a2c75ea1b37c",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 5,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1115/imece2023-111018",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Modeling and Analysis of Terrestrial Locomotion Dynamics of Helical Drive-Propelled Multi-Terrain Vehicles",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "beknalkar",
+      "varanwal",
+      "lynch",
+      "bryant",
+      "mazzoleni"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.522
+    },
+    "best_doi": "10.1115/imece2023-111018"
+   },
+   {
+    "title": "Application of Visual SLAM Technology in Military Intelligent Unmanned Systems",
+    "authors": [
+     "Xianghan Yan",
+     "Weichao Guo",
+     "Yanhong Wang",
+     "Shuofei Li"
+    ],
+    "year": 2024,
+    "abstract": "Vision-based Simultaneous Localization and Mapping (SLAM) technology provides environment perception, positioning, and navigation functions for unmanned systems, which is one of the key technologies for the intelligence of military unmanned systems. After over a decade of development, visual SLAM technology has formed a classic technical framework, including sensor data, visual odometry, back-end optimization, loop closure detection, and mapping. It has broad application prospects in the military, mainly in the autonomous navigation and control of intelligent unmanned systems, intelligence collection and surveillance, multi-aircraft collaborative operations, soldier simulation training, and enhanced battlefield perception. Currently, visual SLAM technology has been successfully applied to various military drones, mobile robots, and visual enhancement equipment systems. Despite challenges in robustness, accuracy, and real-time performance, with the development and breakthroughs in multi-sensor fusion and the introduction of deep learning, the military application level of visual SLAM technology will be better improved.",
+    "venue": "CAIBDA",
+    "doi": "10.1145/3690407.3690442",
+    "arxiv_id": null,
+    "s2_id": "2741dba50ffd52356e3df5a8de64b75d0e0dcf9f",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/2741dba50ffd52356e3df5a8de64b75d0e0dcf9f",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1145/3690407.3690442",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Application of Visual SLAM Technology in Military Intelligent Unmanned Systems",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "yan",
+      "guo",
+      "wang",
+      "li"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.51
+    },
+    "best_doi": "10.1145/3690407.3690442"
+   },
+   {
+    "title": "Robust Autonomous Navigation of Unmanned Aerial Vehicles (UAVs) for Warehouses\u2019 Inventory Application",
+    "authors": [
+     "W. Kwon",
+     "J. H. Park",
+     "Minsu Lee",
+     "Jongbeom Her",
+     "Sanghyeon Kim",
+     "Ja-Won Seo"
+    ],
+    "year": 2020,
+    "abstract": "The inventory inspection using autonomous unmanned aerial vehicles (UAVs) is beneficial in terms of cost, time, and safety of human workers. However, in typical warehouses, it is very challenging for the autonomous UAVs to do inventory task motions safely because aisles are narrow and long, and the illumination is poor. Prior autonomous UAVs are not suitable for such environments, since they suffer from either localization methods prone to disturbance, drift and outliers, or expensive sensors. We present a low-cost sensing system with an extended Kalman filter (EKF)-based multi-sensor fusion framework to achieve practical autonomous navigation of UAVs in warehouse environments. To overcome the inherent drift, outliers, and disturbance problems of na\u00efve UAV localization methods, we suggest 1) exploiting component test of Mahalanobis norm to reject outliers efficiently, 2) introducing pseudo-covariance to incorporate a visual SLAM algorithm, and 3) recognizing floor lanes to get absolute information\u2013as robust data fusion methods. Exemplar results are provided to demonstrate the effectiveness of the methods. The proposed system has been successfully implemented for diverse cyclic inventory inspection tasks in a materials warehouse.",
+    "venue": "IEEE Robotics and Automation Letters",
+    "doi": "10.1109/lra.2019.2955003",
+    "arxiv_id": null,
+    "s2_id": "fc0ba5026d52152532ef666380f32397efe43585",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/fc0ba5026d52152532ef666380f32397efe43585",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 84,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/lra.2019.2955003",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Robust Autonomous Navigation of Unmanned Aerial Vehicles (UAVs) for Warehouses\u2019 Inventory Application",
+     "resolved_year": 2020,
+     "resolved_authors": [
+      "kwon",
+      "park",
+      "lee",
+      "her",
+      "kim",
+      "seo"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.447
+    },
+    "best_doi": "10.1109/lra.2019.2955003"
+   },
+   {
+    "title": "A Smoothing and Mapping Tightly Coupled Multi-modal Fusion Autonomous Navigation Method",
+    "authors": [
+     "Bo Zheng",
+     "Fei Han",
+     "Tao Cao",
+     "Tao Hu",
+     "Yang Peng",
+     "Shisun Wang"
+    ],
+    "year": 2023,
+    "abstract": "The planetary surface environment is unstructured with strong light, strong shadows, weak texture and many fluctuations. The special circumstances result in dim light or overexposure, lack of perceptual features, and no GPS or prior information support, which brings great challenges to the robust navigation of the planetary rover in the motion and jolt state. In dim light environment, it is difficult for a single camera to provide highly reliable feature recognition and tracking. Meanwhile, in unstructured similar environment, it is difficult for a single lidar to provide high fidelity depth measurement and motion estimation. In this paper, a multi-factor graph optimization model based on inertial system (IMU) is constructed, and a smoothing and mapping tightly coupled multi-modal fusion autonomous navigation method is proposed. With IMU as the central node, the visual inertia odometer (VIO) and laser inertia odometer (LIO) subsystems optimize the state pose in a tightly coupled way, which can effectively constrain the deviation drift of IMU. Moreover, the system introduces the rut line, terrain skyline and other line features as well as historical environmental information feedback. Reliably navigation can be achieved even if the visual or laser factor is failed or restarted. The measured data of obstacle simulation field show that the autonomous navigation method proposed in this paper can achieve high precision and robust real-time state estimation and map construction under the condition of high-speed motion and jolt.",
+    "venue": "2023 2nd Conference on Fully Actuated System Theory and Applications (CFASTA)",
+    "doi": "10.1109/cfasta57821.2023.10243359",
+    "arxiv_id": null,
+    "s2_id": "1bb8714147f609291b4c5e96dfabee12c0d2aa50",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/1bb8714147f609291b4c5e96dfabee12c0d2aa50",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 1,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/cfasta57821.2023.10243359",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A Smoothing and Mapping Tightly Coupled Multi-modal Fusion Autonomous Navigation Method",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "zheng",
+      "han",
+      "cao",
+      "hu",
+      "peng",
+      "wang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.433
+    },
+    "best_doi": "10.1109/cfasta57821.2023.10243359"
+   },
+   {
+    "title": "A Review of the development of Visual SLAM",
+    "authors": [
+     "Zhengao Dai"
+    ],
+    "year": 2024,
+    "abstract": "Simulated Localization and Mapping (SLAM) technology is one of the core technologies in the navigation field of autonomous mobile robots and unmanned aerial vehicles, which enables the machines to simultaneously locate themselves and build environmental maps through visual sensors (such as cameras). This technology has important applications in the fields of self-driving cars, augmented reality, and automatic navigation. This paper aims to provide a comprehensive overview of visual SLAM, focusing on its theoretical basis, key technologies, and development in the past decades. This paper first summarizes the basic principle and classification of SLAM technology, and then deeply discusses the theoretical basis of visual SLAM, including image processing, computer vision, state estimation, and kinematics. Then, the paper introduces the development of key technologies of visual SLAM in detail. Finally, this paper discusses the application of visual SLAM in UAV navigation, robot exploration, and virtual reality, and points out the limitations of current technology and the future research direction, including multi-sensor fusion, deep learning application, real-time performance improvement and SLAM technology in antagonistic environment. The main contribution of this review is to sort out the latest progress of visual SLAM in detail and look forward to the future development trend and potential research direction.",
+    "venue": "2024 4th International Conference on Artificial Intelligence, Robotics, and Communication (ICAIRC)",
+    "doi": "10.1109/icairc64177.2024.10899961",
+    "arxiv_id": null,
+    "s2_id": "738d21f0338d82e35ab04679ee63c23ded9cf1d6",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/738d21f0338d82e35ab04679ee63c23ded9cf1d6",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 2,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/icairc64177.2024.10899961",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A Review of the development of Visual SLAM",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "dai"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.426
+    },
+    "best_doi": "10.1109/icairc64177.2024.10899961"
+   },
+   {
+    "title": "Edge Assisted Mobile Semantic Visual SLAM",
+    "authors": [
+     "Hao Cao",
+     "Jin-Gao Xu",
+     "Danyang Li",
+     "Long-Fei Shangguan",
+     "Yun-Hao Liu",
+     "Zheng Yang"
+    ],
+    "year": 2023,
+    "abstract": "Localization and navigation play a key role in many location-based services and have attracted numerous research efforts. In recent years, visual SLAM has been prevailing for autonomous driving. However, the ever-growing computation resources demanded by SLAM impede its applications to resource-constrained mobile devices. In this paper, we present the design, implementation, and evaluation of edgeSLAM, an edge-assisted real-time semantic visual SLAM service running on mobile devices. edgeSLAM leverages the state-of-the-art semantic segmentation algorithm to enhance localization and mapping accuracy, and speeds up the computation-intensive SLAM and semantic segmentation algorithms by computation offloading. The key innovations of edgeSLAM include an efficient computation offloading strategy, an opportunistic data sharing method, an adaptive task scheduling algorithm, and a multi-user support mechanism. We fully implement edgeSLAM and plan to open-source it. Extensive experiments are conducted under 3 datasets. The results show that edgeSLAM can run on mobile devices at 35fps and achieve 5cm localization accuracy from real-world experiments, outperforming existing solutions by more than 15%. We also demonstrate the usability of edgeSLAM through 2 case studies of pedestrian localization and robot navigation. To the best of our knowledge, edgeSLAM is the first edge-assisted real-time semantic visual SLAM for mobile devices.",
+    "venue": "IEEE Transactions on Mobile Computing",
+    "doi": "10.1109/tmc.2022.3201000",
+    "arxiv_id": null,
+    "s2_id": "912b412fef33eceda93a9d1cc0d1a8202ed848f7",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/912b412fef33eceda93a9d1cc0d1a8202ed848f7",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 5,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/tmc.2022.3201000",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Edge Assisted Mobile Semantic Visual SLAM",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "cao",
+      "xu",
+      "li",
+      "shangguan",
+      "liu",
+      "yang"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.399
+    },
+    "best_doi": "10.1109/tmc.2022.3201000"
+   },
+   {
+    "title": "Localization for Autonomous Navigation: A Brief Overview",
+    "authors": [
+     "Jan P. Castillo-Sanchez",
+     "Hugo G. Gonz\u00e1lez-Hern\u00e1ndez",
+     "J. Reyes-Avenda\u00f1o"
+    ],
+    "year": 2023,
+    "abstract": "Autonomous Vehicles (AVs) are a novel technology possessing a vast and diversified body of literature which requires in-depth studies to drive further advances. One crucial aspect of autonomous operation is achieving precise and reliable localization to enable safe navigation in different environments. This paper provides a concise overview of the state of the art in localization techniques for Autonomous Navigation Systems (ANS), focusing on summarizing the most significant concepts and methodologies based on a collection of previous comprehensive literature reviews. Different approaches for AVs localization are presented, followed by a custom categorization of prevailing techniques. Visual Odometry (VO) and Simultaneous Localization and Mapping (SLAM) are emphasized as the most promising localization methods. Challenges and research opportunities, including multi-sensor fusion and vehicular networks, are highlighted. The aim of this work is to shed light on the foundations essential attributes of localization methods, thereby facilitating further research in autonomous mobility projects.",
+    "venue": "2023 International Symposium on Electromobility (ISEM)",
+    "doi": "10.1109/isem59023.2023.10334898",
+    "arxiv_id": null,
+    "s2_id": "96a76de85b96e2529f5e457bbfeefc6e3a0e6168",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/96a76de85b96e2529f5e457bbfeefc6e3a0e6168",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 1,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/isem59023.2023.10334898",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Localization for Autonomous Navigation: A Brief Overview",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "sanchez",
+      "hernandez",
+      "avendano"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.387
+    },
+    "best_doi": "10.1109/isem59023.2023.10334898"
+   },
+   {
+    "title": "Semantic Terrain Traversability Analysis Based on Deep Learning Aimed at Planetary Rover Navigation",
+    "authors": [
+     "G. Polato",
+     "S. Chiodini",
+     "A. Valmorbida",
+     "M. Pertile",
+     "Giada Giorgi",
+     "Enrico C. Lorenzini"
+    ],
+    "year": 2024,
+    "abstract": "",
+    "venue": "Aerotecnica Missili & Spazio",
+    "doi": "10.1007/s42496-024-00238-0",
+    "arxiv_id": null,
+    "s2_id": "3777ba723f137003c344275f129150fdefe54efe",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/3777ba723f137003c344275f129150fdefe54efe",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 2,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [
+     {
+      "title": "Semantic Terrain Traversability Analysis Based on Deep Learning Aimed at Planetary Rover Navigation",
+      "doi": "10.1007/s42496-024-00238-0",
+      "arxiv_id": null,
+      "venue": "Aerotecnica Missili & Spazio",
+      "year": 2024,
+      "reason": "same DOI",
+      "sources": [
+       "s2"
+      ]
+     }
+    ],
+    "verification": {
+     "doi": "10.1007/s42496-024-00238-0",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Semantic Terrain Traversability Analysis Based on Deep Learning Aimed at Planetary Rover Navigation",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "polato",
+      "chiodini",
+      "valmorbida",
+      "pertile",
+      "giorgi",
+      "lorenzini"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.384
+    },
+    "best_doi": "10.1007/s42496-024-00238-0"
+   },
+   {
+    "title": "MTSNet: Joint Feature Adaptation and Enhancement for Text-Guided Multi-view Martian Terrain Segmentation",
+    "authors": [
+     "Yang Fang",
+     "Xuefeng Rao",
+     "Xin-Bo Gao",
+     "Wei-Sheng Li",
+     "Zijian Min"
+    ],
+    "year": 2024,
+    "abstract": "Martian terrain segmentation plays a crucial role in autonomous navigation and safe driving of Mars rovers as well as global analysis of Martian geological landforms. However, most deep learning-based segmentation models cannot effectively handle the challenges of highly unstructured and unbalanced terrain distribution on the Martian surface, thus leading to inadequate adaptability and generalization ability. In this paper, we propose a novel multi-view Martian Terrain Segmentation framework (MTSNet) by developing an efficient Martian Terrain text-Guided Segment Anything Model (MTG-SAM) and combining it with a tailored Local Terrain Feature Enhancement Network (LTEN) to capture intricate terrain details. Specifically, the proposed MTG-SAM is equipped with a Terrain Context attention Adapter Module (TCAM) to efficiently and effectively unleashing the model adaptability and transferability on Mars-specific terrain distribution. Then, a Local Terrain Feature Enhancement Network (LTEN) is designated to compensate for the limitations of MTG-SAM in capturing the fine-grained local terrain features of Mars surface. Afterwards, a simple yet efficient Gated Fusion Module (GFM) is introduced to dynamically merge the global contextual features from MTG-SAM encoder and the local refined features from LTEN module for comprehensive terrain feature learning. Moreover, the proposed MTSNet enables terrain-specific text as prompts resolving the efficiency issue of existing methods that require costly annotation of bounding boxes or foreground points. Experimental results on AI4Mars and ConeQuest datasets demonstrate that our proposed MTSNet can effectively learns the unique Martian terrain feature distribution and achieves state-of-the-art performance on multi-view terrain segmentation from both the perspectives of the Mars rover and the satellite remote sensing. Code is available at https://github.com/raoxuefeng/mtsnet.",
+    "venue": "ACM Multimedia",
+    "doi": "10.1145/3664647.3681430",
+    "arxiv_id": null,
+    "s2_id": "9579d283d667f84c86b616932f09e9ed737fe990",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/9579d283d667f84c86b616932f09e9ed737fe990",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 10,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1145/3664647.3681430",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "MTSNet: Joint Feature Adaptation and Enhancement for Text-Guided Multi-view Martian Terrain Segmentation",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "fang",
+      "rao",
+      "gao",
+      "li",
+      "min"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.353
+    },
+    "best_doi": "10.1145/3664647.3681430"
+   },
+   {
+    "title": "Large-scale Autonomous Navigation and Path Planning of Lunar Rover via Deep Reinforcement Learning",
+    "authors": [
+     "Tao Hu",
+     "Tao Cao",
+     "Bo Zheng",
+     "Han-Mo Zhang",
+     "Mengying Ni"
+    ],
+    "year": 2021,
+    "abstract": "Future lunar surface exploration needs to be carried out in areas with more complex terrain and richer scientific research value without prior information. Therefore, the patrol device needs to be able to autonomously detect terrain and obstacle avoidance when planning exploration tasks. However, Deep reinforcement learning has been successfully applied in various game-like environments, and it is a challenging task to apply deep reinforcement learning to the navigation and obstacle avoidance detection of the rover on lunar surface. We propose an autonomous decision-making method for lunar vehicle patrols based on deep reinforcement learning. The algorithm first uses lidar for simultaneous positioning and graphing. For the constructed static three-dimensional point cloud map of the lunar surface, it is described as a two-dimensional grid using octree-map projection The grid map is processed by the long-short time memory (LSTM) to process the two-dimensional grid obstacle information. Using dueling deep Q network (dueling DQN) with multi-step learning to train the planetary vehicle automatic path planning, and finally in the ROS static obstacle environment simulation verification experiment, the simulation results verify that the proposed method is effective and adaptable for the lunar rover in different terrain environments.",
+    "venue": "ACM Cloud and Autonomic Computing Conference",
+    "doi": "10.1109/cac53003.2021.9728075",
+    "arxiv_id": null,
+    "s2_id": "58aca649801da420e2aeb6dc60d28105318607e6",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/58aca649801da420e2aeb6dc60d28105318607e6",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 9,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/cac53003.2021.9728075",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Large-scale Autonomous Navigation and Path Planning of Lunar Rover via Deep Reinforcement Learning",
+     "resolved_year": 2021,
+     "resolved_authors": [
+      "hu",
+      "cao",
+      "zheng",
+      "zhang",
+      "ni"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.353
+    },
+    "best_doi": "10.1109/cac53003.2021.9728075"
+   },
+   {
+    "title": "SLI-SLAM: Autonomous Navigation and Accurate Mapping for Quadruped Robot in Complex Environments Using LiDAR, Stereo Camera, and IMU Fusion",
+    "authors": [
+     "Yiming Xu",
+     "Bin Li",
+     "Shuhui Yang",
+     "Yumin Zhi",
+     "Ru-Kun Li"
+    ],
+    "year": 2024,
+    "abstract": "The proposed algorithm, SLI-SLAM (Stereo Camera-LiDAR-Inertial Measurement unit Fusion SLAM), introduces a comprehensive multi-sensor fusion framework for achieving navigation capabilities in quadruped robots. It combines stereo cameras, LiDAR, and IMU sensors using the factor graph framework for simultaneous localization and mapping (SLAM). It incorporates three types of odometry (LiDAR, Visual, and IMU) and effectively fuse their data to improve system performance. The algorithm enables autonomous perception, navigation, obstacle avoidance, and path planning. During autonomous navigation, the robot continuously perceives the environment, updates its position, and dynamically adjusts the planned path to navigate safely around obstacles. The SLI-SLAM algorithm, in combination with the NDT and GMapping algorithms, facilitates real-time map updates, allowing for adaptation to environmental changes. The SLI-SLAM algorithm has been extensively validated on the popular KITTI dataset and in real-world environments. Compared to other SLAM approaches in complex scenarios, the comparative analysis demonstrates its accuracy and robustness. Despite challenges in implementation, such as sensor calibration, synchronization, noise, and computational complexity, the SLI-SLAM algorithm has successfully been applied to quadruped robots and extensively tested, confirming its effectiveness and practicality. The SLI-SLAM algorithm enhances robustness, realtime performance, and the integration of environmental information, leading to accurate localization and mapping in complex scenarios.",
+    "venue": "Cybersecurity and Cyberforensics Conference",
+    "doi": "10.23919/ccc63176.2024.10662538",
+    "arxiv_id": null,
+    "s2_id": "8b5481ac8734107e29417072cca04283541baec5",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/8b5481ac8734107e29417072cca04283541baec5",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 3,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.23919/ccc63176.2024.10662538",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "SLI-SLAM: Autonomous Navigation and Accurate Mapping for Quadruped Robot in Complex Environments Using LiDAR, Stereo Camera, and IMU Fusion",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "xu",
+      "li",
+      "yang",
+      "zhi",
+      "li"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.346
+    },
+    "best_doi": "10.23919/ccc63176.2024.10662538"
+   },
+   {
+    "title": "LiDAR Data and Visual SLAM Based Robot Navigation Using Deep Learning",
+    "authors": [
+     "Sujanthi S",
+     "M. M",
+     "Poovikashri M",
+     "S. J",
+     "U. S"
+    ],
+    "year": 2024,
+    "abstract": "Robots can perceive their environment, identify objects, and prevent collisions with the use of LiDAR (Light Detection and Ranging) technology. Navigating an unfamiliar terrain is one of an autonomous vehicle's main goals. Creating a map is one way to accomplish this goal. A map gives the car the ability to make its own routes between the locations it has visited in order to complete a mission. Obtaining such a map in situations when there is no prior information of the environment or even the robot's starting location inside it is a unique challenge. For mobile robots to function in the real world, they must solve the basic challenge of local navigation, which entails moving towards a target point while avoiding obstacles. Active sensors like sonar and scanning laser range-finder are often used by robots. On the other hand, we know from first-hand experience that local navigation by sight alone is feasible. Automating this process has proven to be somewhat challenging. The application of robots may provide an answer to issues in hazardous environments, protecting both people and the environment. The robot's precise location and the route free of obstacles are determined using a variety of sensors. Traditional sensors, on the other hand, have their limits when it comes to processing complexity, spatial resolution, and detecting distance. The control algorithm and data collecting from sensors are put into action. The mobile robot is able to steer clear of obstacles of varying sizes and colors. Even while moving about within a room, this mobile robot can avoid bumping against walls or other obstacles.",
+    "venue": "2024 International Conference on Sustainable Communication Networks and Application (ICSCNA)",
+    "doi": "10.1109/icscna63714.2024.10864113",
+    "arxiv_id": null,
+    "s2_id": "773637756bce0e366b57523849f9751f442ab2a3",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/773637756bce0e366b57523849f9751f442ab2a3",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 1,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/icscna63714.2024.10864113",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "LiDAR Data and Visual SLAM Based Robot Navigation Using Deep Learning",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "s",
+      "m",
+      "m",
+      "j",
+      "s"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.346
+    },
+    "best_doi": "10.1109/icscna63714.2024.10864113"
+   },
+   {
+    "title": "A semantic visual SLAM towards object selection and tracking optimization",
+    "authors": [
+     "Tian Sun",
+     "Lei Cheng",
+     "Yaqi Hu",
+     "Xiaoping Yuan",
+     "Yong Liu"
+    ],
+    "year": 2024,
+    "abstract": "",
+    "venue": "Applied intelligence (Boston)",
+    "doi": "10.1007/s10489-024-05761-y",
+    "arxiv_id": null,
+    "s2_id": "cabfb563ce6f2f9c06ec2fe16deb222c1704bba0",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/cabfb563ce6f2f9c06ec2fe16deb222c1704bba0",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 2,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1007/s10489-024-05761-y",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "A semantic visual SLAM towards object selection and tracking optimization",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "sun",
+      "cheng",
+      "hu",
+      "yuan",
+      "liu"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.341
+    },
+    "best_doi": "10.1007/s10489-024-05761-y"
+   },
+   {
+    "title": "ECA-SLAM: A Visual SLAM Utilizing Depth Features and Attention Mechanism",
+    "authors": [
+     "Wen-Jie Deng",
+     "Tie Yun",
+     "Lin Qi"
+    ],
+    "year": 2024,
+    "abstract": "Simultaneous Localization and Mapping (SLAM) has a broad application prospect in robot navigation, autonomous driving, and augmented reality. While visual SLAM systems have made significant progress, they still face challenges in complex environments due to the complexity and time variability of the real environment. Traditional methods have limitations in feature extraction, matching, and mapping, and the effect of localization and mapping can be greatly reduced due to scene changes. In response to these challenges, this paper proposes an improved visual SLAM method based on deep learning. We use a lightweight Mobilenetv2 network for feature extraction and introduce the Hardswish activation function to improve the performance further. Meanwhile, the ECA-Net attention mechanism is introduced into the feature extraction network to enhance its ability to capture key image features accurately. In addition, we use multi-task distillation to train our network to reduce the complexity of the model. Extensive experimental evaluation on multiple datasets reveals that the proposed method has significantly improved accuracy and robustness, particularly in challenging environments, demonstrating superior performance. Index Terms\u2014SLAM, ECA-Net, deep learning, feature extraction",
+    "venue": "IEEE International Joint Conference on Neural Network",
+    "doi": "10.1109/ijcnn60899.2024.10651128",
+    "arxiv_id": null,
+    "s2_id": "3488817812e9b979d993ae786c2f4fab5714de24",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/3488817812e9b979d993ae786c2f4fab5714de24",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 1,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/ijcnn60899.2024.10651128",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 0.67,
+     "year_ok": true,
+     "resolved_title": "ECA-SLAM: A Visual SLAM Utilizing Depth Features and Attention Mechanism",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "deng",
+      "tie",
+      "qi"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.324
+    },
+    "best_doi": "10.1109/ijcnn60899.2024.10651128"
+   },
+   {
+    "title": "Efficient Autonomous Navigation in Dynamic Environments: Algorithm Evaluation and Multi-Robot Coordination",
+    "authors": [
+     "Mohammed Safir S. M",
+     "N. Wahab",
+     "Mohd Saiful Azimi Mahmud",
+     "H. Alqaraghuli",
+     "Erlianasha Samsuria",
+     "M. Z. Romdlony"
+    ],
+    "year": 2024,
+    "abstract": "Navigating indoor mobile robots in dynamic environments poses significant challenges due to obstacles and uncharted terrain. This study explores autonomous navigation systems within a laboratory-scale Flexible Manufacturing System (FMS), addressing the need for more reliable and real-time navigation. Objectives include designing a 2D map using SLAM, creating an autonomous indoor navigation system with real-time obstacle avoidance, and establishing a multi-robot navigation framework. Performance of A*, D*, TEB, and DWA algorithms is evaluated in single and multi-robot scenarios. Findings highlight A*'s effectiveness in static environments, D*'s adaptability in dynamic settings, and TEB's superiority in obstacle avoidance over DWA. The study concludes by discussing the potential of A* and TEB in multi-robot applications and suggests future research in algorithm optimization and multi-robot coordination.",
+    "venue": "2024 IEEE International Conference on Automatic Control and Intelligent Systems (I2CACIS)",
+    "doi": "10.1109/i2cacis61270.2024.10649877",
+    "arxiv_id": null,
+    "s2_id": "76f37906e712206443b1d51ed8c6b97e006debdb",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/76f37906e712206443b1d51ed8c6b97e006debdb",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 3,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/i2cacis61270.2024.10649877",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Efficient Autonomous Navigation in Dynamic Environments: Algorithm Evaluation and Multi-Robot Coordination",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "m",
+      "wahab",
+      "mahmud",
+      "alqaraghuli",
+      "samsuria",
+      "romdlony"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.309
+    },
+    "best_doi": "10.1109/i2cacis61270.2024.10649877"
+   },
+   {
+    "title": "AutoFusion: Autonomous Visual Geolocation and Online Dense Reconstruction for UAV Cluster",
+    "authors": [
+     "Yi-Zhu Zhang",
+     "Shuhui Bu",
+     "Yifei Dong",
+     "Yu Zhang",
+     "Kun Li",
+     "Lin Chen"
+    ],
+    "year": 2024,
+    "abstract": "Real-time dense reconstruction using Unmanned Aerial Vehicle (UAV) is becoming increasingly popular in large-scale rescue and environmental monitoring tasks. However, due to the energy constraints of a single UAV, the efficiency can be greatly improved through the collaboration of multi-UAVs. Nevertheless, when faced with unknown environments or the loss of Global Navigation Satellite System (GNSS) signal, most multi-UAV SLAM systems can\u2019t work, making it hard to construct a global consistent map. In this paper, we propose a real-time dense reconstruction system called AutoFusion for multiple UAVs, which robustly supports scenarios with lost global positioning and weak co-visibility. A method for Visual Geolocation and Matching Network (VGMN) is suggested by constructing a graph convolutional neural network as a feature extractor. It can acquire geographical location information solely through images. We also present a real-time dense reconstruction framework for multi-UAV with autonomous visual geolocation. UAV agents send images and relative positions to the ground server, which processes the data using VGMN for multi-agent geolocation optimization, including initialization, pose graph optimization, and map fusion. Extensive experiments demonstrate that our system can efficiently and stably construct large-scale dense maps in real-time with high accuracy and robustness.",
+    "venue": "IEEE International Conference on Robotics and Automation",
+    "doi": "10.1109/icra57147.2024.10611315",
+    "arxiv_id": null,
+    "s2_id": "b4c0535f165096daab1df89465a79824eb94594e",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/b4c0535f165096daab1df89465a79824eb94594e",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 2,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/icra57147.2024.10611315",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "AutoFusion: Autonomous Visual Geolocation and Online Dense Reconstruction for UAV Cluster",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "zhang",
+      "bu",
+      "dong",
+      "zhang",
+      "li",
+      "chen"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.266
+    },
+    "best_doi": "10.1109/icra57147.2024.10611315"
+   },
+   {
+    "title": "FPGA Roofline modeling and its Application to Visual SLAM",
+    "authors": [
+     "Ioanna-Maria Panagou",
+     "M. Gkeka",
+     "Alexandros Patras",
+     "S. Lalis",
+     "C. Antonopoulos",
+     "Nikolaos Bellas"
+    ],
+    "year": 2022,
+    "abstract": "The Roofline model has been proposed to visually associate application performance against the computational and bandwidth capabilities of the underlying platform. Since FPGAs lack fixed operation units, modifications in the original CPU-based Roofline model should be made. In this paper, we propose a new application-centric approach to construct the FPGA Roofline model extending previous work and encompassing resource and latency constraints to provide a more fitting ceiling. Moreover, we generalize our model to accommodate platforms with multiple accelerators whose execution footprint may be strongly input-dependent due to conditionals and complex loop structures. We evaluate our model and compare it with previous models on KinectFusion, a complex, multi-kernel algorithm for visual Simultaneous Localization and Mapping (vSLAM) used for autonomous agent navigation. Our work makes it feasible to deploy Roofline analysis on a wider range of MPSoC-based FPGAs that consist of more complex HW/ SW components and not just single accelerators.",
+    "venue": "International Conference on Field-Programmable Logic and Applications",
+    "doi": "10.1109/fpl57034.2022.00030",
+    "arxiv_id": null,
+    "s2_id": "ae97357417060a8897c4db3fb8a6c81386c0cb57",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/ae97357417060a8897c4db3fb8a6c81386c0cb57",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 3,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/fpl57034.2022.00030",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "FPGA Roofline modeling and its Application to Visual SLAM",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "panagou",
+      "gkeka",
+      "patras",
+      "lalis",
+      "antonopoulos",
+      "bellas"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.26
+    },
+    "best_doi": "10.1109/fpl57034.2022.00030"
+   },
+   {
+    "title": "Research on An Autonomous Tunnel Inspection UAV based on Visual Feature Extraction and Multi-sensor Fusion Indoor Navigation System",
+    "authors": [
+     "Shengyang Ge",
+     "Feng Pan",
+     "Da-Dong Wang",
+     "Pu Ning"
+    ],
+    "year": 2021,
+    "abstract": "UAVs have been widely used in line erection traction and inspection of outdoor high-voltage power grids due to its flexibility and low cost. Most of the inspection systems inside underground cable tunnels now adopt track-type and trolley-type robots, which are stable and safe, but also have disadvantages of high laying cost, low utilization efficiency, sensitive to terrain and so on. A UAV system for autonomous tunnel inspection based on visual feature extraction and multi-sensor fusion in GPS-denied environments is proposed in this paper. Kalman filter and GCC1 fusion method is the algorithm utilized for UAV indoor positioning using the optical flow sensor and the UAV inertial sensor. And then the flight stability was further enhanced by attitude decoupling. For visual feature extraction, this paper used the LAB color gamut threshold segmentation method to extract the foreground, the Hough transform matching straight line to extract the features of the horizontal deviation and forward direction, and designed a method to separate straight lines, curves and corners, thereby improved the UAV's perception of the tunnel environment. A series of inspection processes such as steering, height change, hovering and return voyage mission with vision feedforward PID controller were designed as tunnel inspection tasks. The on-site flight verification was conducted in the power transmission underground tunnel. Experimental results show that this system has the advantages of light weight, low cost, reliability, highly efficiency, low operation and maintenance costs. It can be deployed quickly and efficiently, and has certain engineering application prospect in the autonomous tunnel inspection.",
+    "venue": "Chinese Control and Decision Conference",
+    "doi": "10.1109/ccdc52312.2021.9602626",
+    "arxiv_id": null,
+    "s2_id": "84e415fe86ff8991099d029ecf2954b60334af1e",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/84e415fe86ff8991099d029ecf2954b60334af1e",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 7,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/ccdc52312.2021.9602626",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Research on An Autonomous Tunnel Inspection UAV based on Visual Feature Extraction and Multi-sensor Fusion Indoor Navigation System",
+     "resolved_year": 2021,
+     "resolved_authors": [
+      "ge",
+      "pan",
+      "wang",
+      "ning"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.229
+    },
+    "best_doi": "10.1109/ccdc52312.2021.9602626"
+   },
+   {
+    "title": "GMVISION: CO-PROCESSOR FOR COMPLEX VISION-BASED AUTONOMOUS NAVIGATION IN SPACE",
+    "authors": [
+     "D. Gogu",
+     "C. Mihalache",
+     "Florin-Adrian Stancu",
+     "Massimo Casasco",
+     "O. Dubois-Matra",
+     "David Merodio Codinachs",
+     "F. Vollaro",
+     "Julia Wajoras"
+    ],
+    "year": 2023,
+    "abstract": "As current and future space exploration missions are getting bolder, so do the requirements on the navigation algorithms and subsequently on their implementation in the avionics modules and on the associated data interfaces. To achieve the high level of autonomy and reliability required in today\u2019s space missions, vision-based navigation making use of high resolution images and processed on-board at high frame-rates is mandatory. The increased complexity of these computer vision algorithms and the data fusion of measurements acquired from various on-board instruments and sensors mandate the development and use of high-performance avionics to provide one or two order of magnitude faster execution than today's conventional space-grade processors. As consequence, nowadays substantial efforts are done to develop high frequency, high accuracy navigations systems, to improve on-board spacecraft power consumption and to optimize the processing times of the computational loads to achieve near real time operation. This paper focuses on the development of GMVision, a highly versatile space-oriented image processing unit that can provide interfacing SpaceWire control and management of up to 8 links and the opportunity for integrating computationally demanding image processing algorithms. The GMVision board can provide various redundant Vision-based Navigation solutions for autonomous operations in space missions, as GMV has previously developed within different ESA activities (CAMPHORVNAV, NEOGNC-2, Lunar-Lander, PILOTB+, HERA, HIPNOS, ORCO, NEOSHIELD, HERACLES or Mars Sample Return) several image processing algorithms and navigation filters based on autonomous relative or absolute navigation, suitable for rendezvous-search-capture, active debris removal and in-orbit servicing, descent and landing into small or massive bodies or to accommodate computer-vision solutions for rover exploration.\n From the mechanical point of view, GMVision fits inside an envelope of 16 cm x 28 cm x 5.9 cm (dimensions adjustable by re-design), and it can be provided as independent boards with metallic enclosure box accumulating a total mass of approximately 1.5 kg, or it can be provided as rackable electronics boards to integrate with an OBC. The image processing board can adapt to different redundancy concepts, depending on mission needs or system requirements.\n The GMVision system provides 2 boards isolation for Image Processing Function and Interfaces function, as it is relying on a two FPGAs architecture for each board. Both FPGAs are rad-hard European BRAVE units with allocated external volatile and non-volatile memories: an NG-MEDIUM dedicated to interfaces control unit and monitoring, and a powerful NG-LARGE to perform as computer vision co-processor, improving the execution times with 2 orders of magnitude compared to space processors. The image processing algorithms functionality can be divided between the processing FPGA and a SW processor, making use of a HW/SW co-design approach, as GMVision can be interfaced via SpaceWire with an On-board computer. This is the case for the two use-case scenarios for the development of GMVision Mars Sample Return mission concept Vision-Based GNC Rendezvous with ERO platform or Lunar lander with both absolute and relative navigation.\n The SpaceWire interfaces allow TM/TC exchange between GMVision and up to 3 devices/instruments using nominal and redundant Spacewire links (nominal/redundant 1 on-board computer and 2 navigation cameras or eventually 8 different components). The design and development of the computer-vision algorithms for GMVision are facilitated by the architectural design of the processing FPGA code, which provides an internal interfacing wrapper to integrate the required image processing module satisfying a client-consumer simple interface. GMVision board can also include pre-processing functions for the navigation cameras or other sensors, as well as managing the redundancy concept.\n The high performance, fast and complex computer vision solutions are focused on the needed processing, so both FPGAs of the board are SRAM reprogrammable devices which allow flexibility and many options for the design and implementation of complex functionalities, such as high-data rate interfaces management and hardware accelerators. Thanks to the reprogramming capabilities it can also be possible to accommodate different computer-vision accelerators which are not used in the same moment of time by replacing partially or fully bitstreams in the processing FPGA to save a potentially needed second FPGA unit.\n The GMVsion concept is promising technology and it has high exploitation applicability also to other missions, such as Lunar Missions with Roadmap as a Smart sensor. Being reference architecture for complex high performance algorithms, the product is a feasible solution for space-based surveillance system, or to the Mars exploration missions. Interconnected to a space processor, GMVision is the perfect avionics platform for integrating vision-based system for autonomous rover navigation, implemented in full HW or as a HW/SW co-design with most computationally intensive operations implemented in FPGA, and those requiring additional precision implemented on a space processor.\n The TRL to be achieved by the GMVision concept is 6, so the product has not been qualified for flight yet, being built with commercial components. Nevertheless, extensive analysis were performed in terms of analysis and shock, and tests at ambient conditions. The roadmap towards an actual flight model is deemed with high probability of success, as all the electronics components of the existent EM have space qualified counterparts, so the flight model shall be able to withstand the harsh space environment.\n In summary, the paper presents a highly versatile, fast and complex avionics development deemed as co-processor for space computer-vision applications. The features, performance and the evolution of the concept from breadboard model to engineering model, as well as the roadmap towards a powerful flight hardware are presented.",
+    "venue": "Papers of ESA GNC-ICATT 2023",
+    "doi": "10.5270/esa-gnc-icatt-2023-215",
+    "arxiv_id": null,
+    "s2_id": "67921d528903d62aea2ad908fe589e46b6e87503",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/67921d528903d62aea2ad908fe589e46b6e87503",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.5270/esa-gnc-icatt-2023-215",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "GMVISION: CO-PROCESSOR FOR COMPLEX VISION-BASED AUTONOMOUS NAVIGATION IN SPACE",
+     "resolved_year": 2023,
+     "resolved_authors": [
+      "gogu",
+      "mihalache",
+      "stancu",
+      "casasco",
+      "matra",
+      "codinachs",
+      "vollaro",
+      "wajoras"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.533
+    },
+    "best_doi": "10.5270/esa-gnc-icatt-2023-215"
+   },
+   {
+    "title": "Autonomous Navigation Algorithm for Planetary Rovers Based on Multimodality",
+    "authors": [
+     "Hrishikesh H. Pillai",
+     "Malavika Saji",
+     "L. S."
+    ],
+    "year": 2024,
+    "abstract": "Planetary rovers are essential robotic exploration devices that are vital for the investigation of extraterrestrial environments, where they analyze the atmospheric conditions and terrain. These rovers must endure intense acceleration, withstand severe environmental conditions, and maintain their functionality for a prolonged period. These robotic explorers operate in distant and hostile environments where human intervention is not feasible. In the quest to surmount these challenges, they are required to function autonomously and rely on state-of-the-art technologies. This article proposes two multimodal architectures, one which fuses object detection and semantic segmentation, and the other which infuses monocular depth estimation and semantic segmentation, to drive the rover autonomously. The proposed multimodal architectures are robust and enable the rover to navigate autonomously in highly uncertain and unpredictable environments. The results show that implementing the proposed architectures can successfully achieve the rover\u2019s autonomous navigation.",
+    "venue": "2024 IEEE 9th International Conference for Convergence in Technology (I2CT)",
+    "doi": "10.1109/i2ct61223.2024.10543896",
+    "arxiv_id": null,
+    "s2_id": "30c6a130c70d74a6966eb4f71c7f6a17ef6d98e8",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/30c6a130c70d74a6966eb4f71c7f6a17ef6d98e8",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 3,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/i2ct61223.2024.10543896",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Autonomous Navigation Algorithm for Planetary Rovers Based on Multimodality",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "pillai",
+      "saji",
+      "s"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.433
+    },
+    "best_doi": "10.1109/i2ct61223.2024.10543896"
+   },
+   {
+    "title": "Omnidirectional Autonomous Navigation With Multi-Camera RGBD Odometry",
+    "authors": [
+     "Igor Urbanik",
+     "M. Gibiec"
+    ],
+    "year": 2024,
+    "abstract": "Omnidirectionality, that is (in the autonomous navigation context), ability to move in any direction at all times without extensive turning provides some nuances that can be leveraged greatly in many scenarios. This paper aims to describe an approach to omnidirectional autonomous navigation and localization based on the Kalman Planetary Rover developed by the AGH Space Systems team at the Faculty of Mechanical Engineering and Robotics at AGH University of Krakow.",
+    "venue": "2024 15th Annual Undergraduate Research Conference on Applied Computing (URC)",
+    "doi": "10.1109/urc62276.2024.10604488",
+    "arxiv_id": null,
+    "s2_id": "b06edfffaa899bad715b0820bf95c25e410d5f52",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/b06edfffaa899bad715b0820bf95c25e410d5f52",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/urc62276.2024.10604488",
+     "resolved": true,
+     "status": "verified",
+     "title_score": 100.0,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "Omnidirectional Autonomous Navigation With Multi-Camera RGBD Odometry",
+     "resolved_year": 2024,
+     "resolved_authors": [
+      "urbanik",
+      "gibiec"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title, authors and year match",
+     "citable": true,
+     "integrity": {
+      "status": "clean",
+      "notices": []
+     }
+    },
+    "relevance": {
+     "lexical": 0.433
+    },
+    "best_doi": "10.1109/urc62276.2024.10604488"
+   }
+  ],
+  "flagged": [
+   {
+    "title": "SLAM and Autonomous Navigation Algorithm Based on 2D-Lidar",
+    "authors": [
+     "Teng Lin"
+    ],
+    "year": 2024,
+    "abstract": "Simultaneous Localization and Mapping (SLAM) is a key technology in autonomous driving. Based on different applications, hardware sensors and algorithms, the SLAM implementation methods are mostly divided into Visual SLAM, Laser SLAM and multi-sensor SLAM. The optimization direction of SLAM performance is mainly based on sensor performance, algorithm and estimation method. In the indoor scene, the performance of the Visual SLAM method is limited by the environment due to the limited field of vision sensor and its sensitivity to light. 3D-Lidar is not suitable for wide application for the high price. The multi-sensor fusion scheme has the problem of the complexity of fusion design and has operation delay due to the rich environmental characteristic information collected by some vision sensors. To solve the problems above, this paper proposes a SLAM scheme based on 2D-Lidar, the fusion of sensing algorithm and global path algorithm, and designs a system framework combining software and hardware. The realized system can obtain environmental information at high speed in indoor scenes and complete low-delay autonomous navigation with good mapping performance. First, the system uses IMU to correct the distortion of the Lidar data which is processed by the Gmapping algorithm. The system realized in this paper performs accurate calculation and conversion of the coordinate system relations of each sensor. After that, the Djikstra algorithm is adopted as the global path planning algorithm. Finally, ROS systems, NVIDIA-Jetson-Nano, IMU, 2D-Lidar, etc. are used to realize the construction of the algo-rithm model and system in the actual environment. The diagram construction effect in the indoor scene is good, the complete map of the experimental environment is obtained and the motion sys-tem positioning is accurate, which verifies the reliability and effectiveness of the scheme and sys-tem in this paper.",
+    "venue": "Computer Science and Application",
+    "doi": "10.12677/csa.2024.145116",
+    "arxiv_id": null,
+    "s2_id": "73736b9d3c45e2f6fad53f63d1e94a9563e36908",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/73736b9d3c45e2f6fad53f63d1e94a9563e36908",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 1,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [
+     {
+      "title": "SLAM and Autonomous Navigation Algorithm Based on 2D-Lidar",
+      "doi": "10.12677/csa.2024.145116",
+      "arxiv_id": null,
+      "venue": "Computer Science and Application",
+      "year": 2024,
+      "reason": "same DOI",
+      "sources": [
+       "s2"
+      ]
+     }
+    ],
+    "verification": {
+     "doi": "10.12677/csa.2024.145116",
+     "resolved": true,
+     "status": "mismatch",
+     "title_score": 100.0,
+     "author_overlap": 0.0,
+     "year_ok": true,
+     "resolved_title": "SLAM and Autonomous Navigation Algorithm Based on 2D-Lidar",
+     "resolved_year": 2024,
+     "resolved_authors": [],
+     "resolver": "doi.org/csl+json",
+     "reason": "author overlap 0%",
+     "citable": false
+    },
+    "relevance": {
+     "lexical": 0.426
+    },
+    "best_doi": "10.12677/csa.2024.145116"
+   },
+   {
+    "title": "RECENT APPLICATIONS OF MISSION CONTROL SOFTWARE AND VISUAL TOOLS FOR ADVANCING AUTONOMOUS AND REMOTE ROVER SCIENCE OPERATIONS",
+    "authors": [
+     "M. Battler",
+     "M. Cross",
+     "K. Raimalwala",
+     "H. Burd",
+     "A. Budhkar",
+     "J. Newman",
+     "C. Gilmour",
+     "R. Ewing",
+     "D. Gandhi"
+    ],
+    "year": 2022,
+    "abstract": "",
+    "venue": "",
+    "doi": null,
+    "arxiv_id": null,
+    "s2_id": "c181706783a7cc9a838ac4ff08fb265c8ecd75a5",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/c181706783a7cc9a838ac4ff08fb265c8ecd75a5",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": null,
+    "oa_source": null,
+    "citation_count": 0,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "",
+     "resolved": false,
+     "status": "unresolved",
+     "title_score": 0.0,
+     "author_overlap": 0.0,
+     "year_ok": false,
+     "resolved_title": "",
+     "resolved_year": null,
+     "resolved_authors": null,
+     "resolver": "doi.org/csl+json",
+     "reason": "no DOI",
+     "citable": false
+    },
+    "relevance": {
+     "lexical": 0.296
+    },
+    "best_doi": null
+   },
+   {
+    "title": "MOFISSLAM: A Multi-Object Semantic SLAM System With Front-View, Inertial, and Surround-View Sensors for Indoor Parking",
+    "authors": [
+     "X. Shao",
+     "Lin Zhang",
+     "Tianjun Zhang",
+     "Ying Shen",
+     "Yicong Zhou"
+    ],
+    "year": 2022,
+    "abstract": "The semantic SLAM (Simultaneous Localization And Mapping) system is a crucial module for autonomous indoor parking. Visual cameras (monocular/binocular) and IMU (Inertial Measurement Unit) constitute the basic configuration to build such a system. The performance of existing SLAM systems typically deteriorates in the presence of dynamically movable objects or objects with little texture. By contrast, semantic objects on the ground embody the most salient and stable features in the indoor parking environment. Due to their inabilities to perceive such features on the ground, existing SLAM systems are prone to tracking inconsistency during navigation. In this paper, we present MOFIS<sub>SLAM</sub>, a novel tightly-coupled <inline-formula> <tex-math notation=\"LaTeX\">${M}$ </tex-math></inline-formula>ulti-<inline-formula> <tex-math notation=\"LaTeX\">${O}$ </tex-math></inline-formula>bject semantic SLAM system integrating <inline-formula> <tex-math notation=\"LaTeX\">${F}$ </tex-math></inline-formula>ront-view, <inline-formula> <tex-math notation=\"LaTeX\">${I}$ </tex-math></inline-formula>nertial, and <inline-formula> <tex-math notation=\"LaTeX\">${S}$ </tex-math></inline-formula>urround-view sensors for autonomous indoor parking. The proposed system moves beyond existing semantic SLAM systems by complementing the sensor configuration with a surround-view system capturing images from a top-down viewpoint. In MOFIS<sub>SLAM</sub>, apart from low-level visual features and inertial motion data, typical semantic objects (parking-slots, parking-slot IDs and speed bumps) detected in surround-views are also incorporated in optimization, forming robust surround-view constraints. Specifically, each surround-view feature imposes a surround-view constraint that can be split into a contact term and a registration term. The former pre-defines the position of each individual surround-view feature subject to whether it has semantic contact with other surround-view features. Three contact modes, defined as <italic>complementary</italic>, <italic>adjacent</italic> and <italic>coincident</italic>, are identified to guarantee a unified form of all contact terms. The latter further constrains by registering each surround-view observation and its position in the world coordinate system. In parallel, to objectively evaluate SLAM studies for autonomous indoor parking, a large-scale dataset with groundtruth trajectories is collected, which is the first of its kind. Its groundtruth trajectories, commonly unavailable, are obtained by tracking artificial features scattered in the indoor parking environment, whose 3D coordinates are measured with an ETS (Electronic Total Station). The collected dataset has been made publicly available at <uri>https://shaoxuan92.github.io/MOFIS</uri>.",
+    "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+    "doi": "10.1109/tcsvt.2021.3135041",
+    "arxiv_id": null,
+    "s2_id": "3341f135543bb12757a65abe2d812fdc0f5cf637",
+    "openalex_id": null,
+    "url": "https://www.semanticscholar.org/paper/3341f135543bb12757a65abe2d812fdc0f5cf637",
+    "pdf_url": null,
+    "is_oa": false,
+    "oa_status": "closed",
+    "oa_source": "unpaywall",
+    "citation_count": 32,
+    "sources": [
+     "s2"
+    ],
+    "provenance": "search:s2",
+    "merged_from": [],
+    "verification": {
+     "doi": "10.1109/tcsvt.2021.3135041",
+     "resolved": true,
+     "status": "mismatch",
+     "title_score": 81.4,
+     "author_overlap": 1.0,
+     "year_ok": true,
+     "resolved_title": "MOFIS\n                    <sub>SLAM</sub>\n                    : A\n                    <i>M</i>\n                    ulti-\n                    <i>O</i>\n                    bject Semantic SLAM System With\n                    <i>F</i>\n                    ront-View,\n                    <i>I</i>\n                    nertial, and\n                    <i>S</i>\n                    urround-View Sensors for Indoor Parking",
+     "resolved_year": 2022,
+     "resolved_authors": [
+      "shao",
+      "zhang",
+      "zhang",
+      "shen",
+      "zhou"
+     ],
+     "resolver": "doi.org/csl+json",
+     "reason": "title mismatch (81 < 90)",
+     "citable": false
+    },
+    "relevance": {
+     "lexical": 0.18
+    },
+    "best_doi": "10.1109/tcsvt.2021.3135041"
+   }
+  ]
+ },
+ "stats": {
+  "gemini (gemini-3.8-flash)": {
+   "calls": 21,
+   "secs": 8.713498900000559,
+   "retries": 14
+  },
+  "gemini (gemini-3.6-flash)": {
+   "calls": 21,
+   "secs": 8.022789199992985,
+   "retries": 14
+  },
+  "gemini (gemini-3.5-flash-lite)": {
+   "calls": 7,
+   "secs": 16.975530500007153,
+   "retries": 0
+  },
+  "export.arxiv.org": {
+   "calls": 1,
+   "secs": 0.48218999999880907,
+   "retries": 0
+  },
+  "api.semanticscholar.org": {
+   "calls": 9,
+   "secs": 6.580423200004589,
+   "retries": 5
+  },
+  "api.unpaywall.org": {
+   "calls": 35,
+   "secs": 13.941573000010976,
+   "retries": 0
+  },
+  "doi.org": {
+   "calls": 44,
+   "secs": 30.489566899996134,
+   "retries": 0
+  },
+  "api.crossref.org": {
+   "calls": 43,
+   "secs": 12.599678299997322,
+   "retries": 3
+  }
+ },
+ "evidence": [
+  {
+   "ts": 1792430447.42,
+   "host": "export.arxiv.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://export.arxiv.org/api/query?search_query=%28ti%3Avisual+OR+abs%3Avisual%29+AND+%28ti%3Aslam+OR+abs%3Aslam%29+AND+%28ti%3Aautonomous+OR+abs%3Aautonomous%29+AND+%28ti%3Anavigation+OR+abs%3Anavigation%29+AND+%28ti%3Amulti-terrain+OR+abs%3Amulti-terrain%29&start=0&max_results=80&sortBy=relevance"
+  },
+  {
+   "ts": 1792430469.54,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=visual+SLAM+autonomous+navigation+multi+terrain+rover&limit=40&fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl&year=2020-2024"
+  },
+  {
+   "ts": 1792430489.12,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1115/imece2023-111018?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430489.27,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1145/3690407.3690442?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430489.41,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.3390/en17205177?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430489.45,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/access.2024.3473792?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430489.66,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/lra.2019.2955003?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430489.69,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1088/1742-6596/2762/1/012002?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430489.81,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/cfasta57821.2023.10243359?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430490.01,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.3390/s24227306?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430490.22,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.3390/s24113578?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430490.43,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.12677/csa.2024.145116?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430490.62,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/icairc64177.2024.10899961?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430490.83,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.3389/fnbot.2024.1473937?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430491.02,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/tmc.2022.3201000?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430491.25,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.3390/electronics12092006?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430491.43,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.54254/2755-2721/80/2024ch0087?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430491.64,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/isem59023.2023.10334898?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430491.85,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1007/s42496-024-00238-0?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430492.06,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1145/3664647.3681430?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430493.04,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1115/imece2023-111018"
+  },
+  {
+   "ts": 1792430493.09,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1145/3690407.3690442"
+  },
+  {
+   "ts": 1792430493.31,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/access.2024.3473792"
+  },
+  {
+   "ts": 1792430493.46,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/lra.2019.2955003"
+  },
+  {
+   "ts": 1792430493.52,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1088/1742-6596/2762/1/012002"
+  },
+  {
+   "ts": 1792430493.68,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/cfasta57821.2023.10243359"
+  },
+  {
+   "ts": 1792430493.75,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3390/en17205177"
+  },
+  {
+   "ts": 1792430493.9,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3390/s24227306"
+  },
+  {
+   "ts": 1792430494.1,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/tro.2025.3577026"
+  },
+  {
+   "ts": 1792430494.3,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3390/s24113578"
+  },
+  {
+   "ts": 1792430494.5,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.12677/csa.2024.145116"
+  },
+  {
+   "ts": 1792430494.71,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/robio58561.2023.10354794"
+  },
+  {
+   "ts": 1792430494.93,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/icairc64177.2024.10899961"
+  },
+  {
+   "ts": 1792430495.35,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3389/fnbot.2024.1473937"
+  },
+  {
+   "ts": 1792430495.39,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/tmc.2022.3201000"
+  },
+  {
+   "ts": 1792430495.54,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3390/electronics12092006"
+  },
+  {
+   "ts": 1792430495.92,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.54254/2755-2721/80/2024ch0087"
+  },
+  {
+   "ts": 1792430495.99,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/isem59023.2023.10334898"
+  },
+  {
+   "ts": 1792430496.38,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1145/3664647.3681430"
+  },
+  {
+   "ts": 1792430496.48,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1007/s42496-024-00238-0"
+  },
+  {
+   "ts": 1792430496.8,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1115%2Fimece2023-111018&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430496.98,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1145%2F3690407.3690442&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430497.25,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Faccess.2024.3473792&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430497.39,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1088%2F1742-6596%2F2762%2F1%2F012002&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430497.6,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3390%2Fen17205177&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430497.82,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Flra.2019.2955003&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430498.02,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fcfasta57821.2023.10243359&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430498.21,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3390%2Fs24227306&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430498.44,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ftro.2025.3577026&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430498.7,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3390%2Fs24113578&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430498.91,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Frobio58561.2023.10354794&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430499.05,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ficairc64177.2024.10899961&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430499.25,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3389%2Ffnbot.2024.1473937&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430499.46,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ftmc.2022.3201000&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430499.66,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3390%2Felectronics12092006&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430499.9,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.54254%2F2755-2721%2F80%2F2024ch0087&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430500.08,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fisem59023.2023.10334898&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430500.27,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2Fs42496-024-00238-0&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430500.53,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1145%2F3664647.3681430&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430520.44,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2303.15771?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792430526.05,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/arXiv:2309.08769?fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl"
+  },
+  {
+   "ts": 1792430526.82,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/cac53003.2021.9728075?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430526.96,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.23919/ccc63176.2024.10662538?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430527.12,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1007/s10489-024-05761-y?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430527.18,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/icscna63714.2024.10864113?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430527.32,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/ijcnn60899.2024.10651128?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430527.38,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.3390/rs15184442?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430527.54,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/i2cacis61270.2024.10649877?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430527.73,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/icra57147.2024.10611315?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430527.94,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.5194/isprs-archives-xlviii-1-w1-2023-547-2023?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430528.14,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/fpl57034.2022.00030?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430528.35,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/ccdc52312.2021.9602626?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430528.54,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/tcsvt.2021.3135041?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430529.96,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/cac53003.2021.9728075"
+  },
+  {
+   "ts": 1792430530.23,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/icscna63714.2024.10864113"
+  },
+  {
+   "ts": 1792430530.43,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1002/rob.22581"
+  },
+  {
+   "ts": 1792430530.49,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3389/frobt.2022.801886"
+  },
+  {
+   "ts": 1792430530.51,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.3390/rs15184442"
+  },
+  {
+   "ts": 1792430530.56,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2303.15771"
+  },
+  {
+   "ts": 1792430530.59,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.23919/ccc63176.2024.10662538"
+  },
+  {
+   "ts": 1792430530.73,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/ijcnn60899.2024.10651128"
+  },
+  {
+   "ts": 1792430530.98,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/i2cacis61270.2024.10649877"
+  },
+  {
+   "ts": 1792430531.01,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1007/s10489-024-05761-y"
+  },
+  {
+   "ts": 1792430531.14,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/tase.2024.3429280"
+  },
+  {
+   "ts": 1792430531.38,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/lra.2024.3407411"
+  },
+  {
+   "ts": 1792430531.54,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/icra57147.2024.10611315"
+  },
+  {
+   "ts": 1792430531.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.5194/isprs-archives-xlviii-1-w1-2023-547-2023"
+  },
+  {
+   "ts": 1792430531.88,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.48550/arxiv.2309.08769"
+  },
+  {
+   "ts": 1792430532.18,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/fpl57034.2022.00030"
+  },
+  {
+   "ts": 1792430532.39,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/ccdc52312.2021.9602626"
+  },
+  {
+   "ts": 1792430532.6,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/lra.2024.3396089"
+  },
+  {
+   "ts": 1792430532.82,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/tcsvt.2021.3135041"
+  },
+  {
+   "ts": 1792430533.26,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fcac53003.2021.9728075&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430533.54,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.23919%2Fccc63176.2024.10662538&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430533.62,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ficscna63714.2024.10864113&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430533.81,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3390%2Frs15184442&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430534.07,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1002%2Frob.22581&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430534.19,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1007%2Fs10489-024-05761-y&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430534.47,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.3389%2Ffrobt.2022.801886&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430534.7,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fijcnn60899.2024.10651128&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430534.86,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fi2cacis61270.2024.10649877&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430535.0,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ftase.2024.3429280&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430535.23,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Flra.2024.3407411&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430535.43,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ficra57147.2024.10611315&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430535.63,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.5194%2Fisprs-archives-xlviii-1-w1-2023-547-2023&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430535.88,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Ffpl57034.2022.00030&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430536.12,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fccdc52312.2021.9602626&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430537.59,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Flra.2024.3396089&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430562.94,
+   "host": "api.semanticscholar.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=vision-based+SLAM+planetary+rover+autonomous+navigation&limit=40&fields=title%2Cabstract%2Cyear%2Cvenue%2Cauthors%2CexternalIds%2CopenAccessPdf%2CisOpenAccess%2CcitationCount%2Curl&year=2020-2024"
+  },
+  {
+   "ts": 1792430582.31,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.5270/esa-gnc-icatt-2023-215?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430582.49,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.54254/2755-2721/2024.ch17853?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430582.64,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.55041/ijsrem29791?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430582.71,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/i2ct61223.2024.10543896?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430582.89,
+   "host": "api.unpaywall.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.unpaywall.org/v2/10.1109/urc62276.2024.10604488?email=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430584.3,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.5270/esa-gnc-icatt-2023-215"
+  },
+  {
+   "ts": 1792430584.58,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.54254/2755-2721/2024.ch17853"
+  },
+  {
+   "ts": 1792430584.6,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/i2ct61223.2024.10543896"
+  },
+  {
+   "ts": 1792430584.69,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.55041/ijsrem29791"
+  },
+  {
+   "ts": 1792430584.78,
+   "host": "doi.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://doi.org/10.1109/urc62276.2024.10604488"
+  },
+  {
+   "ts": 1792430585.09,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.5270%2Fesa-gnc-icatt-2023-215&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430585.27,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.54254%2F2755-2721%2F2024.ch17853&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430585.5,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Fi2ct61223.2024.10543896&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430587.54,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.55041%2Fijsrem29791&rows=20&mailto=yashvant280607%40gmail.com"
+  },
+  {
+   "ts": 1792430587.72,
+   "host": "api.crossref.org",
+   "status": 200,
+   "cached": false,
+   "url": "https://api.crossref.org/works?filter=updates%3A10.1109%2Furc62276.2024.10604488&rows=20&mailto=yashvant280607%40gmail.com"
+  }
+ ]
+}
