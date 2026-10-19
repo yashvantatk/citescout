@@ -6,5 +6,6 @@ rapidfuzz>=3.9
 tenacity>=8.5
 bibtexparser>=1.4,<2
 python-dotenv>=1.0
+playwright>=1.48   # connects to Browserbase cloud browsers over CDP; no local browser download needed
 pytest>=8.0
 pytest-asyncio>=0.24

@@ -41,6 +41,7 @@ with st.sidebar:
                                   else "❌ missing (scripted planner will run)"))
     st.caption("Semantic Scholar key: " + ("✅" if os.getenv("S2_API_KEY") else "–")
                + " · OpenAlex key: " + ("✅" if os.getenv("OPENALEX_API_KEY") else "–"))
+    st.caption("Browserbase (publisher pages): " + ("✅" if os.getenv("BROWSERBASE_API_KEY") else "– plain fetch"))
 
 st.title("📚 CiteScout AI")
 st.caption("Literature scout & bibliography builder: 25 relevant open-access papers, every DOI verified, "
@@ -61,6 +62,7 @@ def show_step(container, s):
 
 # ------------------------------------------------------------------ Scout tab
 with tab_run:
+    q, kw, yf, yt, target, pick = "", "", 2017, 2024, 25, ""  # defaults (keeps type checkers happy)
     if mode == "Live agent":
         q = st.text_input("Research question", "How do transformers improve neural machine translation?")
         kw = st.text_input("Keywords (comma-separated)", "transformer, attention, machine translation")
@@ -151,7 +153,15 @@ with tab_run:
         if not b["paywalled"]:
             st.caption("None in this run.")
         for p in b["paywalled"]:
-            st.markdown(f"- {p.title} · [doi.org/{p.best_doi}](https://doi.org/{p.best_doi}) · no legal OA copy")
+            pub = getattr(p, "publisher", {}) or {}
+            extra = ""
+            if pub.get("verdict"):
+                extra = f" · publisher page ({pub.get('via')}): **{pub['verdict']}**"
+                if pub.get("paywall_markers"):
+                    extra += f" (“{pub['paywall_markers'][0]}”)"
+                if pub.get("replay_url"):
+                    extra += f" · [session replay]({pub['replay_url']})"
+            st.markdown(f"- {p.title} · [doi.org/{p.best_doi}](https://doi.org/{p.best_doi}) · no legal OA copy{extra}")
         st.subheader(f"Flagged, not cited ({len(b['flagged'])})")
         if not b["flagged"]:
             st.caption("None in this run.")
@@ -247,7 +257,7 @@ with tab_arch:
 digraph G { rankdir=LR; node [shape=box, style="rounded,filled", fillcolor="#eef3ff", fontname="Helvetica"];
   user [label="Faculty\\nquestion, years, keywords", fillcolor="#fff4d6"];
   gemini [label="Gemini planner\\n(function calling)", fillcolor="#e3f6e8"];
-  tools [label="Tools\\nsearch_arxiv · search_s2\\nsnowball · verify_pool\\ninspect_publisher · finish"];
+  tools [label="Tools\\nsearch_arxiv · search_s2\\nsnowball · verify_pool\\ninspect_publisher (Browserbase) · finish"];
   gates [label="Code gates\\nmerge versions · DOI verify\\nOA check · retraction check\\nfinish rules", fillcolor="#ffe3e3"];
   rank [label="Rank + annotate\\nquote-checked"];
   approve [label="Human approval\\n(plan hash)", fillcolor="#fff4d6"];

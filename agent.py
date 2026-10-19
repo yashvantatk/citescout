@@ -41,6 +41,8 @@ Strategy guidance:
 - Call finish when cited >= {target}, or when further searching is clearly not productive.
 - Code rules: finish is rejected until search_s2 has run at least once, and while unverified papers
   are pending below target. verify_pool also rejects retracted papers (Crossref/Retraction Watch).
+- When paywalled > 0, call inspect_publisher on 1-2 paywalled DOIs (Browserbase reads the publisher page)
+  to record evidence of the paywall. It is evidence only and never makes a paper citable.
 Before each tool call, state your reasoning in one short sentence."""
 
 
@@ -124,11 +126,14 @@ async def t_snowball(st: AgentState, seed_rank: int = 1, direction: str = "both"
 
 
 async def t_inspect_publisher(st: AgentState, doi: str) -> dict:
-    """Look at a paywalled item's landing page for a LEGAL OA link (never bypasses a paywall)."""
-    from scout_engine import fetch
-    r = await fetch(f"https://doi.org/{doi}")
-    return {"doi": doi, "landing_status": r.status, "landing_url": r.url,
-            "note": "link-only; Unpaywall is the source of truth for legal OA copies"}
+    """Publisher landing page via Browserbase Fetch: evidence for paywalled items. Never changes a decision."""
+    from publisher import inspect_publisher
+    ev = await inspect_publisher(doi)
+    for p in st.bucket("paywalled") + st.bucket("cited") + st.bucket("flagged"):
+        if (p.best_doi or "").lower() == ev.get("doi"):
+            p.publisher = ev
+    return {k: ev.get(k) for k in ("doi", "via", "status", "verdict", "publisher_host", "paywall_markers",
+                                   "oa_markers", "error", "note") if ev.get(k) not in (None, [], "")}
 
 
 async def t_finish(st: AgentState, reason: str = "") -> dict:
@@ -157,7 +162,7 @@ DECLS = [
     {"name": "snowball", "description": "Follow the citation graph of the Nth most relevant cited paper: references (older foundations), citations (newer follow-ups) or both.",
      "parameters": {"type": "OBJECT", "properties": {"seed_rank": {"type": "INTEGER"},
                     "direction": {"type": "STRING", "enum": ["references", "citations", "both"]}}}},
-    {"name": "inspect_publisher", "description": "Fetch a paywalled paper's publisher landing page for evidence. Never downloads paywalled content.",
+    {"name": "inspect_publisher", "description": "Read a paywalled paper's publisher landing page via Browserbase and record paywall/OA evidence. Evidence only: never downloads or makes a paper citable.",
      "parameters": {"type": "OBJECT", "properties": {"doi": {"type": "STRING"}}, "required": ["doi"]}},
     {"name": "finish", "description": "Stop when the target is met or more searching is unproductive.",
      "parameters": {"type": "OBJECT", "properties": {"reason": {"type": "STRING"}}}},
@@ -202,6 +207,10 @@ async def _scripted(st: AgentState, log) -> None:
             await _call(st, "search_arxiv", {"query": kw}, "Reformulate with keywords only.", "scripted", log)
             if not st.pool:
                 break
+    for p in st.bucket("paywalled")[:2]:
+        if p.best_doi and len(st.trace) < MAX_STEPS:
+            await _call(st, "inspect_publisher", {"doi": p.best_doi},
+                        "Record publisher-page evidence for a paywalled paper.", "scripted", log)
     await _call(st, "finish", {"reason": "target met" if st.tally()["cited"] >= st.target else "sources exhausted"},
                 "Stop.", "scripted", log)
 

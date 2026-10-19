@@ -51,6 +51,7 @@ class Paper:
     merged_from: list[dict] = field(default_factory=list)
     verification: dict = field(default_factory=dict)
     relevance: dict = field(default_factory=dict)
+    publisher: dict = field(default_factory=dict)     # publisher-page evidence (Browserbase); never decides
 
     @property
     def best_doi(self) -> str | None:

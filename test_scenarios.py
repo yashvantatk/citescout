@@ -17,11 +17,15 @@ from scout_engine import arxiv_by_id, check_oa, classify, merge_papers, paper_fr
 from verifier import verify_doi, verify_paper
 
 # ---- fixtures (all public, all live-checked) ---------------------------------------------
-TC1_QUERY = dict(question="retrieval augmented generation for question answering",
-                 keywords=["retrieval", "RAG", "question answering"], year_from=2021, year_to=2025)
+TC1_QUESTION: str = "retrieval augmented generation for question answering"
+TC1_KEYWORDS: list[str] = ["retrieval", "RAG", "question answering"]
+TC1_YEARS: tuple[int, int] = (2021, 2025)
 TC2_ARXIV, TC2_PUBLISHED = "1512.03385", "10.1109/CVPR.2016.90"   # ResNet preprint + CVPR 2016
-TC3_PAYWALLED = Paper(title="Machine learning: Trends, perspectives, and prospects",
-                      authors=["M. I. Jordan", "T. M. Mitchell"], year=2015, doi="10.1126/science.aaa8415")
+# Nature (DQN, 2015): closed per Unpaywall. Nature's page is a JS check for scripts, which a real
+# Browserbase browser clears by itself (Science's Cloudflare wall did not, so we moved off it).
+TC3_PAYWALLED = Paper(title="Human-level control through deep reinforcement learning",
+                      authors=["Volodymyr Mnih", "Koray Kavukcuoglu", "David Silver"], year=2015,
+                      doi="10.1038/nature14236")
 # synthetic: a real title with a DOI that actually belongs to a different paper ("Deep learning", Nature 2015)
 TC4_FIXTURE = Paper(title="Deep Residual Learning for Image Recognition",
                     authors=["Kaiming He", "Xiangyu Zhang", "Shaoqing Ren", "Jian Sun"], year=2016,
@@ -33,7 +37,7 @@ TC5_RETRACTED = Paper(title="Ileal-lymphoid-nodular hyperplasia, non-specific co
 
 
 async def tc1() -> dict:
-    b = await run_scout(**TC1_QUERY, target=25)
+    b = await run_scout(TC1_QUESTION, TC1_KEYWORDS, TC1_YEARS[0], TC1_YEARS[1], target=25)
     cited = b["cited"]
     resolved = all(p.verification.get("resolved") and p.verification.get("citable") for p in cited)
     return dict(tc="TC1", passed=len(cited) == 25 and resolved,
@@ -46,6 +50,9 @@ async def tc1() -> dict:
 
 async def tc2() -> dict:
     pre, pub = await asyncio.gather(arxiv_by_id(TC2_ARXIV), paper_from_doi(TC2_PUBLISHED))
+    if pre is None or pub is None:
+        return dict(tc="TC2", passed=False, expected="preprint + published version merged",
+                    actual=f"lookup failed: arxiv={pre is not None}, doi={pub is not None}", evidence={})
     merged = merge_papers([pre, pub])
     m = merged[0]
     m = await verify_paper(await check_oa(m))
@@ -59,20 +66,24 @@ async def tc2() -> dict:
 
 
 async def tc3() -> dict:
+    from publisher import inspect_publisher
     p = await verify_paper(await check_oa(Paper(**{**TC3_PAYWALLED.__dict__})))
+    p.publisher = await inspect_publisher(p.doi or "")
     dec, why = classify(p)
     ok = dec == "paywalled" and p.pdf_url is None and p.is_oa is False
     return dict(tc="TC3", passed=ok,
                 expected="paywalled paper -> listed separately with DOI link only, no PDF download",
                 actual=f"decision={dec}; is_oa={p.is_oa}; oa_status={p.oa_status}; source={p.oa_source}; pdf_url={p.pdf_url}; "
-                       f"link=https://doi.org/{p.doi}",
+                       f"link=https://doi.org/{p.doi}; publisher page via {p.publisher.get('via')}: "
+                       f"{p.publisher.get('verdict') or p.publisher.get('error')}",
                 evidence={"unpaywall": f"https://api.unpaywall.org/v2/{p.doi}", "reason": why,
+                          "publisher_page": p.publisher,
                           "verification": p.verification})
 
 
 async def tc4() -> dict:
     f = TC4_FIXTURE
-    v = await verify_doi(f.doi, f.title, f.authors, f.year)
+    v = await verify_doi(f.doi or "", f.title, f.authors, f.year)
     p = Paper(**{**f.__dict__})
     p.verification = v.to_dict()
     p.is_oa = True

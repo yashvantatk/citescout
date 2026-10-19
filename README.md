@@ -29,7 +29,7 @@ Faculty input ─▶ Gemini planner (function calling) ─▶ tools ─▶ deter
 | `search_s2` | Semantic Scholar search, OpenAlex fallback; finds published versions |
 | `verify_pool` | gate: OA check → DOI verification → retraction check |
 | `snowball` | follows references / citations of a strong cited paper (provenance kept) |
-| `inspect_publisher` | landing-page evidence for paywalled items (never bypasses paywalls) |
+| `inspect_publisher` | reads the publisher landing page through the **Browserbase Fetch API** and records paywall/OA evidence for paywalled items. Evidence only: it never bypasses paywalls or makes a paper citable. Without `BROWSERBASE_API_KEY` it falls back to a plain fetch. |
 | `finish` | stop; **rejected by code** until Semantic Scholar was searched and pending papers are verified |
 
 **Deterministic gates (code, not the LLM)**
@@ -67,7 +67,7 @@ bibtexparser · SQLite audit DB · APIs: arXiv, Semantic Scholar, OpenAlex, doi.
 |---|---|---|---|
 | TC1 | topic query | 25 papers, all DOIs resolved | ✅ |
 | TC2 | ResNet arXiv 1512.03385 + CVPR DOI | merged into one entry | ✅ |
-| TC3 | paywalled 10.1126/science.aaa8415 | link only, no download | ✅ |
+| TC3 | paywalled 10.1038/nature14236 (Nature, closed) | link only, no download; Browserbase reads the publisher page as evidence | ✅ |
 | TC4 | DOI resolves to a different title | flagged, not cited | ✅ |
 | TC5 (extra) | retracted paper (Wakefield 1998) | flagged, not cited | ✅ |
 | TC6 (extra) | download without approval | blocked; paywalled never planned | ✅ |
@@ -81,7 +81,7 @@ pytest -q tests_agent_mock.py tests_export.py    # offline: agent loop, finish g
 ```bash
 python -m venv .venv && .venv\Scripts\activate     # Windows
 pip install -r requirements.txt
-copy .env.example .env                              # add GEMINI_API_KEY, S2_API_KEY, OPENALEX_API_KEY, CONTACT_EMAIL
+copy .env.example .env                              # add GEMINI_API_KEY, S2_API_KEY, OPENALEX_API_KEY, BROWSERBASE_API_KEY, CONTACT_EMAIL
 streamlit run app.py
 ```
 
