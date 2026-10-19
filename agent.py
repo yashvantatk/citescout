@@ -41,6 +41,10 @@ Strategy guidance:
 - Call finish when cited >= {target}, or when further searching is clearly not productive.
 - Code rules: finish is rejected until search_s2 has run at least once, and while unverified papers
   are pending below target. verify_pool also rejects retracted papers (Crossref/Retraction Watch).
+- Once roughly half the target is cited, call coverage_gaps with 4-6 short subtopics (2-3 words each)
+  that a thorough review of this question should cover. If it reports gaps, run a search on its
+  suggested query (or snowball citations for a recent-work gap) before finishing, so the bibliography
+  covers every part of the request rather than only the most popular sub-topic.
 - When paywalled > 0, call inspect_publisher on 1-2 paywalled DOIs (Browserbase reads the publisher page)
   to record evidence of the paywall. It is evidence only and never makes a paper citable.
 Before each tool call, state your reasoning in one short sentence."""
@@ -57,6 +61,7 @@ class AgentState:
     checked: list[Paper] = field(default_factory=list)    # verified/classified
     trace: list[dict] = field(default_factory=list)
     tool_calls: int = 0
+    coverage: dict = field(default_factory=dict)
     started: float = field(default_factory=time.time)
 
     def bucket(self, name: str) -> list[Paper]:
@@ -136,6 +141,15 @@ async def t_inspect_publisher(st: AgentState, doi: str) -> dict:
                                    "oa_markers", "error", "note") if ev.get(k) not in (None, [], "")}
 
 
+async def t_coverage_gaps(st: AgentState, subtopics: list[str] | None = None) -> dict:
+    """Gap-aware coverage: which expected subtopics / requested facets / recent years are under-covered."""
+    from coverage import coverage_map
+    cm = coverage_map(st.bucket("cited"), st.question, st.keywords, st.year_from, st.year_to, subtopics)
+    st.coverage = cm
+    return {"cited": cm["papers"], "gaps": [f"{g['facet']} ({g['papers']} papers)" for g in cm["gaps"]],
+            "themes": [f"{t['theme']} ({t['count']})" for t in cm["themes"]], "suggested": cm["suggestions"]}
+
+
 async def t_finish(st: AgentState, reason: str = "") -> dict:
     used = {s["tool"] for s in st.trace}
     if "search_s2" not in used:  # code gate: published versions + paywall detection need S2/OpenAlex
@@ -148,7 +162,8 @@ async def t_finish(st: AgentState, reason: str = "") -> dict:
 
 
 TOOLS = {"search_arxiv": t_search_arxiv, "search_s2": t_search_s2, "verify_pool": t_verify_pool,
-         "snowball": t_snowball, "inspect_publisher": t_inspect_publisher, "finish": t_finish}
+         "snowball": t_snowball, "inspect_publisher": t_inspect_publisher,
+         "coverage_gaps": t_coverage_gaps, "finish": t_finish}
 
 DECLS = [
     {"name": "search_arxiv", "description": "Keyword search on arXiv (all results are green OA preprints).",
@@ -164,6 +179,8 @@ DECLS = [
                     "direction": {"type": "STRING", "enum": ["references", "citations", "both"]}}}},
     {"name": "inspect_publisher", "description": "Read a paywalled paper's publisher landing page via Browserbase and record paywall/OA evidence. Evidence only: never downloads or makes a paper citable.",
      "parameters": {"type": "OBJECT", "properties": {"doi": {"type": "STRING"}}, "required": ["doi"]}},
+    {"name": "coverage_gaps", "description": "Gap-aware coverage check. Pass 4-6 subtopics a thorough literature review of this question should cover; code clusters the cited papers into themes and measures how many address each subtopic, keyword and the recent years, then suggests queries for the gaps.",
+     "parameters": {"type": "OBJECT", "properties": {"subtopics": {"type": "ARRAY", "items": {"type": "STRING"}}}}},
     {"name": "finish", "description": "Stop when the target is met or more searching is unproductive.",
      "parameters": {"type": "OBJECT", "properties": {"reason": {"type": "STRING"}}}},
 ]
@@ -194,6 +211,13 @@ async def _scripted(st: AgentState, log) -> None:
             ("verify_pool", {"max_papers": 35}, "Gate the most relevant candidates.")]
     for name, a, why in plan:
         await _call(st, name, a, why, "scripted", log)
+    gaps = await _call(st, "coverage_gaps", {}, "Check which parts of the request are under-covered.", "scripted", log)
+    for sug in (gaps.get("suggested") or [])[:2]:
+        if sug.get("query"):
+            await _call(st, "search_arxiv", {"query": sug["query"]}, f"Fill coverage gap: {sug['facet']}.",
+                        "scripted", log)
+    if st.pool:
+        await _call(st, "verify_pool", {"max_papers": 30}, "Verify the gap-filling candidates.", "scripted", log)
     rank = 1
     while st.tally()["cited"] < st.target and len(st.trace) < MAX_STEPS:
         if st.pool:

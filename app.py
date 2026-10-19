@@ -27,6 +27,7 @@ import replay  # noqa: E402
 from agent import MODEL, run_agent  # noqa: E402
 from annotate import annotate  # noqa: E402
 from export import Approval, build_plan, execute, verify_bundle  # noqa: E402
+from coverage import coverage_map  # noqa: E402
 
 st.set_page_config(page_title="CiteScout AI", page_icon="📚", layout="wide")
 ss = st.session_state  # results survive the rerun that every button click causes
@@ -135,6 +136,32 @@ with tab_run:
             for s in R["steps"]:
                 show_step(st, s)
 
+        cov_steps = [s for s in R["steps"] if s.get("tool") == "coverage_gaps"]
+        subtopics = (cov_steps[-1].get("args") or {}).get("subtopics") if cov_steps else None
+        cmeta = R["meta"]
+        cov = coverage_map(b["cited"], cmeta.get("question", ""), cmeta.get("keywords", []),
+                           cmeta.get("year_from"), cmeta.get("year_to"), subtopics)
+        R["coverage"] = cov
+        with st.expander(f"🧭 Coverage map: {len(cov['themes'])} themes · {len(cov['gaps'])} gaps", expanded=True):
+            c1, c2 = st.columns(2)
+            with c1:
+                st.markdown("**Themes in the cited set**")
+                for t in cov["themes"]:
+                    st.markdown(f"- {t['theme']}: {t['count']} papers")
+            with c2:
+                st.markdown(f"**Coverage of the request** (gap = fewer than {cov['threshold']} papers)")
+                for f in cov["facets"]:
+                    icon = "🟥" if f["status"] == "gap" else "🟩"
+                    st.markdown(f"{icon} {f['facet']}: {f['papers']} · _{f.get('source', '')}_")
+            if cov["years"]:
+                st.bar_chart({str(y): c for y, c in cov["years"].items()}, height=160)
+            if cov["gaps"]:
+                gs = [s for s in R["steps"] if "coverage gap" in (s.get("thought") or "").lower()
+                      or (s.get("tool") in ("search_arxiv", "search_s2", "snowball") and cov_steps
+                          and s["step"] > cov_steps[-1]["step"])]
+                st.caption(f"The agent ran {len(gs)} follow-up step(s) after the coverage check. "
+                           "Remaining gaps are listed so you can judge them yourself.")
+
         st.subheader(f"Cited ({len(b['cited'])})")
         for i, p in enumerate(b["cited"], 1):
             v, r = p.verification, p.relevance
@@ -180,7 +207,8 @@ with tab_run:
         agree = st.checkbox("I approve downloading these open-access PDFs")
         if st.button("Approve & build bundle", disabled=not agree):
             extra = {"agent_trace.json": json.dumps(R["steps"], indent=1, default=str),
-                     "source_evidence.json": json.dumps(R["evidence"], indent=1)}
+                     "source_evidence.json": json.dumps(R["evidence"], indent=1),
+                     "coverage_map.json": json.dumps(R.get("coverage", {}), indent=1)}
             with st.spinner("Downloading PDFs and building the bundle…"):
                 bundle = asyncio.run(execute(plan, Approval(plan.plan_hash, True, "faculty"), extra=extra))
             ss.bundle, ss.report = bundle, verify_bundle(bundle.zip_bytes, plan)
@@ -257,7 +285,7 @@ with tab_arch:
 digraph G { rankdir=LR; node [shape=box, style="rounded,filled", fillcolor="#eef3ff", fontname="Helvetica"];
   user [label="Faculty\\nquestion, years, keywords", fillcolor="#fff4d6"];
   gemini [label="Gemini planner\\n(function calling)", fillcolor="#e3f6e8"];
-  tools [label="Tools\\nsearch_arxiv · search_s2\\nsnowball · verify_pool\\ninspect_publisher (Browserbase) · finish"];
+  tools [label="Tools\\nsearch_arxiv · search_s2\\nsnowball · verify_pool\\ninspect_publisher (Browserbase)\\ncoverage_gaps · finish"];
   gates [label="Code gates\\nmerge versions · DOI verify\\nOA check · retraction check\\nfinish rules", fillcolor="#ffe3e3"];
   rank [label="Rank + annotate\\nquote-checked"];
   approve [label="Human approval\\n(plan hash)", fillcolor="#fff4d6"];
