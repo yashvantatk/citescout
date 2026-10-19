@@ -9,3 +9,5 @@ exports/
 .venv/
 .pytest_cache/
 .vscode/
+
+citescout.db
