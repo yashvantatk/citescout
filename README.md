@@ -11,11 +11,23 @@
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B)
 
 **Ziro Agentic AI Hackathon 2026** · Education & Career AI · *Literature Scout & Bibliography Builder*
-**Team Three Pointers**
+**Team Three Pointers** · Yashvant A T K (Team Leader) · A Mohit Kumar · Tharanesh Suresh Kannan
+*Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram*
 
-**[▶ Working AI Agent - Live demo](#)** · **[🎬 Demo video](#)** · **[📊 Slides](#)**
+**[▶ Working AI Agent - Live demo](https://citescout.streamlit.app/)** · **[🎬 Demo video](https://youtu.be/CShI9rW8tv0)** · **[📊 Slides](https://drive.google.com/file/d/1ue4BdBnovYATiyziA42MAxMS8MXVWtBM/view?usp=sharing)**
 
 </div>
+
+## 📦 Submission links
+
+| What | Link |
+|---|---|
+| ▶ Working prototype (live) | https://citescout.streamlit.app/ |
+| 🎬 Demo video | https://youtu.be/CShI9rW8tv0 |
+| 📊 Presentation | [CiteScout_AI_Presentation (Google Drive)](https://drive.google.com/file/d/1ue4BdBnovYATiyziA42MAxMS8MXVWtBM/view?usp=sharing) |
+| 💻 Source code | https://github.com/yashvantatk/citescout |
+| 🧪 Test cases + proof | **Test cases** tab in the live app (TC1–TC6) · [GitHub Actions CI](https://github.com/yashvantatk/citescout/actions/workflows/tests.yml) |
+| 🏗️ Architecture & tools | [How the agent works](#-how-the-agent-works) below and the **How it works** tab in the app |
 
 ---
 
